@@ -1,0 +1,26 @@
+{
+  "locked_at_utc": "2023-11-24T03:19:38Z",
+  "source": "perf_mccl_loop/worktree",
+  "do_not_edit": true,
+  "note": "Immutable AllReduce-fixed snapshot. Do not edit. All prefix-cache work goes in worktree-prefix-on-ar/. Provenance: perf_mccl_loop/results/ar_cut_20261104/REPORT.md",
+  "ar_cut_report": "perf_mccl_loop/results/ar_cut_20261104/REPORT.md",
+  "excludes": [
+    "build/",
+    "InfiniLM/build/",
+    ".profile_mctracer/"
+  ],
+  "kept": [
+    "install/",
+    "InfiniLM/python/**/lib/*.so"
+  ],
+  "source_git": {
+    "worktree_HEAD": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+    "InfiniLM_HEAD": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f"
+  },
+  "sha256": {
+    "InfiniLM/python/infinilm/lib/_infinilm.cpython-310-x86_64-linux-gnu.so": "02ed7a91b824405031794ceef3941bdf140b21a97ca60d9a53f89272327f7d14",
+    "InfiniLM/python/infinilm/lib/libinfinicore_runtime.so": "e6bdd2803aa4cb24afe8b2d3df5e8371b659569565101904898806691a395e6e",
+    "install/lib/lib/_infinilm.cpython-310-x86_64-linux-gnu.so": "febcb3e28c00c2d213d7d09ee6640ea8b5d26cd418c171f78243bdd0d788fd4a",
+    "install/lib/libinfinicore_runtime.so": "e6bdd2803aa4cb24afe8b2d3df5e8371b659569565101904898806691a395e6e"
+  }
+}
