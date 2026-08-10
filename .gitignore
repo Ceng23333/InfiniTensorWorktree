@@ -1,0 +1,7 @@
+# Nested build artifacts if someone builds in-tree
+**/build/
+**/.xmake/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/*.egg-info/
