@@ -6,7 +6,3 @@
 	path = InfiniLM
 	url = https://github.com/Ceng23333/InfiniLM.git
 	branch = prefill_profile_dev2
-[submodule "InfiniMetadata"]
-	path = InfiniMetadata
-	url = https://github.com/InfiniTensor/InfiniMetadata.git
-	branch = master

@@ -44,6 +44,6 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
   echo "INFINI_TENSOR_WORKTREE=${INFINI_TENSOR_WORKTREE}"
   echo "WORKTREE_ROOT=${WORKTREE_ROOT}"
   echo "ITW_ROOT=${ITW_ROOT}"
-  require_worktree_repos InfiniCore InfiniLM InfiniMetadata
+  require_worktree_repos InfiniCore InfiniLM
   echo "InfiniTensorWorktree OK"
 fi

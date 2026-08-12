@@ -3,7 +3,7 @@
 #
 # Examples:
 #   TAG=v2026.08.10 ./scripts/release.sh --from-current
-#   IC_SHA=... IL_SHA=... IM_SHA=... TAG=v2026.08.10 ./scripts/release.sh
+#   IC_SHA=... IL_SHA=... TAG=v2026.08.10 ./scripts/release.sh
 #
 # Does not push. Prints push commands when done.
 set -euo pipefail
@@ -20,7 +20,7 @@ if [[ "${1:-}" == "--from-current" ]]; then
   PIN_ARGS=(--from-current)
 elif [[ $# -gt 0 ]]; then
   echo "usage: TAG=vYYYY.MM.DD $0 [--from-current]" >&2
-  echo "  or set IC_SHA IL_SHA IM_SHA" >&2
+  echo "  or set IC_SHA IL_SHA" >&2
   exit 1
 fi
 
@@ -34,7 +34,7 @@ for path in "${dirty[@]:-}"; do
   [[ -z "${path}" ]] && continue
   path="${path%/}"
   case "${path}" in
-    InfiniCore|InfiniLM|InfiniMetadata|.gitmodules|.gitignore|scripts|scripts/*|README.md|MANIFEST) ;;
+    InfiniCore|InfiniLM|.gitmodules|.gitignore|scripts|scripts/*|README.md|MANIFEST) ;;
     *)
       echo "error: unexpected dirty path before release: ${path}" >&2
       echo "  commit or stash unrelated changes first" >&2
@@ -52,13 +52,11 @@ MSG="release: freeze InfiniTensorWorktree ${TAG}
 
 IC_SHA=${IC_SHA}
 IL_SHA=${IL_SHA}
-IM_SHA=${IM_SHA}
 "
 
 git add MANIFEST \
   InfiniCore \
   InfiniLM \
-  InfiniMetadata \
   .gitmodules \
   .gitignore \
   scripts/worktree_env.sh \

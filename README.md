@@ -1,6 +1,8 @@
 # InfiniTensorWorktree
 
-Lightweight pin umbrella for **InfiniCore**, **InfiniLM**, and **InfiniMetadata**. Annotated release tags (`vYYYY.MM.DD`) lock the deployment commit (submodule SHAs + `MANIFEST`).
+Lightweight pin umbrella for **InfiniCore** and **InfiniLM**. Annotated release tags (`vYYYY.MM.DD`) lock the deployment commit (submodule SHAs + `MANIFEST`).
+
+InfiniMetadata was removed from this pin; warehouse identity/metrics live in InfiniOrchestrator (Entrypoint `/metadata`, LoadBalancer `/metrics`). InfiniLM keeps a NoOp fallback when the package is absent.
 
 ## Layout
 
@@ -8,8 +10,7 @@ Lightweight pin umbrella for **InfiniCore**, **InfiniLM**, and **InfiniMetadata*
 InfiniTensorWorktree/
   InfiniCore/       # submodule
   InfiniLM/         # submodule
-  InfiniMetadata/   # submodule
-  MANIFEST          # ITW_SHA, IC_SHA, IL_SHA, IM_SHA
+  MANIFEST          # ITW_SHA, IC_SHA, IL_SHA
   scripts/          # worktree_env, pin_worktree, release
 ```
 
@@ -38,8 +39,8 @@ InfiniOrchestrator resolves `INFINI_TENSOR_WORKTREE` to `../InfiniTensorWorktree
 ```bash
 TAG=vYYYY.MM.DD ./scripts/release.sh --from-current
 # or:
-IC_SHA=... IL_SHA=... IM_SHA=... TAG=vYYYY.MM.DD ./scripts/release.sh
+IC_SHA=... IL_SHA=... TAG=vYYYY.MM.DD ./scripts/release.sh
 git push origin HEAD --tags
 ```
 
-Manifest fields: `ITW_SHA`, `IC_SHA`, `IL_SHA`, `IM_SHA`, URLs, `PIN_DATE`.
+Manifest fields: `ITW_SHA`, `IC_SHA`, `IL_SHA`, URLs, `PIN_DATE`.
