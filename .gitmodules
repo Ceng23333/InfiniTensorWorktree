@@ -1,8 +1,6 @@
 [submodule "InfiniCore"]
 	path = InfiniCore
-	url = https://github.com/Ceng23333/InfiniCore.git
-	branch = prefill_profile
+	url = https://github.com/InfiniTensor/InfiniCore.git
 [submodule "InfiniLM"]
 	path = InfiniLM
-	url = https://github.com/Ceng23333/InfiniLM.git
-	branch = prefill_profile_dev2
+	url = https://github.com/InfiniTensor/InfiniLM.git

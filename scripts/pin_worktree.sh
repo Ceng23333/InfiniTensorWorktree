@@ -18,8 +18,8 @@ if [[ "${1:-}" == "--from-current" ]]; then
   FROM_CURRENT=1
 fi
 
-IC_URL="https://github.com/Ceng23333/InfiniCore.git"
-IL_URL="https://github.com/Ceng23333/InfiniLM.git"
+IC_URL="${IC_URL:-https://github.com/Ceng23333/InfiniCore.git}"
+IL_URL="${IL_URL:-https://github.com/Ceng23333/InfiniLM.git}"
 
 require_worktree_repos InfiniCore InfiniLM
 
