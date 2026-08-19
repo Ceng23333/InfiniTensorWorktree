@@ -1,6 +1,6 @@
-ITW_SHA=2192c668a9823b690b30c49ce1716c50aee7ea6d
+ITW_SHA=506ebf05e938be2620d172618f72bc323866814e
 IC_SHA=2ee5578feb19e087326b48d3c9c01c8702f163a1
-IL_SHA=62ef33d6e163f66a4dfcb5dc8cc0417a967f5731
-IC_URL=https://github.com/InfiniTensor/InfiniCore.git
-IL_URL=https://github.com/InfiniTensor/InfiniLM.git
-PIN_DATE=2026-08-18T08:10:00Z
+IL_SHA=c679ef1687f3a1304165ed23529f038a2724f13c
+IC_URL=https://github.com/Ceng23333/InfiniCore.git
+IL_URL=https://github.com/Ceng23333/InfiniLM.git
+PIN_DATE=2026-08-19T04:35:15Z
