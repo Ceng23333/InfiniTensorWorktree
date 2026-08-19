@@ -1,0 +1,30 @@
+{
+  "name": "infinilm-dev-refactor-dev",
+  "image": "mx-devops-acr-cn-shanghai.cr.volces.com/pub-registry1/ai-release/hpcc/vllm-mars:0.20.0-hpcc.ai3.7.0.102-torch2.8-py310-kylin2309a-arm64",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "overrideCommand": true,
+  "runArgs": [
+    "--privileged",
+    "--ipc=shareable",
+    "--shm-size=100g",
+    "--security-opt=apparmor=unconfined",
+    "--security-opt=label=disable",
+    "--device=/dev/dri:/dev/dri",
+    "--device=/dev/htcd:/dev/htcd",
+    "-p=8230:8200",
+    "-p=8231:8201",
+    "-e=HPCC_PATH=/opt/hpcc",
+    "-e=HPCC_VISIBLE_DEVICES=1",
+    "-e=INFINI_ROOT=/workspace/InfiniLM/build/integration/mars/prefix"
+  ],
+  "mounts": [
+    "source=/nfs,target=/nfs,type=bind,readonly",
+    "source=/root/zenghua/models,target=/models,type=bind,readonly"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}

@@ -34,7 +34,7 @@ for path in "${dirty[@]:-}"; do
   [[ -z "${path}" ]] && continue
   path="${path%/}"
   case "${path}" in
-    InfiniCore|InfiniLM|.gitmodules|.gitignore|scripts|scripts/*|README.md|MANIFEST) ;;
+    InfiniCore|InfiniLM|.gitmodules|.gitignore|scripts|scripts/*|README.md|MANIFEST|.devcontainer|.devcontainer/*) ;;
     *)
       echo "error: unexpected dirty path before release: ${path}" >&2
       echo "  commit or stash unrelated changes first" >&2
@@ -59,13 +59,12 @@ git add MANIFEST \
   InfiniLM \
   .gitmodules \
   .gitignore \
-  scripts/worktree_env.sh \
-  scripts/pin_worktree.sh \
-  scripts/release.sh \
+  scripts \
+  .devcontainer \
   README.md \
   2>/dev/null || true
 
-git add -u -- scripts README.md MANIFEST .gitmodules .gitignore 2>/dev/null || true
+git add -u -- scripts README.md MANIFEST .gitmodules .gitignore .devcontainer 2>/dev/null || true
 
 if git diff --cached --quiet; then
   echo "error: nothing staged for release commit" >&2

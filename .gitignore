@@ -5,3 +5,6 @@
 **/*.pyc
 **/.pytest_cache/
 **/*.egg-info/
+
+# Local campaign / smoke artifacts (not part of a pin)
+bench_results/
