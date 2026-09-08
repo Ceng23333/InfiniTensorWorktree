@@ -1,6 +1,13 @@
-ITW_SHA=8963cc9808fe07d4e98c848aa9f0f3f20192c017
+ITW_SHA=16cb6b33abbb86e408d6a327a63d13f7e5b7b041
 IC_SHA=7e430b4f876ab57d06c463065e511fa130c6c2e3
 IL_SHA=cd35317c0fcc984f19042fa71a26c2786e787a13
+IC_UPSTREAM_SHA=19a92e1bc21405afe682ef21d715b5f0a2186241
+IL_UPSTREAM_SHA=e762f2a90d28912117a024fa0e604e8dd4165964
 IC_URL=https://github.com/Ceng23333/InfiniCore.git
 IL_URL=https://github.com/Ceng23333/InfiniLM.git
+IL_BRANCH=metax/qwen38-pilotdeck
+IC_BRANCH=metax/qwen38-pilotdeck
 PIN_DATE=2026-09-08T07:10:02Z
+NOTE=InfiniCore MetaX MACA3.8 flash ABI (INFINICORE_HPCC_VERSION_MAJOR=3) + spdlog/nlohmann; InfiniLM feat/pilotdeck qwen3_5 + openai_protocol; serve Qwen3.8-27B GPUs 2,3 tp=2
+MODEL=Qwen3.8-27B
+MODEL_PATH=/home/metax/Downloads/Qwen3.8-27B

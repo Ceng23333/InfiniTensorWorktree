@@ -62,6 +62,9 @@ git add MANIFEST \
   scripts/worktree_env.sh \
   scripts/pin_worktree.sh \
   scripts/release.sh \
+  scripts/build_metax_infinicore.sh \
+  scripts/run_pilotdeck_server.sh \
+  scripts/run_qwen38_vllm.sh \
   README.md \
   2>/dev/null || true
 
