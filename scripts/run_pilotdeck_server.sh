@@ -5,7 +5,7 @@ export INFINI_ROOT=/root/.infini
 export REPO=/home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree
 export MACA_VISIBLE_DEVICES="${MACA_VISIBLE_DEVICES:-2,3}"
 export PYTHONPATH=$REPO/InfiniLM/python:$REPO/InfiniCore/python
-export LD_LIBRARY_PATH=$INFINI_ROOT/lib:/opt/maca/lib:/opt/maca/lib64:/opt/maca/ompi/lib:/opt/maca/ucx/lib:/opt/mxdriver/lib:/opt/conda/lib/python3.10/site-packages:/opt/conda/lib/python3.10/site-packages/torch/lib:${LD_LIBRARY_PATH:-}
+export LD_LIBRARY_PATH=$INFINI_ROOT/lib:$REPO/InfiniCore/python/infinicore/lib:$REPO/InfiniLM/python/infinilm/lib:/opt/maca/lib:/opt/maca/lib64:/opt/maca/ompi/lib:/opt/maca/ucx/lib:/opt/mxdriver/lib:/opt/conda/lib/python3.10/site-packages:/opt/conda/lib/python3.10/site-packages/torch/lib:${LD_LIBRARY_PATH:-}
 export MACA_PATH=/opt/maca
 
 MODEL="${MODEL:-/home/metax/Downloads/Qwen3.8-27B}"
