@@ -1,6 +1,10 @@
-ITW_SHA=58a4f5ea76848d76aa222a58249f5c6f67ebc06a
-IC_SHA=2a83578bff5ea84bc1ee9b20e371eb34f3f7128e
-IL_SHA=9439ea601614f7f78b63bd47314fc52f07eaea96
+ITW_SHA=c8506ee1886713647baa54c11be7eac0d6db8ba8
+IC_SHA=19a92e1bc21405afe682ef21d715b5f0a2186241
+IL_SHA=f71ddbef96d326babe0892c9d67316f4c1ac61ff
+IC_UPSTREAM_SHA=19a92e1b
+IL_UPSTREAM_SHA=e762f2a90d28912117a024fa0e604e8dd4165964
 IC_URL=https://github.com/InfiniTensor/InfiniCore.git
 IL_URL=https://github.com/InfiniTensor/InfiniLM.git
-PIN_DATE=2026-08-18T08:40:00Z
+IL_BRANCH=feat/pilotdeck
+PIN_DATE=2026-09-08T03:37:36Z
+NOTE=InfiniLM from codeload feat/pilotdeck (upstream e762f2a90d28912117a024fa0e604e8dd4165964); InfiniCore from local 19a92e1b MetaX flash-attn (MANIFEST pin 2a83578 was submodule-only tree)
