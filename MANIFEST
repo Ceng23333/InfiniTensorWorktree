@@ -1,4 +1,4 @@
-ITW_SHA=74d2ec904bf4b66336076a3804a3f27c5d9d48f1
+ITW_SHA=c4df7e1dffec08c799034149439d95d0949ffdca
 IC_SHA=f25248bb2b6574abdd99a43c2a1dbb4fb2745575
 IL_SHA=e762f2a90d28912117a024fa0e604e8dd4165964
 IC_UPSTREAM_SHA=a81b18fe6d88f835b35e34801300966741ff423f
@@ -8,7 +8,7 @@ IL_URL=https://github.com/InfiniTensor/InfiniLM.git
 IL_BRANCH=metax/from-upstream-pilotdeck
 IC_BRANCH=metax/from-upstream-main
 IC_METAX_PATCHES=afe9826e532ac1d96a22b763dd53b3b0813a3981,f25248bb2b6574abdd99a43c2a1dbb4fb2745575
-PIN_DATE=2026-09-08T09:05:26Z
+PIN_DATE=2026-09-08T09:06:37Z
 NOTE=Rebased on InfiniTensor IC main + IL feat/pilotdeck; thin MetaX MACA3.8 patches on IC; text smoke green 2026-09-08; see InfiniLM-Qwen3.8-27B-Deep-Validation.md
 MODEL=Qwen3.8-27B
 MODEL_PATH=/home/metax/Downloads/Qwen3.8-27B
