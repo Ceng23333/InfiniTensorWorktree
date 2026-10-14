@@ -7,11 +7,13 @@ ITW branch: `adapt/g9v3-39a5b-metax`
 | Component | Ref | SHA |
 |-----------|-----|-----|
 | InfiniCore | `adapt/g9v3-39a5b-metax` (from `v0.2.9`) | `e12f34b69f3403ecdecb889dcf7e5b6c4a26f54d` |
-| InfiniLM | `adapt/g9v3-39a5b` (from `origin/main`) | `51ff3a8a0d950fda3fa8edb032663479a9f4caeb` |
+| InfiniLM | `adapt/g9v3-39a5b` (from `origin/main`) | `b0093891e6b32dd481babf467115cd479e01e42b` |
 
 Reference for G9 MoE (`minicpm5_moe`): ITW tag `v2026.09.23-qy-minicpm5-16a3` / IL `67c41a74`.
 
 HF `model_type: g9v3` is aliased to `MiniCPM5MoEForCausalLM` (same as `minicpm5_moe`).
+
+Tokenizer: G9v3 uses `PreTrainedTokenizerFast` + `tokenizer.json` (not SentencePiece). Processor is `BasicLLMProcessor` via `@register_processor("g9v3")`.
 
 ## Weights
 
