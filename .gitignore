@@ -5,3 +5,6 @@
 **/*.pyc
 **/.pytest_cache/
 **/*.egg-info/
+.infini/
+_xmake_pkgs/
+g9v3_*.log
