@@ -1,6 +1,6 @@
 # Develop this pin on Denglin QY (dl-vllm)
 
-ITW tag: `v2026.10.13-qy-minicpm5-16a3-fa-longctx-cudagraph` (pending Phase 3 green)
+ITW tag: `v2026.10.13-qy-minicpm5-16a3-fa-longctx-cudagraph`
 
 Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`, Ops `da91f73` longctx kernels), InfiniLM `fdc1a40…` (`feat/qy-backend-build`, cudagraph FA + longctx C1–C3 MoE/RoPE + capture-unsafe RoPE/MulScalar).
 
@@ -35,4 +35,4 @@ python3 scripts/build_infini_stack.py \
 
 ## Release gate
 
-Graph-on smoke + EvalScope mixed-4096 P1/N10 EXIT=0 / 100% / no OOR. Do not require TTFT ≤26 s. Skip LB@7k.
+Graph-on smoke + EvalScope mixed-4096 P1/N10 EXIT=0 / 100% / no OOR (verified 2026-10-15). Do not require TTFT ≤26 s. Skip LB@7k.
