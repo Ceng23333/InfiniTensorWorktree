@@ -1,10 +1,8 @@
 # Develop this pin on Denglin QY (dl-vllm)
 
-ITW tag: `v2026.10.13-qy-minicpm5-16a3-fa-longctx-cudagraph`
+ITW tag: `v2026.10.13-qy-minicpm5-16a3-fa-longctx-cudagraph` (base) + local full_and_piecewise capture-safe promotion.
 
-Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`, Ops `da91f73` longctx kernels), InfiniLM `fdc1a40…` (`feat/qy-backend-build`, cudagraph FA + longctx C1–C3 MoE/RoPE + capture-unsafe RoPE/MulScalar).
-
-Based on cudagraph `v2026.10.10-qy-minicpm5-cudagraph` @ `c0bc441` merged with longctx adapting-lane GPU promotions.
+Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`), InfiniLM `fdc1a40…` lineage with MoE/RoPE/MulScalar **capture-safe**, `INFINI_CUDAGRAPH_POLICY`, `INFINI_GRAPH_RUN_PROFILE`.
 
 ## Image
 
@@ -14,10 +12,20 @@ Reuse unify image `dl-vllm-minicpm5-2b-qy:v2026.09.15`.
 
 DUT: `minicpm5-16a3-qy-inf--post-refactor-longctx` port **18184** / device **3**.
 
-Defaults: `ENABLE_GRAPH=1`, FA+paged, `MAX_CACHE_LEN=8192`,
-`INFINICORE_DISABLE_DEVICE_GRAPH_SEGMENTS=1` (documented eager-fallback: MoE/RoPE QY pack paths are not Denglin device-graph capture-safe; FA/gemm recording still enabled via `--enable-graph`).
+Defaults: `ENABLE_GRAPH=1`, `INFINI_CUDAGRAPH_POLICY=full_and_piecewise`, FA+paged, `MAX_CACHE_LEN=8192`.
+Kill-switch: `INFINICORE_DISABLE_DEVICE_GRAPH_SEGMENTS=1`. Profile: `INFINI_GRAPH_RUN_PROFILE=1`, `INFINICORE_GRAPH_DEBUG=1`.
 
-Install: `InfiniCore-v20261009-post-refactor-longctx-install`.
+Install: `InfiniCore-v20261009-post-refactor-prhead-install`.
+
+## CUDA graph policy
+
+| `INFINI_CUDAGRAPH_POLICY` | Behavior |
+|---------------------------|----------|
+| `eager` | Record ops; replay op-list only (no device segments) |
+| `full_and_piecewise` | Segment by `is_device_graph_capture_safe`; capture/replay device segments |
+| empty / unknown | Legacy: enable segments unless `INFINICORE_DISABLE_DEVICE_GRAPH_SEGMENTS` is set |
+
+MoE (`MoeFusedDense` / `MoeAlign*` / `MoeTopkSigmoid`), `RoPE`, and `MulScalar` are capture-safe (vLLM / pre-refactor proven); impls skip `cudaStreamSynchronize` while capturing.
 
 ## Build (QY toolchain)
 
@@ -28,11 +36,14 @@ cd InfiniLM
 python3 scripts/build_infini_stack.py \
   --backend qy \
   --infinicore-root ../InfiniCore \
-  --build-root ../../InfiniCore-v20261009-post-refactor-longctx-install/build \
+  --build-root ../../InfiniCore-v20261009-post-refactor-prhead-install/build \
   --allow-dirty-submodules \
   --test
 ```
 
 ## Release gate
 
-Graph-on smoke + EvalScope mixed-4096 P1/N10 EXIT=0 / 100% / no OOR (verified 2026-10-15). Do not require TTFT ≤26 s. Skip LB@7k.
+Graph-on smoke + EvalScope mixed-4096 P1/N10 EXIT=0 / 100% / no OOR.
+Expect decode `segmented graph: … host_segments≈0` / `segments≈1` with `INFINICORE_GRAPH_DEBUG=1`.
+Do not require TTFT ≤26 s. Skip LB@7k.
+See InfiniOrchestrator `playground/Standalone/minicpm5-16a3-qy-inf--post-refactor-longctx/PROFILE_MATRIX.md`.
