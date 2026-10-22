@@ -1,6 +1,6 @@
 # Develop this pin on Denglin QY (dl-vllm)
 
-ITW tag: `v2026.10.21-qy-minicpm5-2b-full-piecewise`.
+ITW tag: `v2026.10.22-qy-minicpm5-2b-full-piecewise`.
 
 Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`), InfiniLM `b253606…` (`feat/qy-backend-build`: MoE/RoPE/MulScalar **capture-safe**, `INFINI_CUDAGRAPH_POLICY`, `INFINI_GRAPH_RUN_PROFILE`).
 
