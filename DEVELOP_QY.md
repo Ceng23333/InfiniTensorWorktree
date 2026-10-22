@@ -38,8 +38,16 @@ With CB+chunk, long prompts are multi-step ≤ capture max so prefill hits **PIE
 |-----|----------|---------|---------|
 | Eager+CB@512 | 4410.8 ms | 89.87 ms | `…_161952` |
 | F&P+CB@512 skip-mid | 5031.5 ms | 83.06 ms | `…_163736` |
+| Graph-off no-CB | 5056.16 ms | 111.37 ms | `…_173052` |
 
-F&P TTFT may lose vs eager — accepted when EXIT=0 and graphs are live. Primary headline matrix is **PARALLEL=4** EvalScope + Layer B LIMIT=59 / concurrency=4.
+## Measured PARALLEL=4 (primary; MAX_BATCH=4, N10)
+
+| Arm | Avg TTFT | p50 TTFT | Avg ITL | Out toks | EXIT |
+|-----|----------|----------|---------|----------|------|
+| E4 eager+CB@512 | 14534.59 ms | 9539.3 ms | 308.04 ms | 1027.5 | 10/10 |
+| F4 F&P+CB@512 skip-mid | 15800.83 ms | 12287.38 ms | 335.12 ms | 1026.8 | 10/10 |
+
+F4 TTFT may lose vs E4 — accepted when EXIT=0 and graphs are live. See playground `MILESTONE_2026.10.23.md`.
 
 ## Build (QY toolchain)
 
