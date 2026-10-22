@@ -2,7 +2,7 @@
 
 ITW tag: `v2026.10.23-qy-minicpm5-2b-full-piecewise` (supersedes `v2026.10.22-…`).
 
-Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`), InfiniLM `5d5419e…` (`feat/qy-backend-build`: F&P capture-safe MoE/RoPE/MulScalar + **V1 continuous batching + chunked prefill**).
+Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`), InfiniLM `9aa4fae…` (`feat/qy-backend-build`: F&P capture-safe MoE/RoPE/MulScalar + **V1 continuous batching + chunked prefill**).
 
 ## Image
 
