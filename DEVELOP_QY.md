@@ -2,7 +2,7 @@
 
 ITW tag: `v2026.10.23-qy-minicpm5-2b-full-piecewise` (supersedes `v2026.10.22-…`).
 
-Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`), InfiniLM `4976b59…` (`feat/qy-backend-build`: F&P capture-safe MoE/RoPE/MulScalar + **V1 continuous batching + chunked prefill**).
+Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`), InfiniLM `4976b59…` on branch HEAD (`feat/qy-backend-build`: F&P + **V1 CB + chunk**; tag freeze `5d5419e`).
 
 ## Image
 
@@ -48,6 +48,16 @@ With CB+chunk, long prompts are multi-step ≤ capture max so prefill hits **PIE
 | F4 F&P+CB@512 skip-mid | 15800.83 ms | 12287.38 ms | 335.12 ms | 1026.8 | 10/10 |
 
 F4 TTFT may lose vs E4 — accepted when EXIT=0 and graphs are live. See playground `MILESTONE_2026.10.23.md`.
+
+## Layer B (LIMIT=59, concurrency=4) — merged
+
+| Backend | Sample EM | Status |
+|---------|-----------|--------|
+| infinilm F&P+CB | 6/59 (10.2%) | passed |
+| infinilm_eager+CB | 4/59 (6.8%) | passed |
+| vllm | 15/59 (25.4%) | passed |
+
+Merged: `longbench_task_merged_20261022_183116/summary.json`.
 
 ## Build (QY toolchain)
 
