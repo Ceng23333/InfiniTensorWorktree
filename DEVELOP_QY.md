@@ -1,8 +1,8 @@
 # Develop this pin on dl QY (dl-vllm)
 
-ITW tag: `v2026.10.23-qy-minicpm5-2b-full-piecewise` (supersedes `v2026.10.22-…`).
+ITW tag: `v2026.10.23-qy-minicpm5-2b-batch-sample-fix` (supersedes `v2026.10.23-qy-minicpm5-2b-full-piecewise`).
 
-Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`), InfiniLM `4976b59…` on branch HEAD (`feat/qy-backend-build`: F&P + **V1 CB + chunk**; tag freeze `5d5419e`).
+Pins: InfiniCore `82dcc1f…` (`feat/qy-submodules`), InfiniLM `56f9b50…` on branch HEAD (`feat/qy-backend-build`: F&P + V1 CB + chunk; **QY batch_greedy disabled for n_out>1**, `%vocab` soft-map removed).
 
 ## Image
 
