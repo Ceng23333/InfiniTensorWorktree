@@ -5,3 +5,6 @@
 **/*.pyc
 **/.pytest_cache/
 **/*.egg-info/
+
+# Profiling evidence remains local; snapshots publish source and documentation.
+profiling/**/results/

@@ -80,3 +80,11 @@ Primary: EvalScope mixed-4096 **PARALLEL=4** / N10 on 2B — EXIT=0 / 100% / no 
 Also: Layer B LongBench `short_easy_cot` LIMIT=59 concurrency=4 (3 backends); graph-on smoke; prompt > 512 shows multi-step chunk + PIECEWISE.
 
 See InfiniOrchestrator `playground/Standalone/minicpm5-2b-qy-inf--post-refactor/PROFILE_MATRIX.md`.
+
+## Local LongBench correctness follow-up
+
+See [LONGBENCH_EM_2026.10.23.md](LONGBENCH_EM_2026.10.23.md) for the QY
+sampling operator correction, chunked-prefill KV slot overwrite fix, rebuilt
+binary provenance, and retained diagnostic results. The historical Layer B
+scores above are not post-fix quality results. These follow-up changes are local
+and have not been published as a new release.
