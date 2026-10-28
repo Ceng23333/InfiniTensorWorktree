@@ -1,0 +1,10 @@
+build/
+.xmake/
+install/
+logs/
+.profile_mctracer/
+__pycache__/
+*.so
+*.so.*
+*.pyc
+*.bak*
