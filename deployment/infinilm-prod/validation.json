@@ -1,0 +1,48 @@
+{
+  "tool_smoke_passed": true,
+  "cases": [
+    {
+      "name": "bash",
+      "passed": true,
+      "seconds": 22.840541850950103,
+      "arguments_nonempty": true,
+      "tools_completed": true,
+      "proof_visible_in_tool_result": true
+    },
+    {
+      "name": "write_read",
+      "passed": true,
+      "seconds": 32.285935051040724,
+      "arguments_nonempty": true,
+      "tools_completed": true,
+      "proof_visible_in_tool_result": true
+    }
+  ],
+  "outline_regression": {
+    "passed": true,
+    "session_id": "web:s_36e3eb6c-e8b7-484a-a320-b400a005ada4",
+    "tool_names": [
+      "Write"
+    ],
+    "errors": 0,
+    "bytes": 6296,
+    "file_sha256": "e06ccb7782c2c1a4650975171835c5fb5cd0ab4e08554ebbb3f4b3900e1fd871",
+    "usage": {
+      "inputTokens": 24590,
+      "outputTokens": 2063,
+      "totalTokens": 26653
+    },
+    "completed_at": "2026-10-29T07:53:23.644Z",
+    "matches_written_arguments": true
+  },
+  "prefill_slot_tests": {
+    "passed": 4,
+    "failed_before_fix": 2
+  },
+  "graph_parity_before_slot_fix": {
+    "paired_requests": 13,
+    "passed": 13
+  },
+  "graph_enabled": true,
+  "prefix_caching": false
+}

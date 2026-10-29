@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-29T16:10:31.078933+08:00",
+  "docker_boot_enabled": true,
+  "containers": {
+    "pilotdeck-infinilm-prod": {
+      "running": true,
+      "restart": "unless-stopped",
+      "image": "sha256:d92545d02ac8270090f5fee09e276b768504cf7f5c8b7fc983376b336ac8f70e"
+    },
+    "pilotdeck-pilotdeck-1": {
+      "running": true,
+      "restart": "unless-stopped",
+      "image": "sha256:2669eb1ea5267eb71437514b1863fce8efe9a54949160677445c7e5b1f40689a"
+    },
+    "pilotdeck-infinilm-vllm": {
+      "running": false,
+      "restart": "no",
+      "image": "sha256:9f3c40239f9f41e07c298a3215702d84b8a64e90ca62c5234487fbccef8832ad"
+    },
+    "vllm-perf-loop": {
+      "running": false,
+      "restart": "no",
+      "image": "sha256:9f3c40239f9f41e07c298a3215702d84b8a64e90ca62c5234487fbccef8832ad"
+    }
+  },
+  "backend_http_status": 200,
+  "pilotdeck_http_status": 200
+}

@@ -15,7 +15,7 @@ fi
 cd "$REPO/InfiniLM"
 exec /opt/conda/bin/python python/infinilm/server/inference_server.py \
   --device=metax --model="$MODEL" --tp="$TP" \
-  --max-new-tokens="${MAX_NEW_TOKENS:-2048}" --max-batch-size="$MAX_BATCH" \
+  --max-new-tokens="${MAX_NEW_TOKENS:-4096}" --max-batch-size="$MAX_BATCH" \
   --num-blocks="$NUM_BLOCKS" --block-size="$BLOCK_SIZE" \
   --enable-paged-attn --attn=flash-attn \
   --disable-prefix-caching \

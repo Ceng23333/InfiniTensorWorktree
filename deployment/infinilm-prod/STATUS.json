@@ -1,0 +1,35 @@
+{
+  "status": "deployed",
+  "checked_at": "2026-10-29T15:57:15.868539+08:00",
+  "image_tag": "pilotdeck-infinilm:promoted-tool-fix-20261029",
+  "image_id": "sha256:d92545d02ac8270090f5fee09e276b768504cf7f5c8b7fc983376b336ac8f70e",
+  "container": "pilotdeck-infinilm-prod",
+  "graph_enabled": true,
+  "device_segments_per_rank": 17,
+  "chunked_prefill": true,
+  "prefill_chunk_size": 2048,
+  "unit_tests_passed": 4,
+  "tool_smoke_passed": true,
+  "tool_smoke": "validation.json",
+  "outline_regression": {
+    "passed": true,
+    "session_id": "web:s_36e3eb6c-e8b7-484a-a320-b400a005ada4",
+    "tool_names": [
+      "Write"
+    ],
+    "errors": 0,
+    "bytes": 6296,
+    "file_sha256": "e06ccb7782c2c1a4650975171835c5fb5cd0ab4e08554ebbb3f4b3900e1fd871",
+    "usage": {
+      "inputTokens": 24590,
+      "outputTokens": 2063,
+      "totalTokens": 26653
+    },
+    "completed_at": "2026-10-29T07:53:23.644Z",
+    "matches_written_arguments": true
+  },
+  "backend_healthy": true,
+  "restarts": 0,
+  "processor_sha256": "0d42ce3207617a0cee63c556bd00338750fc9ce4c949173c0c5a4a468b201ada",
+  "deployment_note": "Historical deployment verification, not a live health probe."
+}

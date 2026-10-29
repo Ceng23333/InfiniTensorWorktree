@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "libraries": [
+    {
+      "path": "/opt/pilotdeck-infinilm/InfiniLM/python/infinicore/lib/_infinicore.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "d9a88b43a2233558d16121fa223ea759e9271a59a7d31a543bff2d25e6763c4e",
+      "matches_manifest": true
+    },
+    {
+      "path": "/opt/pilotdeck-infinilm/InfiniLM/python/infinilm/lib/_infinilm.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "824c1a1ab05d69256b50378e421ddc0689c6d42cbc7091288418a34d2ddb199f",
+      "matches_manifest": true
+    },
+    {
+      "path": "/opt/pilotdeck-infinilm/install/lib/libinfiniccl.so",
+      "sha256": "a7c24c59cc240fc20ee8a112eecb573e5db3ccb9c27a399173127b2045ffa6c7",
+      "matches_manifest": true
+    },
+    {
+      "path": "/opt/pilotdeck-infinilm/install/lib/libinfinicore_runtime.so",
+      "sha256": "e6bdd2803aa4cb24afe8b2d3df5e8371b659569565101904898806691a395e6e",
+      "matches_manifest": true
+    },
+    {
+      "path": "/opt/pilotdeck-infinilm/install/lib/libinfinilm_metax_extra.so",
+      "sha256": "1f04c7cb74a0d916e79e167ba7fc262ad9c25231584041410dafef50da31d072",
+      "matches_manifest": true
+    },
+    {
+      "path": "/opt/pilotdeck-infinilm/install/lib/libinfiniops.so",
+      "sha256": "cd025d2ba56c91838204ff22a0af95b11b28cc87fa22086030cebfd71c521e3d",
+      "matches_manifest": true
+    },
+    {
+      "path": "/opt/pilotdeck-infinilm/install/lib/libinfinirt.so",
+      "sha256": "1727c75184d28acd891a11588cf2b8bc71ea16b2af1baf0bcd6850c428a92530",
+      "matches_manifest": true
+    },
+    {
+      "path": "/opt/pilotdeck-infinilm/install/lib/libkmpc_stub.so",
+      "sha256": "7d225ef3aee0cc3d4c19f57bf61810b7f914c97895e82468229d7857a7e3681e",
+      "matches_manifest": true
+    }
+  ]
+}

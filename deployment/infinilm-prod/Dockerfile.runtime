@@ -1,0 +1,14 @@
+# Packages an existing validated install; this is not a fresh source build.
+FROM pilotdeck-infinilm:with-deps
+WORKDIR /opt/pilotdeck-infinilm
+COPY install/ install/
+COPY InfiniLM/python/ InfiniLM/python/
+COPY scripts/runtime_env.sh scripts/run_server.sh scripts/
+COPY deployment/infinilm-prod/production-runtime-manifest.json MANIFEST.json
+ENV ENABLE_GRAPH=1 INFINI_CUDAGRAPH_POLICY=legacy INFINI_PREFILL_NATIVE_CG=0 INFINI_FA_INGRAPH=decode \
+    INFINI_PREFILL_CHUNKED=1 INFINI_MAX_NUM_BATCHED_TOKENS=2048 INFINI_ENABLE_THINKING=0 \
+    MODEL=/models/Qwen3.8-27B TP=4 MAX_BATCH=1 MAX_NEW_TOKENS=4096 NUM_BLOCKS=512 BLOCK_SIZE=256 PORT=8000
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=300s --retries=3 CMD /opt/conda/bin/python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=3)"
+ENTRYPOINT ["bash", "/opt/pilotdeck-infinilm/scripts/run_server.sh"]
+CMD []
