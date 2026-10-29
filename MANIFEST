@@ -1,6 +1,9 @@
-ITW_SHA=02d5f55dba98206ec0791b813ee2121f7fbcfb0b
+ITW_BASE_SHA=406801d5f268defeda2236b4b4ee6ddb36fa5128
 IC_SHA=82dcc1f932e1151438ae2432f48c92bc678debb7
-IL_SHA=20e63e3c6255da61ba42e8615587501f1e5067ac
+IL_SHA=086f27a799c23f46df3972f184122ebb8580c8c7
 IC_URL=https://github.com/Ceng23333/InfiniCore.git
 IL_URL=https://github.com/Ceng23333/InfiniLM.git
-PIN_DATE=2026-10-27T09:52:37Z
+EXPERIMENT_BRANCH=perf/qwen38-mccl-profile-20261029
+INFINIOPS_BASE_SHA=da91f734b27b7dd1df92746157c5f3d0e72d6ef2
+INFINIOPS_OVERLAY=experiments/perf_mccl_20261028/infiniops-compatibility.patch
+STATUS=experimental_not_promoted

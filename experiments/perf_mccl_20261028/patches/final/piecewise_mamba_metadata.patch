@@ -1,0 +1,23 @@
+diff --git a/InfiniLM/csrc/engine/compiler/piecewise_prefill_compiler.cpp b/InfiniLM/csrc/engine/compiler/piecewise_prefill_compiler.cpp
+index 54cab58..2a69b8e 100644
+--- a/InfiniLM/csrc/engine/compiler/piecewise_prefill_compiler.cpp
++++ b/InfiniLM/csrc/engine/compiler/piecewise_prefill_compiler.cpp
+@@ -318,6 +318,18 @@ void set_attn_metadata(const InfinilmModel::Input &input) {
+ void set_attn_metadata_for_varlen_batch(const InfinilmModel::Input &compiled,
+                                         const InfinilmModel::Input &runtime) {
+     attn_metadata_utils::set_attn_metadata_for_varlen_batch(compiled, runtime);
++    // to_model_input(cpu) replaces the thread-local Mamba metadata. Rebind it
++    // to the updated device buffers, just as we do for attention metadata.
++    if (compiled.mamba_init_state_indices.has_value()) {
++        const size_t n = runtime.block_tables.value()->size(0);
++        auto &fwd = infinilm::global_state::get_forward_context();
++        fwd.mamba_metadata = {
++            compiled.input_offsets.value()->narrow({{0, 0, n + 1}}),
++            compiled.mamba_init_state_indices.value()->narrow({{0, 0, n}}),
++            compiled.mamba_final_state_indices.value()->narrow({{0, 0, n}}),
++        };
++    }
++
+ }
+ 
+ void zero_tensor_tail_seq_(infinicore::Tensor &tensor, size_t valid_len, size_t bucket) {

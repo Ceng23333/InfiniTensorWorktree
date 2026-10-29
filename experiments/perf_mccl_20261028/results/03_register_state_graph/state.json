@@ -1,0 +1,19 @@
+{
+  "name": "03_register_state_graph",
+  "env": {
+    "INFINI_CUDAGRAPH_POLICY": "full_and_piecewise",
+    "INFINI_DECODE_CG_TP": "1",
+    "INFINI_FA_INGRAPH": "decode",
+    "LD_PRELOAD": "/perf/tools/libcgdr_register.so",
+    "INFINICORE_GRAPH_DEBUG": "1"
+  },
+  "phase": "failed",
+  "started_ns": 1793192844439115884,
+  "ok": false,
+  "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+  "source_diff_sha256": "810655511cb276cce092e567468b4f7d477d66cd51c993204f8cbfcf602cf509",
+  "decode_tok_s": 4.897141492588959,
+  "prefill_ttft_s": 12.03743077701074,
+  "correctness_ok": false,
+  "error": "server exited during startup"
+}

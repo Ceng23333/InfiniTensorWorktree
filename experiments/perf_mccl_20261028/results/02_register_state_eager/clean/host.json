@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "start_ns": 1793192580877350285,
+      "end_ns": 1793192581812051091,
+      "elapsed_s": 0.9346938689996023,
+      "ttft_s": null,
+      "tok_s": 5.349345027106546,
+      "prompt_tokens": 30,
+      "completion_tokens": 5,
+      "total_tokens": 35,
+      "text": "It space-tr at",
+      "workload": "decode_micro",
+      "warmup": true
+    },
+    {
+      "start_ns": 1793192581813228799,
+      "end_ns": 1793192591385230776,
+      "elapsed_s": 9.57199677999597,
+      "ttft_s": null,
+      "tok_s": 6.686170239186702,
+      "prompt_tokens": 30,
+      "completion_tokens": 64,
+      "total_tokens": 94,
+      "text": "It the: once other///////////////////////////////////////////////data/data/data/data/data/data-data/data/data/data/text/text",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793192591386004028,
+      "end_ns": 1793192601114856441,
+      "elapsed_s": 9.728845613979502,
+      "ttft_s": null,
+      "tok_s": 6.578375538001918,
+      "prompt_tokens": 30,
+      "completion_tokens": 64,
+      "total_tokens": 94,
+      "text": "It/code\n-play-b//w/(/b/b//data/data/data/data/data/data//data/data///////////////////////////////////////text/text/text/text/text",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793192601115711671,
+      "end_ns": 1793192611323363260,
+      "elapsed_s": 10.207645009999396,
+      "ttft_s": null,
+      "tok_s": 6.269810513326598,
+      "prompt_tokens": 30,
+      "completion_tokens": 64,
+      "total_tokens": 94,
+      "text": "It/B\n-play/b\n/(//b/b///data/data/data/data/data///////data////////////////////////////////////text/text/text/text",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793192611324617051,
+      "end_ns": 1793192619919070128,
+      "elapsed_s": 8.59444621502189,
+      "ttft_s": 8.234539541008417,
+      "tok_s": 0.34906263009202615,
+      "prompt_tokens": 10718,
+      "completion_tokens": 3,
+      "total_tokens": 10721,
+      "text": "I-the",
+      "workload": "prefill_12k",
+      "warmup": false
+    }
+  ]
+}

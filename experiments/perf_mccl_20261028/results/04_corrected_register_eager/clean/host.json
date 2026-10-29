@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "start_ns": 1793193737650879146,
+      "end_ns": 1793193740995489392,
+      "elapsed_s": 3.3446036579844076,
+      "ttft_s": null,
+      "tok_s": 4.185847242790185,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": true
+    },
+    {
+      "start_ns": 1793193740996056814,
+      "end_ns": 1793193743756090532,
+      "elapsed_s": 2.760028008982772,
+      "ttft_s": null,
+      "tok_s": 5.07241229235199,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793193743756794360,
+      "end_ns": 1793193746563680997,
+      "elapsed_s": 2.806880641990574,
+      "ttft_s": null,
+      "tok_s": 4.9877432586771935,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793193746564428562,
+      "end_ns": 1793193749465068137,
+      "elapsed_s": 2.9006336540041957,
+      "ttft_s": null,
+      "tok_s": 4.826531603077012,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793193749466301367,
+      "end_ns": 1793193758138169592,
+      "elapsed_s": 8.671862196002621,
+      "ttft_s": 8.232874462002655,
+      "tok_s": 0.34594645673484975,
+      "prompt_tokens": 10718,
+      "completion_tokens": 3,
+      "total_tokens": 10721,
+      "text": "Confirmed.",
+      "workload": "prefill_12k",
+      "warmup": false
+    }
+  ]
+}

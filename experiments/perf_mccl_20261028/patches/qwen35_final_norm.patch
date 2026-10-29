@@ -1,0 +1,20 @@
+--- a/InfiniLM/python/infinilm/modeling_utils.py
++++ b/InfiniLM/python/infinilm/modeling_utils.py
+@@ -785,7 +785,7 @@
+     to_drop = []
+     to_add = {}
+     for key, tensor in state_dict.items():
+-        if key == "model.norm.weight" or key.endswith(norm_weight_suffixes):
++        if key in ("model.norm.weight", "model.language_model.norm.weight") or key.endswith(norm_weight_suffixes):
+             state_dict[key] = tensor + torch.ones_like(tensor)
+         elif key.endswith("linear_attn.in_proj_qkv.weight"):
+             prefix = key[: -len("in_proj_qkv.weight")]
+@@ -964,7 +964,7 @@
+     to_drop = []
+     to_add = {}
+     for key, tensor in state_dict.items():
+-        if key == "model.norm.weight" or key.endswith(norm_weight_suffixes):
++        if key in ("model.norm.weight", "model.language_model.norm.weight") or key.endswith(norm_weight_suffixes):
+             state_dict[key] = tensor + torch.ones_like(tensor)
+         elif key.endswith("linear_attn.in_proj_qkvz.weight"):
+             prefix = key[: -len("in_proj_qkvz.weight")]

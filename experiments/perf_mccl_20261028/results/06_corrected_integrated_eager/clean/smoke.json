@@ -1,0 +1,33 @@
+{
+  "ok": false,
+  "results": [
+    {
+      "start_ns": 1793194919110983345,
+      "end_ns": 1793194919595168419,
+      "elapsed_s": 0.48417965800035745,
+      "ttft_s": null,
+      "tok_s": 4.130698113712418,
+      "prompt_tokens": 26,
+      "completion_tokens": 2,
+      "total_tokens": 28,
+      "text": "2",
+      "workload": "correctness_smoke",
+      "expected": "4",
+      "pass": false
+    },
+    {
+      "start_ns": 1793194919595353864,
+      "end_ns": 1793194920062628776,
+      "elapsed_s": 0.46726961198146455,
+      "ttft_s": null,
+      "tok_s": 4.2801841778646095,
+      "prompt_tokens": 25,
+      "completion_tokens": 2,
+      "total_tokens": 27,
+      "text": "Paris",
+      "workload": "correctness_smoke",
+      "expected": "Paris",
+      "pass": true
+    }
+  ]
+}

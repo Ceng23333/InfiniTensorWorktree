@@ -1,0 +1,13 @@
+--- a/scripts/runtime_env.sh
++++ b/scripts/runtime_env.sh
+@@ -9,8 +9,8 @@
+ export LD_LIBRARY_PATH="$INFINI_ROOT/lib:$INFINI_ROOT/lib64:/opt/conda/lib/python3.10/site-packages/torch/lib:$MACA_PATH/lib:$MACA_PATH/lib64:$MACA_PATH/ompi/lib:$MACA_PATH/ucx/lib:/opt/mxdriver/lib:${LD_LIBRARY_PATH:-}"
+ export PYTHONPATH="$REPO/InfiniLM/python:${PYTHONPATH:-}"
+ # F&P defaults (product)
+-export ENABLE_GRAPH=1
+-export INFINI_CUDAGRAPH_POLICY=eager
++export ENABLE_GRAPH=${ENABLE_GRAPH:-1}
++export INFINI_CUDAGRAPH_POLICY=${INFINI_CUDAGRAPH_POLICY:-eager}
+ export INFINI_V1_SCHEDULER="${INFINI_V1_SCHEDULER:-1}"
+ export INFINI_PREFILL_CHUNKED="${INFINI_PREFILL_CHUNKED:-1}"
+ export INFINI_NATIVE_CG_SKIP_MID_CAPTURE="${INFINI_NATIVE_CG_SKIP_MID_CAPTURE:-1}"

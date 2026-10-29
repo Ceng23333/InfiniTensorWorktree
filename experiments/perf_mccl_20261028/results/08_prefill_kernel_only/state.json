@@ -1,0 +1,7 @@
+{
+  "phase": "failed",
+  "ok": false,
+  "execution": "eager",
+  "capture_workload": "prefill_12k_only",
+  "error": "incomplete response: done=False, text='', usage={}, ttft=None"
+}

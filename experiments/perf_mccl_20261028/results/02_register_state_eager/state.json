@@ -1,0 +1,16 @@
+{
+  "name": "02_register_state_eager",
+  "env": {
+    "INFINI_CUDAGRAPH_POLICY": "eager",
+    "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+  },
+  "phase": "failed",
+  "started_ns": 1793192352006648247,
+  "ok": false,
+  "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+  "source_diff_sha256": "c19e0bb02ae093d1381f02ab4bfa4ffb063105ae2be445c18b6c50b940c126f6",
+  "decode_tok_s": 6.578375538001918,
+  "prefill_ttft_s": 8.234539541008417,
+  "correctness_ok": false,
+  "error": "server exited during startup"
+}

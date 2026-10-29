@@ -1,0 +1,60 @@
+{
+  "traceEvents": [
+    {
+      "cat": "__metadata",
+      "ph": "M",
+      "name": "process_name",
+      "pid": 2,
+      "args": { "name": "C500", "version": "0.0.1" }
+    },
+    {
+      "name": "mcLaunchKernel",
+      "ph": "X",
+      "pid": 1,
+      "tid": 1,
+      "ts": 1000,
+      "dur": 2000
+    },
+    {
+      "name": "flash_fwd_kernel",
+      "ph": "X",
+      "pid": 2,
+      "tid": 1,
+      "ts": 3000,
+      "dur": 50000
+    },
+    {
+      "name": "flash_fwd_splitkv_combine_kernel",
+      "ph": "X",
+      "pid": 2,
+      "tid": 1,
+      "ts": 54000,
+      "dur": 10000
+    },
+    {
+      "name": "gemm_fp16",
+      "ph": "X",
+      "pid": 258,
+      "tid": 2,
+      "ts": 65000,
+      "dur": 20000
+    },
+    {
+      "name": "memcpy_dtoh",
+      "ph": "X",
+      "pid": 3,
+      "tid": 1,
+      "ts": 90000,
+      "dur": 4000,
+      "args": { "bytes": 4096 }
+    },
+    {
+      "name": "tx_sync",
+      "ph": "X",
+      "pid": 5,
+      "tid": 1,
+      "ts": 95000,
+      "dur": 1500
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+[
+  {
+    "name": "01_graph_metadata_fixed",
+    "env": {
+      "INFINI_CUDAGRAPH_POLICY": "full_and_piecewise",
+      "INFINI_DECODE_CG_TP": "1",
+      "INFINI_FA_INGRAPH": "decode"
+    },
+    "phase": "failed",
+    "started_ns": 1793192179757294809,
+    "ok": false,
+    "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+    "source_diff_sha256": "c19e0bb02ae093d1381f02ab4bfa4ffb063105ae2be445c18b6c50b940c126f6",
+    "error": "incomplete response: done=False, text='', usage={}, ttft=None"
+  },
+  {
+    "name": "02_register_state_eager",
+    "env": {
+      "INFINI_CUDAGRAPH_POLICY": "eager",
+      "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+    },
+    "phase": "failed",
+    "started_ns": 1793192352006648247,
+    "ok": false,
+    "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+    "source_diff_sha256": "c19e0bb02ae093d1381f02ab4bfa4ffb063105ae2be445c18b6c50b940c126f6",
+    "decode_tok_s": 6.578375538001918,
+    "prefill_ttft_s": 8.234539541008417,
+    "correctness_ok": false,
+    "error": "server exited during startup",
+    "reference": {
+      "source": "/tmp/profile_20261028-175202_fair/vllm/host.json",
+      "historical": true,
+      "decode_tok_s": 42.585,
+      "prefill_ttft_s": 1.99
+    },
+    "decode_ratio": 0.15447635406837895,
+    "ttft_ratio": 4.137959568345938,
+    "target_met": false
+  },
+  {
+    "name": "03_register_state_graph",
+    "env": {
+      "INFINI_CUDAGRAPH_POLICY": "full_and_piecewise",
+      "INFINI_DECODE_CG_TP": "1",
+      "INFINI_FA_INGRAPH": "decode",
+      "LD_PRELOAD": "/perf/tools/libcgdr_register.so",
+      "INFINICORE_GRAPH_DEBUG": "1"
+    },
+    "phase": "failed",
+    "started_ns": 1793192844439115884,
+    "ok": false,
+    "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+    "source_diff_sha256": "810655511cb276cce092e567468b4f7d477d66cd51c993204f8cbfcf602cf509",
+    "decode_tok_s": 4.897141492588959,
+    "prefill_ttft_s": 12.03743077701074,
+    "correctness_ok": false,
+    "error": "server exited during startup",
+    "reference": {
+      "source": "/tmp/profile_20261028-175202_fair/vllm/host.json",
+      "historical": true,
+      "decode_tok_s": 42.585,
+      "prefill_ttft_s": 1.99
+    },
+    "decode_ratio": 0.11499686491931335,
+    "ttft_ratio": 6.048960189452633,
+    "target_met": false
+  },
+  {
+    "name": "04_corrected_register_eager",
+    "env": {
+      "ENABLE_GRAPH": "0",
+      "INFINI_CUDAGRAPH_POLICY": "eager",
+      "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+    },
+    "phase": "failed",
+    "started_ns": 1793193495910395154,
+    "ok": false,
+    "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+    "source_diff_sha256": "b6da35d155b4f1971076db3a282fbf968afe47c52808eb624d9726488a3c934a",
+    "decode_tok_s": 4.9877432586771935,
+    "prefill_ttft_s": 8.232874462002655,
+    "correctness_ok": false,
+    "error": "server exited during startup",
+    "reference": {
+      "source": "/tmp/profile_20261028-175202_fair/vllm/host.json",
+      "historical": true,
+      "decode_tok_s": 42.585,
+      "prefill_ttft_s": 1.99
+    },
+    "decode_ratio": 0.11712441607789582,
+    "ttft_ratio": 4.137122845227465,
+    "target_met": false
+  },
+  {
+    "name": "05_corrected_register_decode_graph",
+    "env": {
+      "ENABLE_GRAPH": "1",
+      "INFINI_CUDAGRAPH_POLICY": "legacy",
+      "INFINI_PREFILL_NATIVE_CG": "0",
+      "INFINI_FA_INGRAPH": "decode",
+      "INFINICORE_GRAPH_DEBUG": "1",
+      "INFINI_DECODE_GRAPH_DIAGNOSTICS": "1",
+      "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+    },
+    "phase": "failed",
+    "started_ns": 1793193789999292116,
+    "ok": false,
+    "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+    "source_diff_sha256": "b6da35d155b4f1971076db3a282fbf968afe47c52808eb624d9726488a3c934a",
+    "decode_tok_s": 7.752984619578686,
+    "prefill_ttft_s": 8.271124130988028,
+    "correctness_ok": false,
+    "error": "server exited during startup",
+    "reference": {
+      "source": "/tmp/profile_20261028-175202_fair/vllm/host.json",
+      "historical": true,
+      "decode_tok_s": 42.585,
+      "prefill_ttft_s": 1.99
+    },
+    "decode_ratio": 0.18205904942065718,
+    "ttft_ratio": 4.156343784416094,
+    "target_met": false
+  },
+  {
+    "name": "06_corrected_integrated_eager",
+    "env": {
+      "ENABLE_GRAPH": "0",
+      "INFINI_CUDAGRAPH_POLICY": "eager"
+    },
+    "phase": "failed",
+    "started_ns": 1793194628336786667,
+    "ok": false,
+    "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+    "source_diff_sha256": "e4f1db7e8764d5d1ef49745f108bdd0ece25df7fd829e21f582edb9f620fcd0b",
+    "decode_tok_s": 5.021150733146944,
+    "prefill_ttft_s": 8.271706215979066,
+    "correctness_ok": false,
+    "fixed_decode_length_ok": false,
+    "error": "incomplete response: done=False, text='', usage={}, ttft=None",
+    "reference": {
+      "source": "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/results/vllm_current/clean/host.json",
+      "historical": false,
+      "decode_tok_s": 54.600586928803466,
+      "prefill_ttft_s": 2.058929447986884
+    },
+    "decode_ratio": 0.09196147908985451,
+    "ttft_ratio": 4.017479192435038,
+    "target_met": false
+  }
+]

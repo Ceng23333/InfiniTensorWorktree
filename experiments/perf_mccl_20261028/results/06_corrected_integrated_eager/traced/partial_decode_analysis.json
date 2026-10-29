@@ -1,0 +1,1217 @@
+{
+  "trace": "results/06_corrected_integrated_eager/traced/trace_attempt1/infinilm-12.json",
+  "timestamp_unit": "ns",
+  "truncated": false,
+  "results": [
+    {
+      "workload": "decode_micro",
+      "elapsed_s": 3.527549184014788,
+      "per_gpu": {
+        "0": {
+          "kernel_ms": 1365.8365439999986,
+          "ar_ms": 1063.816703999999,
+          "ar_count": 1792,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 1664,
+              "total_ms": 1013.499135999999,
+              "p50_us": 414.72,
+              "p95_us": 1276.16
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 846,
+              "total_ms": 74.41945599999978,
+              "p50_us": 63.232,
+              "p95_us": 64.512
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 128,
+              "total_ms": 50.31756800000001,
+              "p50_us": 290.94399999999996,
+              "p95_us": 1048.832
+            },
+            {
+              "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+              "count": 1792,
+              "total_ms": 39.121407999999775,
+              "p50_us": 21.504,
+              "p95_us": 24.064
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1040,
+              "total_ms": 36.85350400000018,
+              "p50_us": 36.352,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void (anonymous namespace)::chunk_gated_delta_rule_fast_kernel<__maca_bfloat16, float, 128ul, 128ul, 128ul>(float*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 48,
+              "total_ms": 17.868800000000007,
+              "p50_us": 371.968,
+              "p95_us": 375.296
+            },
+            {
+              "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 16.063999999999968,
+              "p50_us": 23.296,
+              "p95_us": 29.696
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 832,
+              "total_ms": 14.959104000000073,
+              "p50_us": 16.896,
+              "p95_us": 20.992
+            },
+            {
+              "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 624,
+              "total_ms": 12.886272000000004,
+              "p50_us": 20.48,
+              "p95_us": 21.76
+            },
+            {
+              "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 672,
+              "total_ms": 12.516351999999952,
+              "p50_us": 16.384,
+              "p95_us": 47.36
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 208,
+              "total_ms": 12.416,
+              "p50_us": 21.504,
+              "p95_us": 156.672
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 10.453760000000042,
+              "p50_us": 16.128,
+              "p95_us": 19.456
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1248,
+              "total_ms": 9.005311999999984,
+              "p50_us": 7.168,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+              "count": 1344,
+              "total_ms": 6.380031999999968,
+              "p50_us": 4.608,
+              "p95_us": 8.448
+            },
+            {
+              "name": "void infini::ops::SiluAndMulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, unsigned long, bool, bool)",
+              "count": 896,
+              "total_ms": 5.630719999999926,
+              "p50_us": 5.888,
+              "p95_us": 10.496
+            },
+            {
+              "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+              "count": 1134,
+              "total_ms": 5.13407999999994,
+              "p50_us": 4.352,
+              "p95_us": 7.936
+            },
+            {
+              "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+              "count": 896,
+              "total_ms": 4.229376000000039,
+              "p50_us": 4.352,
+              "p95_us": 8.448
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x48x256_4m1n8k_256t_bf16_bf16_fp32_sb_0_0",
+              "count": 64,
+              "total_ms": 3.853312000000002,
+              "p50_us": 60.16,
+              "p95_us": 61.184
+            },
+            {
+              "name": "void flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, false, false, false, false, true, false, false, false, true, (Arch)1000>(mcFlashAttn::Flash_fwd_params, int, int)",
+              "count": 208,
+              "total_ms": 3.625728000000001,
+              "p50_us": 17.792,
+              "p95_us": 18.176
+            },
+            {
+              "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+              "count": 672,
+              "total_ms": 3.2153599999999893,
+              "p50_us": 4.864,
+              "p95_us": 5.12
+            }
+          ]
+        },
+        "1": {
+          "kernel_ms": 1306.4586240000008,
+          "ar_ms": 1004.6822400000018,
+          "ar_count": 1792,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 1664,
+              "total_ms": 977.4809600000018,
+              "p50_us": 396.79999999999995,
+              "p95_us": 1177.088
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 846,
+              "total_ms": 74.46220799999995,
+              "p50_us": 63.488,
+              "p95_us": 64.512
+            },
+            {
+              "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+              "count": 1792,
+              "total_ms": 39.2235519999997,
+              "p50_us": 21.504,
+              "p95_us": 24.064
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1040,
+              "total_ms": 37.2267519999999,
+              "p50_us": 36.608,
+              "p95_us": 37.632
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 128,
+              "total_ms": 27.201279999999986,
+              "p50_us": 129.152,
+              "p95_us": 604.672
+            },
+            {
+              "name": "void (anonymous namespace)::chunk_gated_delta_rule_fast_kernel<__maca_bfloat16, float, 128ul, 128ul, 128ul>(float*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 48,
+              "total_ms": 17.811712000000007,
+              "p50_us": 371.456,
+              "p95_us": 374.784
+            },
+            {
+              "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 15.746047999999941,
+              "p50_us": 23.04,
+              "p95_us": 28.928
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 832,
+              "total_ms": 14.991872000000061,
+              "p50_us": 16.896,
+              "p95_us": 21.248
+            },
+            {
+              "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 624,
+              "total_ms": 12.881152000000004,
+              "p50_us": 20.48,
+              "p95_us": 21.76
+            },
+            {
+              "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 672,
+              "total_ms": 12.542719999999976,
+              "p50_us": 16.384,
+              "p95_us": 47.36
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 208,
+              "total_ms": 12.335871999999993,
+              "p50_us": 21.76,
+              "p95_us": 155.904
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 10.190592000000018,
+              "p50_us": 15.872,
+              "p95_us": 18.688
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1248,
+              "total_ms": 9.17555200000006,
+              "p50_us": 7.424,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+              "count": 1344,
+              "total_ms": 6.335487999999958,
+              "p50_us": 4.608,
+              "p95_us": 8.192
+            },
+            {
+              "name": "void infini::ops::SiluAndMulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, unsigned long, bool, bool)",
+              "count": 896,
+              "total_ms": 5.606911999999931,
+              "p50_us": 5.888,
+              "p95_us": 10.496
+            },
+            {
+              "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+              "count": 1134,
+              "total_ms": 5.152767999999947,
+              "p50_us": 4.352,
+              "p95_us": 7.936
+            },
+            {
+              "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+              "count": 896,
+              "total_ms": 4.185344000000032,
+              "p50_us": 4.352,
+              "p95_us": 8.192
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x48x256_4m1n8k_256t_bf16_bf16_fp32_sb_0_0",
+              "count": 64,
+              "total_ms": 3.8594560000000033,
+              "p50_us": 60.16,
+              "p95_us": 61.184
+            },
+            {
+              "name": "void flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, false, false, false, false, true, false, false, false, true, (Arch)1000>(mcFlashAttn::Flash_fwd_params, int, int)",
+              "count": 208,
+              "total_ms": 3.475199999999998,
+              "p50_us": 17.024,
+              "p95_us": 17.408
+            },
+            {
+              "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+              "count": 672,
+              "total_ms": 3.22636799999999,
+              "p50_us": 4.864,
+              "p95_us": 5.376
+            }
+          ]
+        },
+        "2": {
+          "kernel_ms": 736.9487359999993,
+          "ar_ms": 441.0416639999998,
+          "ar_count": 1792,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 1664,
+              "total_ms": 425.0378239999998,
+              "p50_us": 38.272,
+              "p95_us": 984.576
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 846,
+              "total_ms": 74.40716799999983,
+              "p50_us": 63.232,
+              "p95_us": 64.512
+            },
+            {
+              "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+              "count": 1792,
+              "total_ms": 39.130879999999756,
+              "p50_us": 21.504,
+              "p95_us": 24.064
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1040,
+              "total_ms": 37.128959999999935,
+              "p50_us": 36.608,
+              "p95_us": 37.632
+            },
+            {
+              "name": "void (anonymous namespace)::chunk_gated_delta_rule_fast_kernel<__maca_bfloat16, float, 128ul, 128ul, 128ul>(float*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 48,
+              "total_ms": 17.779456,
+              "p50_us": 370.944,
+              "p95_us": 372.992
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 128,
+              "total_ms": 16.00384,
+              "p50_us": 18.688,
+              "p95_us": 751.872
+            },
+            {
+              "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 15.742463999999943,
+              "p50_us": 23.04,
+              "p95_us": 28.928
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 832,
+              "total_ms": 14.970368000000066,
+              "p50_us": 16.896,
+              "p95_us": 21.248
+            },
+            {
+              "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 672,
+              "total_ms": 12.51225599999995,
+              "p50_us": 16.384,
+              "p95_us": 47.104
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 208,
+              "total_ms": 12.382207999999993,
+              "p50_us": 21.76,
+              "p95_us": 156.928
+            },
+            {
+              "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 624,
+              "total_ms": 11.06099199999995,
+              "p50_us": 17.664,
+              "p95_us": 18.176
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 10.174464000000022,
+              "p50_us": 15.872,
+              "p95_us": 18.688
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1248,
+              "total_ms": 9.126400000000048,
+              "p50_us": 7.424,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+              "count": 1134,
+              "total_ms": 5.110271999999948,
+              "p50_us": 4.096,
+              "p95_us": 7.936
+            },
+            {
+              "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+              "count": 1344,
+              "total_ms": 5.079039999999992,
+              "p50_us": 3.584,
+              "p95_us": 5.376
+            },
+            {
+              "name": "void infini::ops::SiluAndMulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, unsigned long, bool, bool)",
+              "count": 896,
+              "total_ms": 4.38732800000002,
+              "p50_us": 4.608,
+              "p95_us": 8.192
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x48x256_4m1n8k_256t_bf16_bf16_fp32_sb_0_0",
+              "count": 64,
+              "total_ms": 3.853824000000004,
+              "p50_us": 60.16,
+              "p95_us": 60.928
+            },
+            {
+              "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+              "count": 896,
+              "total_ms": 3.7260799999999903,
+              "p50_us": 4.096,
+              "p95_us": 5.632
+            },
+            {
+              "name": "void flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, false, false, false, false, true, false, false, false, true, (Arch)1000>(mcFlashAttn::Flash_fwd_params, int, int)",
+              "count": 208,
+              "total_ms": 3.468799999999999,
+              "p50_us": 16.896,
+              "p95_us": 17.408
+            },
+            {
+              "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+              "count": 672,
+              "total_ms": 3.107071999999984,
+              "p50_us": 4.608,
+              "p95_us": 5.12
+            }
+          ]
+        },
+        "3": {
+          "kernel_ms": 755.6897279999996,
+          "ar_ms": 459.89120000000014,
+          "ar_count": 1792,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 1664,
+              "total_ms": 400.5493760000001,
+              "p50_us": 56.064,
+              "p95_us": 912.128
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 846,
+              "total_ms": 74.49727999999993,
+              "p50_us": 63.232,
+              "p95_us": 64.512
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 128,
+              "total_ms": 59.34182400000001,
+              "p50_us": 309.504,
+              "p95_us": 1428.736
+            },
+            {
+              "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+              "count": 1792,
+              "total_ms": 39.16620799999982,
+              "p50_us": 21.504,
+              "p95_us": 24.064
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1040,
+              "total_ms": 36.73343999999998,
+              "p50_us": 36.352,
+              "p95_us": 37.12
+            },
+            {
+              "name": "void (anonymous namespace)::chunk_gated_delta_rule_fast_kernel<__maca_bfloat16, float, 128ul, 128ul, 128ul>(float*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 48,
+              "total_ms": 17.78252800000001,
+              "p50_us": 370.944,
+              "p95_us": 372.224
+            },
+            {
+              "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 16.061183999999965,
+              "p50_us": 23.296,
+              "p95_us": 29.696
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 832,
+              "total_ms": 14.891264000000092,
+              "p50_us": 16.64,
+              "p95_us": 20.992
+            },
+            {
+              "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 672,
+              "total_ms": 12.51430399999995,
+              "p50_us": 16.384,
+              "p95_us": 47.36
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 208,
+              "total_ms": 12.285439999999989,
+              "p50_us": 21.504,
+              "p95_us": 154.368
+            },
+            {
+              "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 624,
+              "total_ms": 10.93427200000001,
+              "p50_us": 17.408,
+              "p95_us": 18.176
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 10.436608000000026,
+              "p50_us": 16.128,
+              "p95_us": 19.456
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1248,
+              "total_ms": 9.000447999999977,
+              "p50_us": 7.168,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+              "count": 1134,
+              "total_ms": 5.103615999999954,
+              "p50_us": 4.096,
+              "p95_us": 7.936
+            },
+            {
+              "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+              "count": 1344,
+              "total_ms": 5.052159999999985,
+              "p50_us": 3.584,
+              "p95_us": 5.376
+            },
+            {
+              "name": "void infini::ops::SiluAndMulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, unsigned long, bool, bool)",
+              "count": 896,
+              "total_ms": 4.387840000000021,
+              "p50_us": 4.608,
+              "p95_us": 8.192
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x48x256_4m1n8k_256t_bf16_bf16_fp32_sb_0_0",
+              "count": 64,
+              "total_ms": 3.8184959999999992,
+              "p50_us": 59.648,
+              "p95_us": 60.416
+            },
+            {
+              "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+              "count": 896,
+              "total_ms": 3.7040639999999896,
+              "p50_us": 4.096,
+              "p95_us": 5.12
+            },
+            {
+              "name": "void flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, false, false, false, false, true, false, false, false, true, (Arch)1000>(mcFlashAttn::Flash_fwd_params, int, int)",
+              "count": 208,
+              "total_ms": 3.618815999999999,
+              "p50_us": 17.664,
+              "p95_us": 18.432
+            },
+            {
+              "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+              "count": 672,
+              "total_ms": 3.089407999999989,
+              "p50_us": 4.608,
+              "p95_us": 5.12
+            }
+          ]
+        }
+      },
+      "rank_skew": {
+        "matched_collectives": 1792,
+        "arrival_skew_p50_us": 427.648,
+        "arrival_skew_p95_us": 1367.296,
+        "last_arrival_to_last_finish_p50_us": 7.168,
+        "sum_pre_last_arrival_ms": 2912.473343999999,
+        "note": "ordinal alignment assumes identical collective order; GPU residency includes rank waiting"
+      }
+    },
+    {
+      "workload": "decode_micro",
+      "elapsed_s": 2.737182729993947,
+      "per_gpu": {
+        "0": {
+          "kernel_ms": 1388.6136319999996,
+          "ar_ms": 1087.0131199999994,
+          "ar_count": 1792,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 1664,
+              "total_ms": 1038.0584959999994,
+              "p50_us": 409.856,
+              "p95_us": 1222.656
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 846,
+              "total_ms": 74.42227199999984,
+              "p50_us": 63.232,
+              "p95_us": 64.512
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 128,
+              "total_ms": 48.954623999999995,
+              "p50_us": 286.464,
+              "p95_us": 1027.328
+            },
+            {
+              "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+              "count": 1792,
+              "total_ms": 39.1889919999997,
+              "p50_us": 21.504,
+              "p95_us": 24.064
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1040,
+              "total_ms": 36.81920000000018,
+              "p50_us": 36.352,
+              "p95_us": 37.12
+            },
+            {
+              "name": "void (anonymous namespace)::chunk_gated_delta_rule_fast_kernel<__maca_bfloat16, float, 128ul, 128ul, 128ul>(float*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 48,
+              "total_ms": 17.840128000000004,
+              "p50_us": 371.712,
+              "p95_us": 375.552
+            },
+            {
+              "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 16.048895999999985,
+              "p50_us": 23.296,
+              "p95_us": 29.696
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 832,
+              "total_ms": 14.942464000000083,
+              "p50_us": 16.896,
+              "p95_us": 20.992
+            },
+            {
+              "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 624,
+              "total_ms": 12.77184000000004,
+              "p50_us": 20.48,
+              "p95_us": 21.504
+            },
+            {
+              "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 672,
+              "total_ms": 12.510719999999946,
+              "p50_us": 16.384,
+              "p95_us": 47.36
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 208,
+              "total_ms": 12.401151999999993,
+              "p50_us": 21.76,
+              "p95_us": 156.928
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 10.448640000000024,
+              "p50_us": 16.128,
+              "p95_us": 19.2
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1248,
+              "total_ms": 9.031935999999993,
+              "p50_us": 7.168,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+              "count": 1344,
+              "total_ms": 6.30015999999996,
+              "p50_us": 4.608,
+              "p95_us": 8.192
+            },
+            {
+              "name": "void infini::ops::SiluAndMulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, unsigned long, bool, bool)",
+              "count": 896,
+              "total_ms": 5.605119999999932,
+              "p50_us": 5.888,
+              "p95_us": 10.496
+            },
+            {
+              "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+              "count": 1134,
+              "total_ms": 5.139711999999944,
+              "p50_us": 4.096,
+              "p95_us": 7.936
+            },
+            {
+              "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+              "count": 896,
+              "total_ms": 4.169472000000018,
+              "p50_us": 4.352,
+              "p95_us": 8.192
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x48x256_4m1n8k_256t_bf16_bf16_fp32_sb_0_0",
+              "count": 64,
+              "total_ms": 3.841280000000001,
+              "p50_us": 59.904,
+              "p95_us": 60.672
+            },
+            {
+              "name": "void flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, false, false, false, false, true, false, false, false, true, (Arch)1000>(mcFlashAttn::Flash_fwd_params, int, int)",
+              "count": 208,
+              "total_ms": 3.6175360000000003,
+              "p50_us": 17.664,
+              "p95_us": 18.432
+            },
+            {
+              "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+              "count": 672,
+              "total_ms": 3.2176639999999894,
+              "p50_us": 4.864,
+              "p95_us": 5.12
+            }
+          ]
+        },
+        "1": {
+          "kernel_ms": 816.4423679999996,
+          "ar_ms": 515.6300800000002,
+          "ar_count": 1792,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 1664,
+              "total_ms": 479.8615040000002,
+              "p50_us": 221.184,
+              "p95_us": 1005.824
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 846,
+              "total_ms": 74.36748799999988,
+              "p50_us": 63.232,
+              "p95_us": 64.512
+            },
+            {
+              "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+              "count": 1792,
+              "total_ms": 39.17491199999978,
+              "p50_us": 21.504,
+              "p95_us": 24.064
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1040,
+              "total_ms": 37.19935999999994,
+              "p50_us": 36.608,
+              "p95_us": 37.632
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 128,
+              "total_ms": 35.76857600000002,
+              "p50_us": 189.05599999999998,
+              "p95_us": 706.56
+            },
+            {
+              "name": "void (anonymous namespace)::chunk_gated_delta_rule_fast_kernel<__maca_bfloat16, float, 128ul, 128ul, 128ul>(float*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 48,
+              "total_ms": 17.7984,
+              "p50_us": 371.456,
+              "p95_us": 373.504
+            },
+            {
+              "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 15.74143999999994,
+              "p50_us": 23.04,
+              "p95_us": 28.928
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 832,
+              "total_ms": 14.974464000000069,
+              "p50_us": 16.896,
+              "p95_us": 21.248
+            },
+            {
+              "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 624,
+              "total_ms": 12.699136000000017,
+              "p50_us": 20.224,
+              "p95_us": 21.504
+            },
+            {
+              "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 672,
+              "total_ms": 12.512767999999951,
+              "p50_us": 16.384,
+              "p95_us": 47.36
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 208,
+              "total_ms": 12.339711999999993,
+              "p50_us": 21.76,
+              "p95_us": 155.648
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 10.190336000000023,
+              "p50_us": 15.872,
+              "p95_us": 18.688
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1248,
+              "total_ms": 9.132544000000044,
+              "p50_us": 7.424,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+              "count": 1344,
+              "total_ms": 6.216959999999948,
+              "p50_us": 4.352,
+              "p95_us": 7.936
+            },
+            {
+              "name": "void infini::ops::SiluAndMulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, unsigned long, bool, bool)",
+              "count": 896,
+              "total_ms": 5.489151999999991,
+              "p50_us": 5.632,
+              "p95_us": 10.24
+            },
+            {
+              "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+              "count": 1134,
+              "total_ms": 5.122559999999946,
+              "p50_us": 4.096,
+              "p95_us": 7.936
+            },
+            {
+              "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+              "count": 896,
+              "total_ms": 4.109312000000006,
+              "p50_us": 4.352,
+              "p95_us": 7.936
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x48x256_4m1n8k_256t_bf16_bf16_fp32_sb_0_0",
+              "count": 64,
+              "total_ms": 3.86432,
+              "p50_us": 60.416,
+              "p95_us": 61.184
+            },
+            {
+              "name": "void flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, false, false, false, false, true, false, false, false, true, (Arch)1000>(mcFlashAttn::Flash_fwd_params, int, int)",
+              "count": 208,
+              "total_ms": 3.4728959999999978,
+              "p50_us": 16.896,
+              "p95_us": 17.408
+            },
+            {
+              "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+              "count": 672,
+              "total_ms": 3.167743999999988,
+              "p50_us": 4.608,
+              "p95_us": 5.12
+            }
+          ]
+        },
+        "2": {
+          "kernel_ms": 919.163903999999,
+          "ar_ms": 623.7240319999995,
+          "ar_count": 1792,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 1664,
+              "total_ms": 606.5187839999995,
+              "p50_us": 320.384,
+              "p95_us": 1003.52
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 846,
+              "total_ms": 74.34163199999978,
+              "p50_us": 63.232,
+              "p95_us": 64.512
+            },
+            {
+              "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+              "count": 1792,
+              "total_ms": 39.12985599999978,
+              "p50_us": 21.504,
+              "p95_us": 24.064
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1040,
+              "total_ms": 37.14175999999993,
+              "p50_us": 36.608,
+              "p95_us": 37.632
+            },
+            {
+              "name": "void (anonymous namespace)::chunk_gated_delta_rule_fast_kernel<__maca_bfloat16, float, 128ul, 128ul, 128ul>(float*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 48,
+              "total_ms": 17.742592,
+              "p50_us": 370.048,
+              "p95_us": 371.968
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 128,
+              "total_ms": 17.205248,
+              "p50_us": 19.2,
+              "p95_us": 571.904
+            },
+            {
+              "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 15.735039999999948,
+              "p50_us": 23.04,
+              "p95_us": 28.928
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 832,
+              "total_ms": 14.9463040000001,
+              "p50_us": 16.896,
+              "p95_us": 21.248
+            },
+            {
+              "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 672,
+              "total_ms": 12.508671999999944,
+              "p50_us": 16.384,
+              "p95_us": 47.36
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 208,
+              "total_ms": 12.394751999999992,
+              "p50_us": 21.887999999999998,
+              "p95_us": 157.184
+            },
+            {
+              "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 624,
+              "total_ms": 10.977023999999965,
+              "p50_us": 17.664,
+              "p95_us": 17.92
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 10.172416000000014,
+              "p50_us": 15.872,
+              "p95_us": 18.688
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1248,
+              "total_ms": 9.138176000000053,
+              "p50_us": 7.424,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+              "count": 1134,
+              "total_ms": 5.113599999999951,
+              "p50_us": 4.096,
+              "p95_us": 7.936
+            },
+            {
+              "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+              "count": 1344,
+              "total_ms": 4.9868799999999895,
+              "p50_us": 3.584,
+              "p95_us": 4.864
+            },
+            {
+              "name": "void infini::ops::SiluAndMulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, unsigned long, bool, bool)",
+              "count": 896,
+              "total_ms": 4.3517440000000365,
+              "p50_us": 4.608,
+              "p95_us": 7.936
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x48x256_4m1n8k_256t_bf16_bf16_fp32_sb_0_0",
+              "count": 64,
+              "total_ms": 3.851776000000002,
+              "p50_us": 60.16,
+              "p95_us": 60.928
+            },
+            {
+              "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+              "count": 896,
+              "total_ms": 3.6917759999999924,
+              "p50_us": 4.096,
+              "p95_us": 5.12
+            },
+            {
+              "name": "void flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, false, false, false, false, true, false, false, false, true, (Arch)1000>(mcFlashAttn::Flash_fwd_params, int, int)",
+              "count": 208,
+              "total_ms": 3.4749439999999976,
+              "p50_us": 17.152,
+              "p95_us": 17.408
+            },
+            {
+              "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+              "count": 672,
+              "total_ms": 3.1057919999999855,
+              "p50_us": 4.608,
+              "p95_us": 5.12
+            }
+          ]
+        },
+        "3": {
+          "kernel_ms": 764.4108799999995,
+          "ar_ms": 468.9710079999997,
+          "ar_count": 1792,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 1664,
+              "total_ms": 441.5244799999997,
+              "p50_us": 215.04,
+              "p95_us": 892.672
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 846,
+              "total_ms": 74.50137599999994,
+              "p50_us": 63.232,
+              "p95_us": 64.512
+            },
+            {
+              "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+              "count": 1792,
+              "total_ms": 39.156991999999825,
+              "p50_us": 21.504,
+              "p95_us": 24.064
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1040,
+              "total_ms": 36.75315200000003,
+              "p50_us": 36.352,
+              "p95_us": 37.12
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 128,
+              "total_ms": 27.446528000000004,
+              "p50_us": 140.54399999999998,
+              "p95_us": 639.488
+            },
+            {
+              "name": "void (anonymous namespace)::chunk_gated_delta_rule_fast_kernel<__maca_bfloat16, float, 128ul, 128ul, 128ul>(float*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 48,
+              "total_ms": 17.735168000000005,
+              "p50_us": 369.79200000000003,
+              "p95_us": 371.456
+            },
+            {
+              "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 16.061183999999958,
+              "p50_us": 23.296,
+              "p95_us": 29.696
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 832,
+              "total_ms": 14.8730880000001,
+              "p50_us": 16.64,
+              "p95_us": 20.992
+            },
+            {
+              "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 672,
+              "total_ms": 12.49587199999995,
+              "p50_us": 16.384,
+              "p95_us": 47.36
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 208,
+              "total_ms": 12.294911999999995,
+              "p50_us": 21.504,
+              "p95_us": 154.88
+            },
+            {
+              "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+              "count": 624,
+              "total_ms": 10.851072000000137,
+              "p50_us": 17.408,
+              "p95_us": 17.92
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 624,
+              "total_ms": 10.441728000000023,
+              "p50_us": 16.128,
+              "p95_us": 19.456
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1248,
+              "total_ms": 9.004287999999978,
+              "p50_us": 7.168,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+              "count": 1134,
+              "total_ms": 5.099263999999949,
+              "p50_us": 4.096,
+              "p95_us": 7.68
+            },
+            {
+              "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+              "count": 1344,
+              "total_ms": 4.986111999999983,
+              "p50_us": 3.584,
+              "p95_us": 4.864
+            },
+            {
+              "name": "void infini::ops::SiluAndMulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, unsigned long, bool, bool)",
+              "count": 896,
+              "total_ms": 4.363008000000029,
+              "p50_us": 4.608,
+              "p95_us": 8.192
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x48x256_4m1n8k_256t_bf16_bf16_fp32_sb_0_0",
+              "count": 64,
+              "total_ms": 3.8161919999999996,
+              "p50_us": 59.648,
+              "p95_us": 60.416
+            },
+            {
+              "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+              "count": 896,
+              "total_ms": 3.6810239999999923,
+              "p50_us": 4.096,
+              "p95_us": 5.12
+            },
+            {
+              "name": "void flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, false, false, false, false, true, false, false, false, true, (Arch)1000>(mcFlashAttn::Flash_fwd_params, int, int)",
+              "count": 208,
+              "total_ms": 3.6226560000000014,
+              "p50_us": 17.664,
+              "p95_us": 18.176
+            },
+            {
+              "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+              "count": 672,
+              "total_ms": 3.090175999999989,
+              "p50_us": 4.608,
+              "p95_us": 5.12
+            }
+          ]
+        }
+      },
+      "rank_skew": {
+        "matched_collectives": 1792,
+        "arrival_skew_p50_us": 407.808,
+        "arrival_skew_p95_us": 1230.08,
+        "last_arrival_to_last_finish_p50_us": 7.424,
+        "sum_pre_last_arrival_ms": 2638.277888,
+        "note": "ordinal alignment assumes identical collective order; GPU residency includes rank waiting"
+      }
+    }
+  ],
+  "valid": false,
+  "partial_capture": true,
+  "failed_workloads": [
+    "prefill_12k"
+  ],
+  "valid_completed_windows": true
+}

@@ -1,0 +1,10 @@
+{
+  "name": "vllm_product_match",
+  "model": "Qwen3.8-27B",
+  "tp": 4,
+  "maxContextTokens": 32768,
+  "maxOutputTokens": 8192,
+  "enable_thinking": false,
+  "streamIdleTimeoutMs": 900000,
+  "notes": "Aligned to switch_backend.py vllm profile for apples-to-apples InfiniLM vs vLLM profiling. Applied temporarily around profile; restored after. Does not promote or retag."
+}

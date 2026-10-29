@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "start_ns": 1793194897393081518,
+      "end_ns": 1793194901866137264,
+      "elapsed_s": 4.473045007005567,
+      "ttft_s": null,
+      "tok_s": 3.1298589614174603,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": true
+    },
+    {
+      "start_ns": 1793194901868156259,
+      "end_ns": 1793194904744492234,
+      "elapsed_s": 2.876326737983618,
+      "ttft_s": null,
+      "tok_s": 4.8673190757926115,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793194904745485912,
+      "end_ns": 1793194907506483284,
+      "elapsed_s": 2.7609897569927853,
+      "ttft_s": null,
+      "tok_s": 5.070645396109154,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793194907507388260,
+      "end_ns": 1793194910295599743,
+      "elapsed_s": 2.788205481978366,
+      "ttft_s": null,
+      "tok_s": 5.021150733146944,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793194910296807241,
+      "end_ns": 1793194919108183325,
+      "elapsed_s": 8.811368719005259,
+      "ttft_s": 8.271706215979066,
+      "tok_s": 0.34046923873805146,
+      "prompt_tokens": 10718,
+      "completion_tokens": 3,
+      "total_tokens": 10721,
+      "text": "Confirmed.",
+      "workload": "prefill_12k",
+      "warmup": false
+    }
+  ]
+}

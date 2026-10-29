@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "start_ns": 1793193106740829311,
+      "end_ns": 1793193121367097405,
+      "elapsed_s": 14.62625941899023,
+      "ttft_s": null,
+      "tok_s": 4.375691567244091,
+      "prompt_tokens": 30,
+      "completion_tokens": 64,
+      "total_tokens": 94,
+      "text": "```!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "workload": "decode_micro",
+      "warmup": true
+    },
+    {
+      "start_ns": 1793193121368498890,
+      "end_ns": 1793193136384451444,
+      "elapsed_s": 15.015947045001667,
+      "ttft_s": null,
+      "tok_s": 4.26213543562699,
+      "prompt_tokens": 30,
+      "completion_tokens": 64,
+      "total_tokens": 94,
+      "text": "```!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793193136385145835,
+      "end_ns": 1793193149335480558,
+      "elapsed_s": 12.95032887798152,
+      "ttft_s": null,
+      "tok_s": 4.941959436166478,
+      "prompt_tokens": 30,
+      "completion_tokens": 64,
+      "total_tokens": 94,
+      "text": "```!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793193149336247387,
+      "end_ns": 1793193162405101073,
+      "elapsed_s": 13.068848449009238,
+      "ttft_s": null,
+      "tok_s": 4.897141492588959,
+      "prompt_tokens": 30,
+      "completion_tokens": 64,
+      "total_tokens": 94,
+      "text": "```!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793193162406308904,
+      "end_ns": 1793193185613431628,
+      "elapsed_s": 23.20711512499838,
+      "ttft_s": 12.03743077701074,
+      "tok_s": 2.7577749175320845,
+      "prompt_tokens": 10718,
+      "completion_tokens": 64,
+      "total_tokens": 10782,
+      "text": "Confirmed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "workload": "prefill_12k",
+      "warmup": false
+    }
+  ]
+}

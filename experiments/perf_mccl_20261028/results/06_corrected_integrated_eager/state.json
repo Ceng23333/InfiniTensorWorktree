@@ -1,0 +1,17 @@
+{
+  "name": "06_corrected_integrated_eager",
+  "env": {
+    "ENABLE_GRAPH": "0",
+    "INFINI_CUDAGRAPH_POLICY": "eager"
+  },
+  "phase": "failed",
+  "started_ns": 1793194628336786667,
+  "ok": false,
+  "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+  "source_diff_sha256": "e4f1db7e8764d5d1ef49745f108bdd0ece25df7fd829e21f582edb9f620fcd0b",
+  "decode_tok_s": 5.021150733146944,
+  "prefill_ttft_s": 8.271706215979066,
+  "correctness_ok": false,
+  "fixed_decode_length_ok": false,
+  "error": "incomplete response: done=False, text='', usage={}, ttft=None"
+}
