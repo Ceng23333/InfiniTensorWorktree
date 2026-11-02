@@ -1,0 +1,6 @@
+[submodule "InfiniCore"]
+	path = InfiniCore
+	url = https://github.com/Ceng23333/InfiniCore.git
+[submodule "InfiniLM"]
+	path = InfiniLM
+	url = https://github.com/Ceng23333/InfiniLM.git
