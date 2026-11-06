@@ -1,14 +1,6 @@
-ITW_SHA=0b95c29b5f4d019522657408b812bf0b3896d65e
+ITW_SHA=40f446ce53ab5cd8270b530c123ef1df6375abda
 IC_SHA=f11b043783991a5e6c8a30869de765b370f4da68
-IL_SHA=6c34d02a479cac1ffec70f010d1d33ed5785a4f7
-OPS_SHA=194e705560bf2bdef937e74630b03cfdbd583921
-RT_SHA=229c6691cc66c67c58222d1c474562af1a128f1f
-CCL_SHA=960ecca61858fbeba723b5bac4b3e4527fd881b4
+IL_SHA=adfde63a74923f2fee1e78bc97d2f993ab6e7da1
 IC_URL=https://github.com/Ceng23333/InfiniCore.git
 IL_URL=https://github.com/Ceng23333/InfiniLM.git
-OPS_URL=https://github.com/Ceng23333/InfiniOps.git
-RT_URL=https://github.com/Ceng23333/InfiniRT.git
-CCL_URL=https://github.com/Ceng23333/InfiniCCL.git
-PIN_DATE=2026-11-03T08:40:49Z
-SNAPSHOT_TAG=v2026.11.03-qy-lmhead-tp-nccl
-VALIDATION_STATUS=tp2_lmhead_ab_passed
+PIN_DATE=2026-11-06T07:54:00Z
