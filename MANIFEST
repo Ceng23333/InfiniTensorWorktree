@@ -1,6 +1,14 @@
-ITW_SHA=6c9ffd5c7b1e3f0feec3d3aa646ccf910b1862dc
+ITW_SHA=4208b8eplaceholder
 IC_SHA=f11b043783991a5e6c8a30869de765b370f4da68
 IL_SHA=c9d03ecbdefa45d3f45c064c7b2bc9ad8be76556
+OPS_SHA=194e705560bf2bdef937e74630b03cfdbd583921
+RT_SHA=229c6691cc66c67c58222d1c474562af1a128f1f
+CCL_SHA=960ecca61858fbeba723b5bac4b3e4527fd881b4
 IC_URL=https://github.com/Ceng23333/InfiniCore.git
 IL_URL=https://github.com/Ceng23333/InfiniLM.git
+OPS_URL=https://github.com/Ceng23333/InfiniOps.git
+RT_URL=https://github.com/Ceng23333/InfiniRT.git
+CCL_URL=https://github.com/Ceng23333/InfiniCCL.git
 PIN_DATE=2026-11-09T03:54:25Z
+SNAPSHOT_TAG=v2026.11.09-qy-moe-bf16-warpnk
+VALIDATION_STATUS=wall_1.009_surpass_16a3_tp2
