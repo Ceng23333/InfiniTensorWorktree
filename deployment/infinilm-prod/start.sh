@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-image=pilotdeck-infinilm:promoted-tool-fix-20261029
+image=pilotdeck-infinilm:promoted-ar-split-20261112
 name=pilotdeck-infinilm-prod
 if docker container inspect "$name" >/dev/null 2>&1; then
   expected=$(docker image inspect "$image" --format '{{.Id}}')

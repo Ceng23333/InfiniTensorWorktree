@@ -1,8 +1,8 @@
 {
   "status": "deployed",
   "checked_at": "2026-10-29T15:57:15.868539+08:00",
-  "image_tag": "pilotdeck-infinilm:promoted-tool-fix-20261029",
-  "image_id": "sha256:d92545d02ac8270090f5fee09e276b768504cf7f5c8b7fc983376b336ac8f70e",
+  "image_tag": "pilotdeck-infinilm:promoted-ar-split-20261112",
+  "image_id": "sha256:2ef68273cb53272064edd078ed1d5db141cf69586fecf1607883486b21ddff67",
   "container": "pilotdeck-infinilm-prod",
   "graph_enabled": true,
   "device_segments_per_rank": 17,
@@ -31,5 +31,9 @@
   "backend_healthy": true,
   "restarts": 0,
   "processor_sha256": "0d42ce3207617a0cee63c556bd00338750fc9ce4c949173c0c5a4a468b201ada",
-  "deployment_note": "Historical deployment verification, not a live health probe."
+  "deployment_note": "Historical deployment verification, not a live health probe.",
+  "release_tag": "v2026.11.12-infinilm-prod-qwen38-tp4-ar-split",
+  "ar_split": true,
+  "wall_tok_s": 189.2299,
+  "note": "AR matmul/AllReduce split on prod-20261029; rebuilt from worktree-prod-20261029-ar-split-locked"
 }
