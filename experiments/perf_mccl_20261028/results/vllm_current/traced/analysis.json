@@ -1,0 +1,1238 @@
+{
+  "trace": "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/results/vllm_current/traced/gpu_trace.json",
+  "timestamp_unit": "ns",
+  "truncated": false,
+  "results": [
+    {
+      "workload": "decode_micro",
+      "elapsed_s": 13.311909872019896,
+      "per_gpu": {
+        "0": {
+          "kernel_ms": 6469.065216000044,
+          "ar_ms": 5038.577664,
+          "ar_count": 8256,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 8127,
+              "total_ms": 4511.585024,
+              "p50_us": 417.024,
+              "p95_us": 1183.232
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 129,
+              "total_ms": 526.9926400000002,
+              "p50_us": 1310.976,
+              "p95_us": 2353.664
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 7120,
+              "total_ms": 301.3199360000015,
+              "p50_us": 62.208,
+              "p95_us": 63.488
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 5040,
+              "total_ms": 179.24505599998977,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 3024,
+              "total_ms": 110.52031999999919,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, unsigned long, float, c10::BFloat16, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, char*, char*)",
+              "count": 24720,
+              "total_ms": 89.06419200002343,
+              "p50_us": 3.584,
+              "p95_us": 4.096
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 4032,
+              "total_ms": 67.06611199999932,
+              "p50_us": 16.64,
+              "p95_us": 17.152
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+              "count": 20608,
+              "total_ms": 65.65683200001897,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "std::enable_if<(((!std::is_same<float, thrust::pair<float, long> >::value)&&(!std::is_same<float, thrust::pair<float, long> >::value))&&(!std::is_same<float, thrust::pair<float, long> >::value))||std::is_same<float, thrust::pair<long, long> >::value, void>::type at::native::InputPerOutputContinuousReduceKernel<float, float, float, 4, true, false, at::native::MeanOps<float, float, float, float>, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false> >(float const*, at::native::MeanOps<float, float, float, float>, float, int, int, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false>, int, bool, char const*, char const*, void*, int*, void*, long, bool, bool)",
+              "count": 10304,
+              "total_ms": 63.23840000001086,
+              "p50_us": 6.4,
+              "p95_us": 6.656
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, unsigned long, c10::BFloat16, float, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, char*, char*)",
+              "count": 16464,
+              "total_ms": 58.64166399999948,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "mcclkernel_AllGather_FC4_LL_int8_t(fcinfo)",
+              "count": 64,
+              "total_ms": 53.996288,
+              "p50_us": 357.12,
+              "p95_us": 475.136
+            },
+            {
+              "name": "void at::native::elementwise_kernel_1_2_broadcast<512, 4, float, float, float, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, unsigned int, unsigned int, false>(long, char*, char*, char*, unsigned int, unsigned int, unsigned int, unsigned int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >)",
+              "count": 9135,
+              "total_ms": 42.918144000001334,
+              "p50_us": 4.864,
+              "p95_us": 5.376
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 10304,
+              "total_ms": 40.383744000002814,
+              "p50_us": 3.84,
+              "p95_us": 4.352
+            },
+            {
+              "name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+              "count": 3024,
+              "total_ms": 38.74688000000196,
+              "p50_us": 12.288,
+              "p95_us": 14.08
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 10304,
+              "total_ms": 34.852863999995634,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+              "count": 9135,
+              "total_ms": 31.12217599999756,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+              "count": 8192,
+              "total_ms": 30.15449600000155,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void vllm::act_and_mul_kernel<c10::BFloat16, __maca_bfloat162, &(c10::BFloat16 vllm::silu_kernel<c10::BFloat16>(c10::BFloat16 const&, float)), &(__maca_bfloat162 vllm::packed_silu_kernel<__maca_bfloat162>(__maca_bfloat162 const&, float)), true, true, false, false>(c10::BFloat16*, c10::BFloat16 const*, int, float, float, float)",
+              "count": 4096,
+              "total_ms": 29.330688000001263,
+              "p50_us": 7.168,
+              "p95_us": 7.424
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 4064,
+              "total_ms": 27.65260800000086,
+              "p50_us": 6.016,
+              "p95_us": 11.008
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 2016,
+              "total_ms": 16.31283199999999,
+              "p50_us": 8.32,
+              "p95_us": 11.52
+            }
+          ]
+        },
+        "1": {
+          "kernel_ms": 5660.282368000041,
+          "ar_ms": 4264.653824000001,
+          "ar_count": 8256,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 8127,
+              "total_ms": 3949.6358400000013,
+              "p50_us": 393.728,
+              "p95_us": 1225.472
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 129,
+              "total_ms": 315.01798399999996,
+              "p50_us": 1339.136,
+              "p95_us": 2353.92
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 7120,
+              "total_ms": 300.10547199999905,
+              "p50_us": 62.208,
+              "p95_us": 63.488
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 5040,
+              "total_ms": 178.2981119999894,
+              "p50_us": 36.352,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 3024,
+              "total_ms": 110.5233919999993,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, unsigned long, float, c10::BFloat16, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, char*, char*)",
+              "count": 24720,
+              "total_ms": 77.72236800001221,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 4032,
+              "total_ms": 67.21612799999997,
+              "p50_us": 16.64,
+              "p95_us": 17.152
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+              "count": 20608,
+              "total_ms": 65.62636800001923,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "std::enable_if<(((!std::is_same<float, thrust::pair<float, long> >::value)&&(!std::is_same<float, thrust::pair<float, long> >::value))&&(!std::is_same<float, thrust::pair<float, long> >::value))||std::is_same<float, thrust::pair<long, long> >::value, void>::type at::native::InputPerOutputContinuousReduceKernel<float, float, float, 4, true, false, at::native::MeanOps<float, float, float, float>, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false> >(float const*, at::native::MeanOps<float, float, float, float>, float, int, int, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false>, int, bool, char const*, char const*, void*, int*, void*, long, bool, bool)",
+              "count": 10304,
+              "total_ms": 62.357760000009755,
+              "p50_us": 6.144,
+              "p95_us": 6.656
+            },
+            {
+              "name": "mcclkernel_AllGather_FC4_LL_int8_t(fcinfo)",
+              "count": 64,
+              "total_ms": 55.42784000000001,
+              "p50_us": 371.328,
+              "p95_us": 487.168
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, unsigned long, c10::BFloat16, float, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, char*, char*)",
+              "count": 16464,
+              "total_ms": 50.58688000000753,
+              "p50_us": 3.072,
+              "p95_us": 3.328
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 10304,
+              "total_ms": 40.120576000002586,
+              "p50_us": 3.84,
+              "p95_us": 4.352
+            },
+            {
+              "name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+              "count": 3024,
+              "total_ms": 39.19411200000216,
+              "p50_us": 12.544,
+              "p95_us": 14.336
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 10304,
+              "total_ms": 34.68287999999746,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::elementwise_kernel_1_2_broadcast<512, 4, float, float, float, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, unsigned int, unsigned int, false>(long, char*, char*, char*, unsigned int, unsigned int, unsigned int, unsigned int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >)",
+              "count": 9135,
+              "total_ms": 32.03353599999893,
+              "p50_us": 3.584,
+              "p95_us": 4.096
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+              "count": 9135,
+              "total_ms": 30.995199999998384,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+              "count": 8192,
+              "total_ms": 30.108160000001355,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void vllm::act_and_mul_kernel<c10::BFloat16, __maca_bfloat162, &(c10::BFloat16 vllm::silu_kernel<c10::BFloat16>(c10::BFloat16 const&, float)), &(__maca_bfloat162 vllm::packed_silu_kernel<__maca_bfloat162>(__maca_bfloat162 const&, float)), true, true, false, false>(c10::BFloat16*, c10::BFloat16 const*, int, float, float, float)",
+              "count": 4096,
+              "total_ms": 28.809216000002618,
+              "p50_us": 6.912,
+              "p95_us": 7.168
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 4064,
+              "total_ms": 27.569664000000756,
+              "p50_us": 6.016,
+              "p95_us": 11.008
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 2016,
+              "total_ms": 16.31052799999995,
+              "p50_us": 8.192,
+              "p95_us": 11.52
+            }
+          ]
+        },
+        "2": {
+          "kernel_ms": 3782.144768000032,
+          "ar_ms": 2430.538239999995,
+          "ar_count": 8256,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 8127,
+              "total_ms": 2428.109311999995,
+              "p50_us": 7.424,
+              "p95_us": 1064.704
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 7120,
+              "total_ms": 301.00710400000224,
+              "p50_us": 62.208,
+              "p95_us": 63.488
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 5040,
+              "total_ms": 178.05542399998964,
+              "p50_us": 36.352,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 3024,
+              "total_ms": 110.62169599999922,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, unsigned long, float, c10::BFloat16, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, char*, char*)",
+              "count": 24720,
+              "total_ms": 77.39571200000975,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 4032,
+              "total_ms": 67.02207999999919,
+              "p50_us": 16.64,
+              "p95_us": 17.152
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+              "count": 20608,
+              "total_ms": 65.23673600001837,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "std::enable_if<(((!std::is_same<float, thrust::pair<float, long> >::value)&&(!std::is_same<float, thrust::pair<float, long> >::value))&&(!std::is_same<float, thrust::pair<float, long> >::value))||std::is_same<float, thrust::pair<long, long> >::value, void>::type at::native::InputPerOutputContinuousReduceKernel<float, float, float, 4, true, false, at::native::MeanOps<float, float, float, float>, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false> >(float const*, at::native::MeanOps<float, float, float, float>, float, int, int, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false>, int, bool, char const*, char const*, void*, int*, void*, long, bool, bool)",
+              "count": 10304,
+              "total_ms": 62.0628480000085,
+              "p50_us": 6.144,
+              "p95_us": 6.656
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, unsigned long, c10::BFloat16, float, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, char*, char*)",
+              "count": 16464,
+              "total_ms": 50.24435200000637,
+              "p50_us": 3.072,
+              "p95_us": 3.328
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 10304,
+              "total_ms": 39.95801600000229,
+              "p50_us": 3.84,
+              "p95_us": 4.352
+            },
+            {
+              "name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+              "count": 3024,
+              "total_ms": 38.6129920000012,
+              "p50_us": 12.288,
+              "p95_us": 14.08
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 10304,
+              "total_ms": 34.514431999998266,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::elementwise_kernel_1_2_broadcast<512, 4, float, float, float, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, unsigned int, unsigned int, false>(long, char*, char*, char*, unsigned int, unsigned int, unsigned int, unsigned int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >)",
+              "count": 9135,
+              "total_ms": 31.94982399999875,
+              "p50_us": 3.584,
+              "p95_us": 4.096
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+              "count": 9135,
+              "total_ms": 30.863615999999144,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+              "count": 8192,
+              "total_ms": 29.985536000000913,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void vllm::act_and_mul_kernel<c10::BFloat16, __maca_bfloat162, &(c10::BFloat16 vllm::silu_kernel<c10::BFloat16>(c10::BFloat16 const&, float)), &(__maca_bfloat162 vllm::packed_silu_kernel<__maca_bfloat162>(__maca_bfloat162 const&, float)), true, true, false, false>(c10::BFloat16*, c10::BFloat16 const*, int, float, float, float)",
+              "count": 4096,
+              "total_ms": 28.77184000000256,
+              "p50_us": 6.912,
+              "p95_us": 7.168
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 4064,
+              "total_ms": 27.553280000000676,
+              "p50_us": 6.016,
+              "p95_us": 11.008
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 2016,
+              "total_ms": 16.26035199999992,
+              "p50_us": 8.32,
+              "p95_us": 11.52
+            },
+            {
+              "name": "void flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<256, 16, 16, 1, true, true, mctlass::bfloat16_t, 256, Flash_kernel_traits<256, 16, 16, 1, mctlass::bfloat16_t> >, 4, 7, true, false>(mcFlashAttn::Flash_fwd_params)",
+              "count": 1008,
+              "total_ms": 15.682815999999919,
+              "p50_us": 15.616,
+              "p95_us": 15.872
+            },
+            {
+              "name": "_causal_conv1d_update_kernel",
+              "count": 3024,
+              "total_ms": 13.844736000000204,
+              "p50_us": 4.608,
+              "p95_us": 5.12
+            }
+          ]
+        },
+        "3": {
+          "kernel_ms": 7318.297088000049,
+          "ar_ms": 5915.875584000005,
+          "ar_count": 8256,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 8127,
+              "total_ms": 5396.576768000004,
+              "p50_us": 522.752,
+              "p95_us": 1246.72
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 129,
+              "total_ms": 519.298816,
+              "p50_us": 1308.672,
+              "p95_us": 2345.984
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 7120,
+              "total_ms": 301.3455360000006,
+              "p50_us": 62.208,
+              "p95_us": 63.488
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 5040,
+              "total_ms": 178.75455999998948,
+              "p50_us": 36.352,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 3024,
+              "total_ms": 110.34367999999807,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, unsigned long, float, c10::BFloat16, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, char*, char*)",
+              "count": 24720,
+              "total_ms": 78.29120000001367,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 4032,
+              "total_ms": 66.86617599999876,
+              "p50_us": 16.64,
+              "p95_us": 17.152
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+              "count": 20608,
+              "total_ms": 65.3982720000195,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "std::enable_if<(((!std::is_same<float, thrust::pair<float, long> >::value)&&(!std::is_same<float, thrust::pair<float, long> >::value))&&(!std::is_same<float, thrust::pair<float, long> >::value))||std::is_same<float, thrust::pair<long, long> >::value, void>::type at::native::InputPerOutputContinuousReduceKernel<float, float, float, 4, true, false, at::native::MeanOps<float, float, float, float>, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false> >(float const*, at::native::MeanOps<float, float, float, float>, float, int, int, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false>, int, bool, char const*, char const*, void*, int*, void*, long, bool, bool)",
+              "count": 10304,
+              "total_ms": 62.557184000009826,
+              "p50_us": 6.4,
+              "p95_us": 6.656
+            },
+            {
+              "name": "mcclkernel_AllGather_FC4_LL_int8_t(fcinfo)",
+              "count": 64,
+              "total_ms": 60.24601600000001,
+              "p50_us": 371.712,
+              "p95_us": 489.472
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, unsigned long, c10::BFloat16, float, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, char*, char*)",
+              "count": 16464,
+              "total_ms": 51.194880000008716,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 10304,
+              "total_ms": 39.850752000001556,
+              "p50_us": 3.84,
+              "p95_us": 4.352
+            },
+            {
+              "name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+              "count": 3024,
+              "total_ms": 38.753280000001816,
+              "p50_us": 12.288,
+              "p95_us": 14.08
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 10304,
+              "total_ms": 34.681599999997204,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::elementwise_kernel_1_2_broadcast<512, 4, float, float, float, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, unsigned int, unsigned int, false>(long, char*, char*, char*, unsigned int, unsigned int, unsigned int, unsigned int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >)",
+              "count": 9135,
+              "total_ms": 32.8801280000023,
+              "p50_us": 3.584,
+              "p95_us": 4.096
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+              "count": 9135,
+              "total_ms": 31.00287999999835,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+              "count": 8192,
+              "total_ms": 30.020352000001004,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void vllm::act_and_mul_kernel<c10::BFloat16, __maca_bfloat162, &(c10::BFloat16 vllm::silu_kernel<c10::BFloat16>(c10::BFloat16 const&, float)), &(__maca_bfloat162 vllm::packed_silu_kernel<__maca_bfloat162>(__maca_bfloat162 const&, float)), true, true, false, false>(c10::BFloat16*, c10::BFloat16 const*, int, float, float, float)",
+              "count": 4096,
+              "total_ms": 28.73292800000241,
+              "p50_us": 6.912,
+              "p95_us": 7.168
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 4064,
+              "total_ms": 27.59782400000074,
+              "p50_us": 6.016,
+              "p95_us": 11.008
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 2016,
+              "total_ms": 16.31820799999994,
+              "p50_us": 8.32,
+              "p95_us": 11.52
+            }
+          ]
+        }
+      },
+      "rank_skew": {
+        "matched_collectives": 8256,
+        "arrival_skew_p50_us": 619.6479999999999,
+        "arrival_skew_p95_us": 1280.256,
+        "last_arrival_to_last_finish_p50_us": 7.424,
+        "sum_pre_last_arrival_ms": 17404.774352000037,
+        "note": "ordinal alignment assumes identical collective order; GPU residency includes rank waiting"
+      }
+    },
+    {
+      "workload": "decode_micro",
+      "elapsed_s": 9.09787577399402,
+      "per_gpu": {
+        "0": {
+          "kernel_ms": 3497.671935999992,
+          "ar_ms": 2698.051071999998,
+          "ar_count": 4679,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 4550,
+              "total_ms": 2631.2709119999977,
+              "p50_us": 400.256,
+              "p95_us": 1207.808
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 3986,
+              "total_ms": 168.62924800000084,
+              "p50_us": 62.208,
+              "p95_us": 63.488
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 2821,
+              "total_ms": 100.31206399999967,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 129,
+              "total_ms": 66.78016000000004,
+              "p50_us": 339.968,
+              "p95_us": 1179.904
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1693,
+              "total_ms": 61.988608000000845,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, unsigned long, float, c10::BFloat16, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, char*, char*)",
+              "count": 14016,
+              "total_ms": 51.04793599998677,
+              "p50_us": 3.584,
+              "p95_us": 4.096
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 2257,
+              "total_ms": 37.596928000000396,
+              "p50_us": 16.64,
+              "p95_us": 17.152
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+              "count": 11677,
+              "total_ms": 36.92902400000183,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "std::enable_if<(((!std::is_same<float, thrust::pair<float, long> >::value)&&(!std::is_same<float, thrust::pair<float, long> >::value))&&(!std::is_same<float, thrust::pair<float, long> >::value))||std::is_same<float, thrust::pair<long, long> >::value, void>::type at::native::InputPerOutputContinuousReduceKernel<float, float, float, 4, true, false, at::native::MeanOps<float, float, float, float>, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false> >(float const*, at::native::MeanOps<float, float, float, float>, float, int, int, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false>, int, bool, char const*, char const*, void*, int*, void*, long, bool, bool)",
+              "count": 5838,
+              "total_ms": 35.465984000002564,
+              "p50_us": 6.144,
+              "p95_us": 6.656
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, unsigned long, c10::BFloat16, float, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, char*, char*)",
+              "count": 9336,
+              "total_ms": 33.733631999998224,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void at::native::elementwise_kernel_1_2_broadcast<512, 4, float, float, float, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, unsigned int, unsigned int, false>(long, char*, char*, char*, unsigned int, unsigned int, unsigned int, unsigned int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >)",
+              "count": 5113,
+              "total_ms": 24.300287999999114,
+              "p50_us": 4.864,
+              "p95_us": 5.376
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 5838,
+              "total_ms": 22.835968000000946,
+              "p50_us": 4.096,
+              "p95_us": 4.352
+            },
+            {
+              "name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+              "count": 1693,
+              "total_ms": 21.630208000000344,
+              "p50_us": 12.288,
+              "p95_us": 14.08
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 5839,
+              "total_ms": 19.77446400000035,
+              "p50_us": 3.328,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+              "count": 5113,
+              "total_ms": 17.41414400000094,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+              "count": 4642,
+              "total_ms": 17.10566400000039,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void vllm::act_and_mul_kernel<c10::BFloat16, __maca_bfloat162, &(c10::BFloat16 vllm::silu_kernel<c10::BFloat16>(c10::BFloat16 const&, float)), &(__maca_bfloat162 vllm::packed_silu_kernel<__maca_bfloat162>(__maca_bfloat162 const&, float)), true, true, false, false>(c10::BFloat16*, c10::BFloat16 const*, int, float, float, float)",
+              "count": 2321,
+              "total_ms": 16.69939199999971,
+              "p50_us": 7.168,
+              "p95_us": 7.424
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 2288,
+              "total_ms": 15.714048000000043,
+              "p50_us": 6.016,
+              "p95_us": 11.008
+            },
+            {
+              "name": "mcclkernel_AllGather_FC4_LL_int8_t(fcinfo)",
+              "count": 36,
+              "total_ms": 11.447552,
+              "p50_us": 340.352,
+              "p95_us": 492.032
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 112,
+              "total_ms": 10.208256000000002,
+              "p50_us": 147.32799999999997,
+              "p95_us": 155.392
+            }
+          ]
+        },
+        "1": {
+          "kernel_ms": 2925.8204160000087,
+          "ar_ms": 2310.686208,
+          "ar_count": 3655,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 3526,
+              "total_ms": 2190.0692480000002,
+              "p50_us": 494.848,
+              "p95_us": 1246.72
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 3089,
+              "total_ms": 130.25100799999936,
+              "p50_us": 62.464,
+              "p95_us": 63.488
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 129,
+              "total_ms": 120.61696,
+              "p50_us": 495.104,
+              "p95_us": 1752.832
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 2186,
+              "total_ms": 77.42054400000083,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1312,
+              "total_ms": 48.030720000000755,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, unsigned long, float, c10::BFloat16, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, char*, char*)",
+              "count": 10952,
+              "total_ms": 34.999040000001294,
+              "p50_us": 3.072,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1749,
+              "total_ms": 29.19091199999958,
+              "p50_us": 16.64,
+              "p95_us": 17.152
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+              "count": 9121,
+              "total_ms": 28.880127999998443,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "std::enable_if<(((!std::is_same<float, thrust::pair<float, long> >::value)&&(!std::is_same<float, thrust::pair<float, long> >::value))&&(!std::is_same<float, thrust::pair<float, long> >::value))||std::is_same<float, thrust::pair<long, long> >::value, void>::type at::native::InputPerOutputContinuousReduceKernel<float, float, float, 4, true, false, at::native::MeanOps<float, float, float, float>, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false> >(float const*, at::native::MeanOps<float, float, float, float>, float, int, int, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false>, int, bool, char const*, char const*, void*, int*, void*, long, bool, bool)",
+              "count": 4560,
+              "total_ms": 27.370240000001623,
+              "p50_us": 6.144,
+              "p95_us": 6.656
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, unsigned long, c10::BFloat16, float, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, char*, char*)",
+              "count": 7296,
+              "total_ms": 22.875904000001594,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 4560,
+              "total_ms": 17.723391999999485,
+              "p50_us": 3.84,
+              "p95_us": 4.096
+            },
+            {
+              "name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+              "count": 1312,
+              "total_ms": 16.94847999999985,
+              "p50_us": 12.544,
+              "p95_us": 14.336
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 4560,
+              "total_ms": 15.398912000001468,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::elementwise_kernel_1_2_broadcast<512, 4, float, float, float, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, unsigned int, unsigned int, false>(long, char*, char*, char*, unsigned int, unsigned int, unsigned int, unsigned int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >)",
+              "count": 3962,
+              "total_ms": 14.29350400000009,
+              "p50_us": 3.584,
+              "p95_us": 4.096
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+              "count": 3962,
+              "total_ms": 13.490176000001398,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+              "count": 3626,
+              "total_ms": 13.354495999999907,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void vllm::act_and_mul_kernel<c10::BFloat16, __maca_bfloat162, &(c10::BFloat16 vllm::silu_kernel<c10::BFloat16>(c10::BFloat16 const&, float)), &(__maca_bfloat162 vllm::packed_silu_kernel<__maca_bfloat162>(__maca_bfloat162 const&, float)), true, true, false, false>(c10::BFloat16*, c10::BFloat16 const*, int, float, float, float)",
+              "count": 1813,
+              "total_ms": 12.771071999999906,
+              "p50_us": 6.912,
+              "p95_us": 7.424
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 1780,
+              "total_ms": 12.220159999999995,
+              "p50_us": 6.016,
+              "p95_us": 11.008
+            },
+            {
+              "name": "mcclkernel_AllGather_FC4_LL_int8_t(fcinfo)",
+              "count": 28,
+              "total_ms": 10.994432000000002,
+              "p50_us": 376.70399999999995,
+              "p95_us": 491.008
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 112,
+              "total_ms": 10.203648,
+              "p50_us": 147.2,
+              "p95_us": 155.904
+            }
+          ]
+        },
+        "2": {
+          "kernel_ms": 1013.7495040000148,
+          "ar_ms": 306.74073599999923,
+          "ar_count": 4320,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 4191,
+              "total_ms": 288.0522239999992,
+              "p50_us": 7.168,
+              "p95_us": 451.072
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 3672,
+              "total_ms": 154.87795200000062,
+              "p50_us": 62.208,
+              "p95_us": 63.232
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 2598,
+              "total_ms": 91.5837439999983,
+              "p50_us": 36.352,
+              "p95_us": 37.12
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1560,
+              "total_ms": 57.125120000000734,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, unsigned long, float, c10::BFloat16, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, char*, char*)",
+              "count": 12942,
+              "total_ms": 40.27699200000597,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 2079,
+              "total_ms": 34.53055999999995,
+              "p50_us": 16.64,
+              "p95_us": 17.152
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+              "count": 10780,
+              "total_ms": 33.57235200000157,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "std::enable_if<(((!std::is_same<float, thrust::pair<float, long> >::value)&&(!std::is_same<float, thrust::pair<float, long> >::value))&&(!std::is_same<float, thrust::pair<float, long> >::value))||std::is_same<float, thrust::pair<long, long> >::value, void>::type at::native::InputPerOutputContinuousReduceKernel<float, float, float, 4, true, false, at::native::MeanOps<float, float, float, float>, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false> >(float const*, at::native::MeanOps<float, float, float, float>, float, int, int, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false>, int, bool, char const*, char const*, void*, int*, void*, long, bool, bool)",
+              "count": 5390,
+              "total_ms": 31.964672000002448,
+              "p50_us": 5.888,
+              "p95_us": 6.4
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, unsigned long, c10::BFloat16, float, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, char*, char*)",
+              "count": 8622,
+              "total_ms": 26.06668800000168,
+              "p50_us": 3.072,
+              "p95_us": 3.328
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 5390,
+              "total_ms": 20.829184000000883,
+              "p50_us": 3.84,
+              "p95_us": 4.096
+            },
+            {
+              "name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+              "count": 1560,
+              "total_ms": 19.836672000000082,
+              "p50_us": 12.288,
+              "p95_us": 13.824
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 129,
+              "total_ms": 18.688512000000003,
+              "p50_us": 18.944,
+              "p95_us": 1214.464
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 5390,
+              "total_ms": 17.960448000000312,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::elementwise_kernel_1_2_broadcast<512, 4, float, float, float, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, unsigned int, unsigned int, false>(long, char*, char*, char*, unsigned int, unsigned int, unsigned int, unsigned int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >)",
+              "count": 4710,
+              "total_ms": 16.1277440000017,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+              "count": 4710,
+              "total_ms": 15.827456000000645,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+              "count": 4286,
+              "total_ms": 15.574272000000532,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void vllm::act_and_mul_kernel<c10::BFloat16, __maca_bfloat162, &(c10::BFloat16 vllm::silu_kernel<c10::BFloat16>(c10::BFloat16 const&, float)), &(__maca_bfloat162 vllm::packed_silu_kernel<__maca_bfloat162>(__maca_bfloat162 const&, float)), true, true, false, false>(c10::BFloat16*, c10::BFloat16 const*, int, float, float, float)",
+              "count": 2143,
+              "total_ms": 15.085311999999918,
+              "p50_us": 6.912,
+              "p95_us": 7.424
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 2108,
+              "total_ms": 14.39283199999999,
+              "p50_us": 5.888,
+              "p95_us": 11.008
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 112,
+              "total_ms": 10.148864,
+              "p50_us": 145.79199999999997,
+              "p95_us": 155.904
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 1038,
+              "total_ms": 8.291584000000068,
+              "p50_us": 8.192,
+              "p95_us": 11.52
+            }
+          ]
+        },
+        "3": {
+          "kernel_ms": 3284.293376000013,
+          "ar_ms": 2610.460672000003,
+          "ar_count": 4018,
+          "top_kernels": [
+            {
+              "name": "mcclKernel_AllReduce_FC4_LL_Sum_mccl_bfloat16(fcinfo)",
+              "count": 3889,
+              "total_ms": 2485.4819840000027,
+              "p50_us": 612.352,
+              "p95_us": 1257.472
+            },
+            {
+              "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 3407,
+              "total_ms": 144.2060799999993,
+              "p50_us": 62.208,
+              "p95_us": 63.488
+            },
+            {
+              "name": "mcclKernel_AllReduce_FC4_Sum_mccl_bfloat16(fcinfo)",
+              "count": 129,
+              "total_ms": 124.97868799999996,
+              "p50_us": 847.872,
+              "p95_us": 1789.184
+            },
+            {
+              "name": "void b16gemvt_wave_kernel<64, 2, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 2411,
+              "total_ms": 85.38931199999953,
+              "p50_us": 36.352,
+              "p95_us": 37.12
+            },
+            {
+              "name": "void b16gemvt_kernel<512, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1447,
+              "total_ms": 52.89267200000064,
+              "p50_us": 36.608,
+              "p95_us": 37.376
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, unsigned long, float, c10::BFloat16, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, char*, char*)",
+              "count": 12038,
+              "total_ms": 38.47910400000274,
+              "p50_us": 3.072,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+              "count": 1929,
+              "total_ms": 31.973631999999682,
+              "p50_us": 16.64,
+              "p95_us": 17.152
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnSelf_add<float>, std::array<char*, 2ul>)",
+              "count": 10028,
+              "total_ms": 31.633407999999505,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "std::enable_if<(((!std::is_same<float, thrust::pair<float, long> >::value)&&(!std::is_same<float, thrust::pair<float, long> >::value))&&(!std::is_same<float, thrust::pair<float, long> >::value))||std::is_same<float, thrust::pair<long, long> >::value, void>::type at::native::InputPerOutputContinuousReduceKernel<float, float, float, 4, true, false, at::native::MeanOps<float, float, float, float>, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false> >(float const*, at::native::MeanOps<float, float, float, float>, float, int, int, at::native::reduce::OffsetCalculator<1, unsigned int, false>, at::native::reduce::OffsetCalculator<2, unsigned int, false>, int, bool, char const*, char const*, void*, int*, void*, long, bool, bool)",
+              "count": 5014,
+              "total_ms": 30.119680000001786,
+              "p50_us": 6.144,
+              "p95_us": 6.656
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel_copy_cast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, unsigned long, c10::BFloat16, float, 4>(at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, char*, char*)",
+              "count": 8019,
+              "total_ms": 25.170688000002432,
+              "p50_us": 3.072,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::rsqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 5014,
+              "total_ms": 19.338496000000585,
+              "p50_us": 3.84,
+              "p95_us": 4.096
+            },
+            {
+              "name": "fused_recurrent_gated_delta_rule_packed_decode_kernel",
+              "count": 1447,
+              "total_ms": 18.484480000000193,
+              "p50_us": 12.288,
+              "p95_us": 14.08
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+              "count": 5014,
+              "total_ms": 16.889088000001248,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::elementwise_kernel_1_2_broadcast<512, 4, float, float, float, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, unsigned int, unsigned int, false>(long, char*, char*, char*, unsigned int, unsigned int, unsigned int, unsigned int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >)",
+              "count": 4371,
+              "total_ms": 15.87276800000007,
+              "p50_us": 3.584,
+              "p95_us": 4.096
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+              "count": 4370,
+              "total_ms": 14.849280000001224,
+              "p50_us": 3.328,
+              "p95_us": 3.584
+            },
+            {
+              "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+              "count": 3986,
+              "total_ms": 14.615296000000116,
+              "p50_us": 3.584,
+              "p95_us": 3.84
+            },
+            {
+              "name": "void vllm::act_and_mul_kernel<c10::BFloat16, __maca_bfloat162, &(c10::BFloat16 vllm::silu_kernel<c10::BFloat16>(c10::BFloat16 const&, float)), &(__maca_bfloat162 vllm::packed_silu_kernel<__maca_bfloat162>(__maca_bfloat162 const&, float)), true, true, false, false>(c10::BFloat16*, c10::BFloat16 const*, int, float, float, float)",
+              "count": 1993,
+              "total_ms": 14.030079999999902,
+              "p50_us": 6.912,
+              "p95_us": 7.424
+            },
+            {
+              "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+              "count": 1960,
+              "total_ms": 13.430783999999955,
+              "p50_us": 6.016,
+              "p95_us": 11.008
+            },
+            {
+              "name": "mcclkernel_AllGather_FC4_LL_int8_t(fcinfo)",
+              "count": 31,
+              "total_ms": 12.002303999999999,
+              "p50_us": 356.864,
+              "p95_us": 491.008
+            },
+            {
+              "name": "mcblas__Mck_bf16gemm_tn_64x32x256_2m1n8k_256t_bf16_bf16_fp32_sb_0_2",
+              "count": 112,
+              "total_ms": 10.161664,
+              "p50_us": 146.944,
+              "p95_us": 155.904
+            }
+          ]
+        }
+      },
+      "rank_skew": null
+    },
+    {
+      "workload": "prefill_12k",
+      "elapsed_s": 3.432375914999284,
+      "per_gpu": {},
+      "rank_skew": null
+    }
+  ],
+  "valid": false,
+  "source_shards": [
+    {
+      "path": "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/results/vllm_current/traced/trace/vllm-524.json",
+      "rank": 0,
+      "gpu_events": 397582,
+      "truncated": false
+    },
+    {
+      "path": "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/results/vllm_current/traced/trace/vllm-525.json",
+      "rank": 1,
+      "gpu_events": 368559,
+      "truncated": false
+    },
+    {
+      "path": "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/results/vllm_current/traced/trace/vllm-526.json",
+      "rank": 2,
+      "gpu_events": 387259,
+      "truncated": false
+    },
+    {
+      "path": "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/results/vllm_current/traced/trace/vllm-527.json",
+      "rank": 3,
+      "gpu_events": 381336,
+      "truncated": false
+    }
+  ],
+  "execution": "eager"
+}

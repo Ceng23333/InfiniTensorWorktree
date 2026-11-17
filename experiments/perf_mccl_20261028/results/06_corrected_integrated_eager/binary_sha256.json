@@ -1,0 +1,7 @@
+{
+  "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/install/lib/libinfinicore_runtime.so": "048010a64571cfbb8f541761d4d5534ec147b80930404e29c70bbe22fb27ad68",
+  "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/install/lib/libinfinilm_metax_extra.so": "1f04c7cb74a0d916e79e167ba7fc262ad9c25231584041410dafef50da31d072",
+  "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/install/lib/libinfiniccl.so": "a7c24c59cc240fc20ee8a112eecb573e5db3ccb9c27a399173127b2045ffa6c7",
+  "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/install/lib/libinfiniops.so": "cd025d2ba56c91838204ff22a0af95b11b28cc87fa22086030cebfd71c521e3d",
+  "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/InfiniLM/python/infinilm/lib/_infinilm.cpython-310-x86_64-linux-gnu.so": "c78cfb97e9f023776d37c9ae917392f0995927f49033e23967b423a541b785db"
+}

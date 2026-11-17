@@ -1,0 +1,2897 @@
+{
+  "gap_count": 13,
+  "gap_sum_ms": 1078.949376,
+  "api_by_thread": [
+    {
+      "api": "mcMemcpyAsync",
+      "tid": 157,
+      "count": 169,
+      "sum_ms": 9.850089,
+      "median_ms": 0.007144,
+      "max_ms": 1.228096
+    },
+    {
+      "api": "mcStreamSynchronize",
+      "tid": 157,
+      "count": 195,
+      "sum_ms": 3.351987,
+      "median_ms": 0.013978,
+      "max_ms": 0.171846
+    },
+    {
+      "api": "mcStreamSynchronize",
+      "tid": 158,
+      "count": 121,
+      "sum_ms": 2.940332,
+      "median_ms": 0.015105,
+      "max_ms": 0.183332
+    },
+    {
+      "api": "mcStreamSynchronize",
+      "tid": 159,
+      "count": 143,
+      "sum_ms": 2.654820999999999,
+      "median_ms": 0.0133,
+      "max_ms": 0.100892
+    },
+    {
+      "api": "mcLaunchKernel",
+      "tid": 159,
+      "count": 140,
+      "sum_ms": 2.2650779999999995,
+      "median_ms": 0.013195,
+      "max_ms": 0.056128
+    },
+    {
+      "api": "mcLaunchKernel",
+      "tid": 158,
+      "count": 132,
+      "sum_ms": 1.965828,
+      "median_ms": 0.012736500000000001,
+      "max_ms": 0.050883
+    },
+    {
+      "api": "mcMemcpyAsync",
+      "tid": 159,
+      "count": 130,
+      "sum_ms": 1.575026,
+      "median_ms": 0.00936,
+      "max_ms": 0.052623
+    },
+    {
+      "api": "mcMemcpyAsync",
+      "tid": 158,
+      "count": 110,
+      "sum_ms": 1.2361859999999996,
+      "median_ms": 0.007833,
+      "max_ms": 0.054463
+    },
+    {
+      "api": "mcLaunchKernel",
+      "tid": 157,
+      "count": 64,
+      "sum_ms": 0.9225490000000001,
+      "median_ms": 0.011617,
+      "max_ms": 0.034123
+    },
+    {
+      "api": "mcStreamSynchronize",
+      "tid": 160,
+      "count": 22,
+      "sum_ms": 0.542133,
+      "median_ms": 0.014075500000000001,
+      "max_ms": 0.102072
+    },
+    {
+      "api": "mcSetDevice",
+      "tid": 159,
+      "count": 452,
+      "sum_ms": 0.44620699999999985,
+      "median_ms": 0.00088,
+      "max_ms": 0.008557
+    },
+    {
+      "api": "mcSetDevice",
+      "tid": 158,
+      "count": 421,
+      "sum_ms": 0.3839210000000002,
+      "median_ms": 0.000817,
+      "max_ms": 0.0098
+    },
+    {
+      "api": "mcMemcpyAsync",
+      "tid": 160,
+      "count": 22,
+      "sum_ms": 0.35160299999999994,
+      "median_ms": 0.0103845,
+      "max_ms": 0.054705
+    },
+    {
+      "api": "mcSetDevice",
+      "tid": 157,
+      "count": 369,
+      "sum_ms": 0.3030800000000001,
+      "median_ms": 0.000689,
+      "max_ms": 0.005512
+    },
+    {
+      "api": "mcLaunchKernel",
+      "tid": 160,
+      "count": 9,
+      "sum_ms": 0.133879,
+      "median_ms": 0.0108,
+      "max_ms": 0.04871
+    },
+    {
+      "api": "mcSetDevice",
+      "tid": 160,
+      "count": 53,
+      "sum_ms": 0.09116200000000002,
+      "median_ms": 0.001017,
+      "max_ms": 0.007803
+    },
+    {
+      "api": "mcStreamGetCaptureInfo",
+      "tid": 158,
+      "count": 8,
+      "sum_ms": 0.020604,
+      "median_ms": 0.0023295,
+      "max_ms": 0.003924
+    },
+    {
+      "api": "mcStreamGetCaptureInfo",
+      "tid": 159,
+      "count": 5,
+      "sum_ms": 0.019192,
+      "median_ms": 0.003615,
+      "max_ms": 0.005044
+    },
+    {
+      "api": "mcCtxGetCurrent",
+      "tid": 132,
+      "count": 2,
+      "sum_ms": 0.016574,
+      "median_ms": 0.008287,
+      "max_ms": 0.008587
+    },
+    {
+      "api": "mcCtxGetCurrent",
+      "tid": 131,
+      "count": 2,
+      "sum_ms": 0.016434,
+      "median_ms": 0.008217,
+      "max_ms": 0.008337
+    },
+    {
+      "api": "mcGetLastError",
+      "tid": 158,
+      "count": 24,
+      "sum_ms": 0.014680999999999996,
+      "median_ms": 0.0005605,
+      "max_ms": 0.001113
+    },
+    {
+      "api": "mcCtxGetCurrent",
+      "tid": 130,
+      "count": 3,
+      "sum_ms": 0.013108,
+      "median_ms": 0.005534,
+      "max_ms": 0.005574
+    },
+    {
+      "api": "mcCtxGetCurrent",
+      "tid": 129,
+      "count": 2,
+      "sum_ms": 0.012124,
+      "median_ms": 0.006062,
+      "max_ms": 0.006509
+    },
+    {
+      "api": "mcGetLastError",
+      "tid": 159,
+      "count": 19,
+      "sum_ms": 0.011486,
+      "median_ms": 0.000555,
+      "max_ms": 0.00097
+    },
+    {
+      "api": "mcGetDevice",
+      "tid": 158,
+      "count": 8,
+      "sum_ms": 0.00926,
+      "median_ms": 0.0011285,
+      "max_ms": 0.00146
+    },
+    {
+      "api": "mcGetLastError",
+      "tid": 157,
+      "count": 13,
+      "sum_ms": 0.006757,
+      "median_ms": 0.000412,
+      "max_ms": 0.000998
+    },
+    {
+      "api": "mcGetDevice",
+      "tid": 159,
+      "count": 5,
+      "sum_ms": 0.006340999999999999,
+      "median_ms": 0.001253,
+      "max_ms": 0.001415
+    }
+  ],
+  "gpu_kernels_in_gaps": [
+    {
+      "name": "void b16gemvt_kernel<256, 8, 8, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+      "count": 52,
+      "sum_ms": 80.74726399999999,
+      "p50_ms": 1.548032
+    },
+    {
+      "name": "void infini::ops::EmbeddingKernel<(infini::rt::Device::Type)4, __maca_bfloat16, long>(__maca_bfloat16*, long const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long const*, long const*, unsigned long, unsigned long const*, long const*, long, long, unsigned long, unsigned long, bool, bool)",
+      "count": 28,
+      "sum_ms": 2.6327040000000004,
+      "p50_ms": 0.09408
+    },
+    {
+      "name": "void infini::ops::FusedAddRmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16>(__maca_bfloat16*, long, __maca_bfloat16*, long, __maca_bfloat16 const*, unsigned long, float)",
+      "count": 52,
+      "sum_ms": 1.1220480000000002,
+      "p50_ms": 0.021504
+    },
+    {
+      "name": "void b16gemvt_kernel<128, 8, 8, 2, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+      "count": 26,
+      "sum_ms": 0.740352,
+      "p50_ms": 0.028416
+    },
+    {
+      "name": "void infini::ops::RmsNormKernel<256u, (infini::rt::Device::Type)4, float, __maca_bfloat16, __maca_bfloat16>(__maca_bfloat16*, long, long, __maca_bfloat16 const*, long, long, __maca_bfloat16 const*, unsigned long, unsigned long, float)",
+      "count": 44,
+      "sum_ms": 0.5265920000000002,
+      "p50_ms": 0.016384
+    },
+    {
+      "name": "void b16gemvt_kernel<256, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+      "count": 26,
+      "sum_ms": 0.41113599999999995,
+      "p50_ms": 0.015872
+    },
+    {
+      "name": "void b16gemvt_kernel<512, 8, 4, 8, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+      "count": 50,
+      "sum_ms": 0.373504,
+      "p50_ms": 0.007424
+    },
+    {
+      "name": "void (anonymous namespace)::causal_conv1d_k4_kernel<__maca_bfloat16>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, void const*, void const*, void const*, bool, bool, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+      "count": 22,
+      "sum_ms": 0.3594240000000001,
+      "p50_ms": 0.016384
+    },
+    {
+      "name": "void (anonymous namespace)::recurrent_gated_delta_rule_kernel<__maca_bfloat16, float, 128ul, 128ul, 8ul>(__maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, float const*, float const*, void const*, void const*, bool, bool, bool, bool, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)",
+      "count": 17,
+      "sum_ms": 0.32768,
+      "p50_ms": 0.019968
+    },
+    {
+      "name": "void infini::ops::EmbeddingKernel<(infini::rt::Device::Type)4, __maca_bfloat16, int>(__maca_bfloat16*, int const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long const*, long const*, unsigned long, unsigned long const*, long const*, long, long, unsigned long, unsigned long, bool, bool)",
+      "count": 4,
+      "sum_ms": 0.325888,
+      "p50_ms": 0.08192
+    },
+    {
+      "name": "void b16gemvt_kernel<64, 8, 4, 4, int, float, __maca_bfloat16, __maca_bfloat16>(int, int, float, long long, __maca_bfloat16 const*, long long, int, long long, __maca_bfloat16 const*, long long, long long, float, long long, __maca_bfloat16*, long long, long long, int)",
+      "count": 14,
+      "sum_ms": 0.289792,
+      "p50_ms": 0.020736
+    },
+    {
+      "name": "void infini::ops::SiluKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, long const*, long const*, unsigned long, unsigned long, bool, bool)",
+      "count": 35,
+      "sum_ms": 0.14387200000000003,
+      "p50_ms": 0.00384
+    },
+    {
+      "name": "void (anonymous namespace)::fused_gated_delta_net_gating_kernel<__maca_bfloat16>(float*, float*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long, unsigned long, unsigned long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, float, float)",
+      "count": 17,
+      "sum_ms": 0.08473599999999999,
+      "p50_ms": 0.004864
+    },
+    {
+      "name": "void infini::ops::MulKernel<(infini::rt::Device::Type)4, __maca_bfloat16, 256u>(__maca_bfloat16*, __maca_bfloat16 const*, __maca_bfloat16 const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool)",
+      "count": 14,
+      "sum_ms": 0.056832000000000014,
+      "p50_ms": 0.004096
+    },
+    {
+      "name": "void infini::ops::AddKernel<(infini::rt::Device::Type)4, int, 256u>(int*, int const*, int const*, unsigned long const*, unsigned long const*, unsigned long const*, long const*, long const*, long const*, unsigned long, unsigned long, bool, bool, bool, double)",
+      "count": 4,
+      "sum_ms": 0.018175999999999998,
+      "p50_ms": 0.004608
+    }
+  ],
+  "dma_events": [
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 39.424
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 16.896
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 15.872
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 55.04
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 17.152
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 25.856
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 21.76
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 17.92
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 27.904
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 39.936
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 18.176
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 26.624
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 22.784
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 18.176
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 16.384
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 23.04
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 28.672
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 16.384
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 771,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 17.152
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 76.544
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 16.64
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.056
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 43.264
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.312
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.568
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 3.072
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 3.072
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 48.128
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 18.688
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.056
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 91.136
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.824
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 3.072
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.568
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 46.848
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.824
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.312
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 96.0
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 15.36
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.56
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.568
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 496640,
+      "duration_us": 43.776
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy DTOH(device,pageable)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 15.104
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 259,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 13.824
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 515,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 24,
+      "duration_us": 2.816
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 8,
+      "duration_us": 1.792
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 2.048
+    },
+    {
+      "pid": 3,
+      "name": "memcpy HTOD(device,device)",
+      "bytes": 4,
+      "duration_us": 1.792
+    }
+  ],
+  "note": "API durations can nest and overlap across threads; sums are diagnostic, not additive latency attribution."
+}

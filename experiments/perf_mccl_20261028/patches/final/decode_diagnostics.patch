@@ -1,0 +1,19 @@
+diff --git a/InfiniLM/csrc/engine/rank_worker.cpp b/InfiniLM/csrc/engine/rank_worker.cpp
+index ca0369d..2b43b47 100644
+--- a/InfiniLM/csrc/engine/rank_worker.cpp
++++ b/InfiniLM/csrc/engine/rank_worker.cpp
+@@ -456,6 +456,14 @@ void RankWorker::thread_loop() {
+                             // FULL decode: FA in-graph under FA_INGRAPH=decode.
+                             if (!logits && !piecewise_ran && uniform_decode) {
+                                 auto [graph, output] = compiler_->get_compiled(model_input_cpu);
++                                static thread_local bool reported_decode_graph = false;
++                                if (!reported_decode_graph && std::getenv("INFINI_DECODE_GRAPH_DIAGNOSTICS")) {
++                                    spdlog::info("decode graph rank={} selected={} device_segments={}",
++                                                 rank_info_.tp_rank, graph != nullptr,
++                                                 graph ? graph->device_segment_count() : 0);
++                                    reported_decode_graph = true;
++                                }
++
+                                 if (graph != nullptr && output != nullptr) {
+                                     infinicore::context::InferencePhaseGuard phase_guard(
+                                         infinicore::context::InferencePhase::Decode);

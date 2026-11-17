@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "execution": "eager",
+  "results": [
+    {
+      "start_ns": 1793195425648571775,
+      "end_ns": 1793195438960484920,
+      "elapsed_s": 13.311909872019896,
+      "ttft_s": null,
+      "tok_s": 4.807724858062676,
+      "prompt_tokens": 30,
+      "total_tokens": 94,
+      "completion_tokens": 64,
+      "prompt_tokens_details": null,
+      "text": "```\npad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad",
+      "workload": "decode_micro",
+      "warmup": true
+    },
+    {
+      "start_ns": 1793195438960565209,
+      "end_ns": 1793195448058443555,
+      "elapsed_s": 9.09787577399402,
+      "ttft_s": null,
+      "tok_s": 7.0346091318307415,
+      "prompt_tokens": 30,
+      "total_tokens": 94,
+      "completion_tokens": 64,
+      "prompt_tokens_details": null,
+      "text": "```\npad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793195448058678706,
+      "end_ns": 1793195451491058200,
+      "elapsed_s": 3.432375914999284,
+      "ttft_s": 2.613863312988542,
+      "tok_s": 2.0394036589670748,
+      "prompt_tokens": 10718,
+      "total_tokens": 10725,
+      "completion_tokens": 7,
+      "text": "I have read the prompt.",
+      "workload": "prefill_12k",
+      "warmup": false
+    }
+  ]
+}

@@ -1,7 +1,14 @@
 # Nested build artifacts if someone builds in-tree
 **/build/
+**/build-mars/
 **/.xmake/
 **/__pycache__/
 **/*.pyc
 **/.pytest_cache/
 **/*.egg-info/
+
+# Local Mars verify / promo artifacts (not part of ITW freeze)
+bench_results/
+prefix-mars/
+hpcc-shim/
+**/InfiniCCL.bak/

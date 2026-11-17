@@ -1,0 +1,88 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 76e8e8c..981623f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -737,6 +737,15 @@ set(INFINI_RT_INCLUDE_DIRS "" CACHE STRING "InfiniRT include directories")
+ set(INFINI_RT_LIBRARY "" CACHE FILEPATH "InfiniRT library")
+ 
+ function(_infiniops_configure_infinirt)
++    # AUTO_FALLBACK_INFINI_RT_SOURCE: cmake may wipe -D cache when CMAKE_CXX_COMPILER changes mid-configure.
++    if(NOT INFINI_RT_SOURCE_DIR AND NOT INFINI_RT_ROOT)
++        set(_sibling_rt "${CMAKE_CURRENT_LIST_DIR}/../InfiniRT")
++        if(EXISTS "${_sibling_rt}/CMakeLists.txt")
++            set(INFINI_RT_SOURCE_DIR "${_sibling_rt}")
++            message(STATUS "Auto-selected InfiniRT source: ${INFINI_RT_SOURCE_DIR}")
++        endif()
++    endif()
++
+     if(TARGET infinirt)
+         get_target_property(_infinirt_include_dirs infinirt INTERFACE_INCLUDE_DIRECTORIES)
+         if(_infinirt_include_dirs)
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 747ee72..30055d4 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -57,10 +57,19 @@ if(NOT TARGET nlohmann_json::nlohmann_json)
+         cmake_policy(SET CMP0135 NEW)
+     endif()
+     include(FetchContent)
+-    FetchContent_Declare(nlohmann_json
+-        URL https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz
+-        URL_HASH SHA256=42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa
+-    )
++    # Offline MetaX: use vendored tree (no GitHub fetch).
++    set(_nlohmann_local "${CMAKE_CURRENT_SOURCE_DIR}/../../../deps/nlohmann_json")
++    if(NOT EXISTS "${_nlohmann_local}/CMakeLists.txt")
++        set(_nlohmann_local "${CMAKE_CURRENT_SOURCE_DIR}/../../../../deps/nlohmann_json")
++    endif()
++    if(EXISTS "${_nlohmann_local}/CMakeLists.txt")
++        FetchContent_Declare(nlohmann_json SOURCE_DIR "${_nlohmann_local}")
++    else()
++        FetchContent_Declare(nlohmann_json
++            URL https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz
++            URL_HASH SHA256=42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa
++        )
++    endif()
+     FetchContent_MakeAvailable(nlohmann_json)
+ endif()
+ 
+diff --git a/src/linked/torch/metax/ops/flash_attn_varlen_func/flash_attn.cc b/src/linked/torch/metax/ops/flash_attn_varlen_func/flash_attn.cc
+index 27b62f0..1ad08d2 100644
+--- a/src/linked/torch/metax/ops/flash_attn_varlen_func/flash_attn.cc
++++ b/src/linked/torch/metax/ops/flash_attn_varlen_func/flash_attn.cc
+@@ -5,6 +5,7 @@
+ #include "linked/torch/ops/flash_attn_varlen_func.h"
+ #include "torch/metax/c10.h"
+ 
++// MACA 3.8 flash_attn exports a trailing bool (return_max_logit), same as Mars.
+ std::vector<at::Tensor> mha_varlen_fwd(
+     at::Tensor& q, const at::Tensor& k, const at::Tensor& v,
+     std::optional<at::Tensor>& out, const at::Tensor& cu_seqlens_q,
+@@ -15,7 +16,7 @@ std::vector<at::Tensor> mha_varlen_fwd(
+     float dropout_p, float softmax_scale, bool zero_tensors, bool causal,
+     int window_size_left, int window_size_right, float softcap,
+     bool return_softmax, std::optional<at::Generator> generator,
+-    std::optional<at::Tensor>& flash_attn_mars_ext);
++    std::optional<at::Tensor>& flash_attn_mars_ext, bool return_max_logit);
+ 
+ namespace infini::ops::linked::torch::metax {
+ 
+@@ -36,7 +37,7 @@ struct FlashAttnVarlen : C10<Device::Type::kMetax> {
+                             max_seqlen_k, dropout_p, softmax_scale,
+                             zero_tensors, causal, window_size_left,
+                             window_size_right, softcap, return_softmax,
+-                            generator, flash_attn_mars_ext);
++                            generator, flash_attn_mars_ext, false);
+   }
+ };
+ 
+diff --git a/src/linked/torch/metax/ops/flash_attn_varlen_func/flash_attn.yaml b/src/linked/torch/metax/ops/flash_attn_varlen_func/flash_attn.yaml
+index c692e1a..874420d 100644
+--- a/src/linked/torch/metax/ops/flash_attn_varlen_func/flash_attn.yaml
++++ b/src/linked/torch/metax/ops/flash_attn_varlen_func/flash_attn.yaml
+@@ -1,4 +1,4 @@
+ library: flash_attn
+ required_symbols:
+   - >-
+-    mha_varlen_fwd(at::Tensor&, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor>&, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor>&, std::optional<at::Tensor const>&, std::optional<at::Tensor>&, std::optional<at::Tensor>&, int, int, float, float, bool, bool, int, int, float, bool, std::optional<at::Generator>, std::optional<at::Tensor>&)
++    mha_varlen_fwd(at::Tensor&, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor>&, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor>&, std::optional<at::Tensor const>&, std::optional<at::Tensor>&, std::optional<at::Tensor>&, int, int, float, float, bool, bool, int, int, float, bool, std::optional<at::Generator>, std::optional<at::Tensor>&, bool)

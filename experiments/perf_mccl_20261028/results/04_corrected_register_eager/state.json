@@ -1,0 +1,17 @@
+{
+  "name": "04_corrected_register_eager",
+  "env": {
+    "ENABLE_GRAPH": "0",
+    "INFINI_CUDAGRAPH_POLICY": "eager",
+    "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+  },
+  "phase": "failed",
+  "started_ns": 1793193495910395154,
+  "ok": false,
+  "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+  "source_diff_sha256": "b6da35d155b4f1971076db3a282fbf968afe47c52808eb624d9726488a3c934a",
+  "decode_tok_s": 4.9877432586771935,
+  "prefill_ttft_s": 8.232874462002655,
+  "correctness_ok": false,
+  "error": "server exited during startup"
+}

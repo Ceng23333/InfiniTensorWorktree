@@ -1,0 +1,1830 @@
+{
+  "summary": {
+    "_infinicore": {
+      "objects": 2,
+      "without_optimization_flag": 2
+    },
+    "_infinilm": {
+      "objects": 87,
+      "without_optimization_flag": 87
+    },
+    "infinicore_runtime": {
+      "objects": 211,
+      "without_optimization_flag": 211
+    }
+  },
+  "representative_compile_values": {
+    "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/random_sample/random_sample_metax.cc.o.d": " {\n        \"/usr/bin/g++\",\n        {\n            \"-m64\",\n            \"-std=c++17\",\n            \"-Ithird_party/spdlog/include\",\n            \"-Ithird_party/json/single_include\",\n            \"-Icsrc/infinicore/include\",\n            \"-Icsrc/infinicore/src\",\n            \"-Icsrc/infinicore/utils\",\n            \"-I/home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include\",\n            \"-I/home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infiniccl\",\n            \"-DENABLE_INFINIOPS_API\",\n            \"-DUSE_INFINIRT_GRAPH\",\n            \"-fPIC\",\n            \"-DINFINICORE_HPCC_VERSION_MAJOR=3\",\n            \"-DINFINICORE_MACA38_FLASH_TAIL_BOOL=1\",\n            \"-I/opt/conda/include/python3.10\",\n            \"-I/opt/maca/include\",\n            \"-I/opt/maca/tools/cu-bridge/include\"\n        }\n    },\n    files = {\n        \"csrc/infinicore/src/ops/random_sample/random_sample_metax.cc\"\n    }\n}",
+    "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/graph/graph.cc.o.d": " {\n        \"/usr/bin/g++\",\n        {\n            \"-m64\",\n            \"-std=c++17\",\n            \"-Ithird_party/spdlog/include\",\n            \"-Ithird_party/json/single_include\",\n            \"-Icsrc/infinicore/include\",\n            \"-Icsrc/infinicore/src\",\n            \"-Icsrc/infinicore/utils\",\n            \"-I/home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include\",\n            \"-I/home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infiniccl\",\n            \"-DENABLE_INFINIOPS_API\",\n            \"-DUSE_INFINIRT_GRAPH\",\n            \"-fPIC\",\n            \"-DINFINICORE_HPCC_VERSION_MAJOR=3\",\n            \"-DINFINICORE_MACA38_FLASH_TAIL_BOOL=1\",\n            \"-I/opt/conda/include/python3.10\",\n            \"-I/opt/maca/include\",\n            \"-I/opt/maca/tools/cu-bridge/include\"\n        }\n    },\n    files = {\n        \"csrc/infinicore/src/graph/graph.cc\"\n    },\n    depfiles = \"build/.objs/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/graph/graph.cc.o:  csrc/infinicore/src/graph/graph.cc  csrc/infinicore/src/graph/graph_manager.hpp  csrc/infinicore/include/infinicore/graph/graph.hpp  csrc/infinicore/include/infinicore/graph/../tensor.hpp  csrc/infinicore/include/infinicore/graph/../device.hpp  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/generated.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/data_type.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/common/constexpr_map.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/common/traits.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/device.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/hash.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/driver.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/runtime.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/tensor_view.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/common/shape_strides_storage.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/common/metadata_view.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/common/small_vector.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/cpu/device_.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/native/cpu/device_.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/metax/device_.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/native/cuda/metax/device_.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/cpu/runtime_.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/native/cpu/runtime_.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/metax/runtime_.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/native/cuda/metax/runtime_.h  /home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infini/rt/detail/native/cuda/runtime_.h  csrc/infinicore/include/infinicore/graph/../dtype.hpp  csrc/infinicore/include/infinicore/graph/../memory.hpp  csrc/infinicore/src/graph/../context/runtime/runtime.hpp  csrc/infinicore/src/graph/../context/runtime/../allocators/pinnable_block_allocator.hpp  csrc/infinicore/src/graph/../context/runtime/../allocators/memory_allocator.hpp  csrc/infinicore/include/infinicore/context/context.hpp  csrc/infinicore/src/graph/../utils.hpp  third_party/spdlog/include/spdlog/cfg/env.h  third_party/spdlog/include/spdlog/cfg/helpers.h  third_party/spdlog/include/spdlog/common.h  third_party/spdlog/include/spdlog/details/null_mutex.h  third_party/spdlog/include/spdlog/tweakme.h  third_party/spdlog/include/spdlog/fmt/fmt.h  third_party/spdlog/include/spdlog/fmt/bundled/format.h  third_party/spdlog/include/spdlog/fmt/bundled/base.h  third_party/spdlog/include/spdlog/fmt/bundled/format.h  third_party/spdlog/include/spdlog/fmt/bundled/format-inl.h  third_party/spdlog/include/spdlog/common-inl.h  third_party/spdlog/include/spdlog/cfg/helpers-inl.h  third_party/spdlog/include/spdlog/details/os.h  third_party/spdlog/include/spdlog/details/os-inl.h  third_party/spdlog/include/spdlog/details/registry.h  third_party/spdlog/include/spdlog/details/periodic_worker.h  third_party/spdlog/include/spdlog/details/periodic_worker-inl.h  third_party/spdlog/include/spdlog/details/registry-inl.h  third_party/spdlog/include/spdlog/logger.h  third_party/spdlog/include/spdlog/details/backtracer.h  third_party/spdlog/include/spdlog/details/circular_q.h  third_party/spdlog/include/spdlog/details/log_msg_buffer.h  third_party/spdlog/include/spdlog/details/log_msg.h  third_party/spdlog/include/spdlog/details/log_msg-inl.h  third_party/spdlog/include/spdlog/details/log_msg_buffer-inl.h  third_party/spdlog/include/spdlog/details/backtracer-inl.h  third_party/spdlog/include/spdlog/logger-inl.h  third_party/spdlog/include/spdlog/pattern_formatter.h  third_party/spdlog/include/spdlog/formatter.h  third_party/spdlog/include/spdlog/pattern_formatter-inl.h  third_party/spdlog/include/spdlog/details/fmt_helper.h  third_party/spdlog/include/spdlog/mdc.h  third_party/spdlog/include/spdlog/sinks/sink.h  third_party/spdlog/include/spdlog/sinks/sink-inl.h  third_party/spdlog/include/spdlog/sinks/ansicolor_sink.h  third_party/spdlog/include/spdlog/details/console_globals.h  third_party/spdlog/include/spdlog/sinks/ansicolor_sink-inl.h  third_party/spdlog/include/spdlog/spdlog.h  third_party/spdlog/include/spdlog/details/synchronous_factory.h  third_party/spdlog/include/spdlog/version.h  third_party/spdlog/include/spdlog/spdlog-inl.h\\\n\"\n}",
+    "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/rank_worker.cpp.o.d": " {\n        \"/usr/bin/g++\",\n        {\n            \"-m64\",\n            \"-fPIC\",\n            \"-std=c++17\",\n            \"-Ithird_party/spdlog/include\",\n            \"-Ithird_party/json/single_include\",\n            \"-I/opt/conda/lib/python3.10/site-packages/pybind11/include\",\n            \"-Icsrc/infinicore/include\",\n            \"-I/home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include\",\n            \"-I/home/metax/qy/workspace/pilotdeck/InfiniTensorWorktree-v20261023-qy-minicpm5-2b-full-piecewise/build/integration/metax/prefix/include/infiniccl\",\n            \"-DINFINICORE_HPCC_VERSION_MAJOR=3\",\n            \"-DINFINICORE_MACA38_FLASH_TAIL_BOOL=1\",\n            \"-I/opt/conda/include/python3.10\",\n            \"-I/opt/maca/include\",\n            \"-I/opt/maca/tools/cu-bridge/include\"\n        }\n    }\n}"
+  },
+  "binary_matches_measured_iteration_06": {
+    "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/install/lib/libinfinicore_runtime.so": true,
+    "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/install/lib/libinfinilm_metax_extra.so": true,
+    "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/install/lib/libinfiniccl.so": true,
+    "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/install/lib/libinfiniops.so": true,
+    "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/worktree/InfiniLM/python/infinilm/lib/_infinilm.cpython-310-x86_64-linux-gnu.so": true
+  },
+  "objects": [
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinicore/linux/x86_64/release/csrc/infinicore/src/pybind11/from_list.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinicore"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinicore/linux/x86_64/release/csrc/infinicore/src/pybind11/infinicore.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinicore"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/cache/kv_cache.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/cache/mamba_cache.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/config/config_factory.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/config/model_config.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/config/quant_config.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/debug_utils/hooks.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/compiler/general_compiler.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/compiler/paged_compiler.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/compiler/piecewise_prefill_compiler.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/compiler/static_batching_compiler.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/dispatch_hist.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/distributed/communication_group.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/distributed/dist_config.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/distributed/tcp_rendezvous.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/infer_engine.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/rank_barrier.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/engine/rank_worker.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/global_state/global_state.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/attention/attention.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/attention/backends/attention_layer.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/attention/backends/flash_attn.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/attention/backends/paged_attn.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/attention/backends/static_attn.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/linear/base_linear.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/linear/fused_linear.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/linear/linear.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/mlp/mlp.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/dispatcher/dispatcher_factory.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/dispatcher/standard_dispatcher.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/ep/allgather_reduce_scatter_dispatcher.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/ep/base_ep_dispatcher.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/ep/deepep_dispatcher.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/ep/ep_config.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/ep/local_allreduce_dispatcher.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/experts/fused_moe_experts.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/fused_moe.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/legacy/moe_mlp.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/router/topk_router.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/runner/cuda_fused_moe_runner.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/moe/sparse_moe_block.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/awq.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/awq_marlin.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/base_quantization.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/compressed_tensors.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/gptq.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/gptq_marlin.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/gptq_qy.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/kv_quant.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/mxfp4.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/quantization/none_quantization.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/rotary_embedding/rope_scaling_creators.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/rotary_embedding/rotary_embedding.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/layers/rotary_embedding/rotary_embedding_factory.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/baichuan/baichuan_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/chatglm/chatglm_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/fm9g/fm9g_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/glm4/glm4_decoder_layer.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/glm4/glm4_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/infinilm_model.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/internlm3/internlm3_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/llama/llama_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/minicpm4/minicpm4_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/minicpm5_moe/minicpm5_moe_attention.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/minicpm5_moe/minicpm5_moe_decoder_layer.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/minicpm5_moe/minicpm5_moe_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/minicpm5_moe/minicpm5_moe_sparse_moe_block.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/minicpm_eagle/minicpm_eagle_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/model_factory.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/models_registry.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen2/qwen2_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3/qwen3_attention.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3/qwen3_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_5/qwen3_5_attention.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_5/qwen3_5_decoderLayer.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_5/qwen3_5_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_5/qwen3_5_fused_qkv_linear.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_5/qwen3_5_model.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_5/qwen3_5_vision.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_5_moe/qwen3_5_moe_decoder_layer.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_5_moe/qwen3_5_moe_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_next/qwen3_next_allocate_kv_cache_tensors.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_next/qwen3_next_attention.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_next/qwen3_next_decoderLayer.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_next/qwen3_next_for_causal_lm.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_next/qwen3_next_gated_deltanet.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/models/qwen3_next/qwen3_next_sparse_moe_block.cpp.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/_infinilm/linux/x86_64/release/csrc/pybind11/bindings.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "_infinilm"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/adaptor/aten_adaptor.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/adaptor/denglin_fused_moe_adaptor.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/context/allocators/device_pinned_allocator.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/context/allocators/host_allocator.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/context/allocators/pinnable_block_allocator.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/context/allocators/stream_ordered_allocator.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/context/context_impl.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/context/runtime/runtime.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/device.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/device_event.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/dtype.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/graph/graph.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/io.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/memory.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/nn/embedding.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/nn/layer_norm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/nn/module.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/nn/parameter.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/nn/rmsnorm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/nn/rope.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/nn/rope_scaling_configs.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/acos/acos.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/adaptive_avg_pool1d/adaptive_avg_pool1d.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/adaptive_avg_pool3d/adaptive_avg_pool3d.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/adaptive_max_pool1d/adaptive_max_pool1d.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/add/add.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/add/add_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/add_rms_norm/add_rms_norm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/add_rms_norm/add_rms_norm_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/addbmm/addbmm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/addcmul/addcmul.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/addr/addr.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/affine_grid/affine_grid.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/argwhere/argwhere.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/asin/asin.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/asinh/asinh.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/asum/asum.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/atanh/atanh.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/attention/attention.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/avg_pool1d/avg_pool1d.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/axpy/axpy.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/baddbmm/baddbmm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/bilinear/bilinear.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/binary_cross_entropy_with_logits/binary_cross_entropy_with_logits.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/bitwise_right_shift/bitwise_right_shift.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/blas_amax/blas_amax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/blas_amin/blas_amin.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/blas_copy/blas_copy.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/blas_dot/blas_dot.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/block_diag/block_diag.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/broadcast_to/broadcast_to.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/cat/cat.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/causal_conv1d/causal_conv1d.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/causal_conv1d/causal_conv1d_metax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/causal_softmax/causal_softmax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/causal_softmax/causal_softmax_aten.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/cdist/cdist.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/chunk_gated_delta_rule/chunk_gated_delta_rule.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/chunk_gated_delta_rule/chunk_gated_delta_rule_metax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/conv2d/conv2d.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/cross_entropy/cross_entropy.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/deepseek_moe/deepseek_moe.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/dequant/per_tensor_dequant_int8/per_tensor_quant_int8.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/diff/diff.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/digamma/digamma.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/dist/dist.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/distributed/allgather.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/distributed/allreduce.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/distributed/reduce_scatter.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/distributed/send_recv.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/embedding/embedding.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/embedding/embedding_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/flash_attention/flash_attention.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/flipud/flipud.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/float_power/float_power.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/floor/floor.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/floor_divide/floor_divide.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/fmin/fmin.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/fmod/fmod.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/fused_gated_delta_net_gating/fused_gated_delta_net_gating.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/fused_gated_delta_net_gating/fused_gated_delta_net_gating_metax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/gaussian_nll_loss/gaussian_nll_loss.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/gelu/gelu.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/gelu/gelu_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/gelutanh/gelutanh.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/gelutanh/gelutanh_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/gemm/gemm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/gemm/gemm_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/hardswish/hardswish.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/hardtanh/hardtanh.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/hinge_embedding_loss/hinge_embedding_loss.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/huber_loss/huber_loss.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/hypot/hypot.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/index_add/index_add.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/index_copy/index_copy.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/inner/inner.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/interpolate/interpolate.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/kron/kron.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/kthvalue/kthvalue.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/kv_caching/kv_caching.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/layer_norm/layer_norm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/ldexp/ldexp.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/lerp/lerp.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/linear/linear.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/linear_w8a8i8/linear_w8a8i8.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/log_softmax/log_softmax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/logaddexp/logaddexp.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/logaddexp2/logaddxep2.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/logcumsumexp/logcumsumexp.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/logdet/logdet.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mamba_selective_scan/mamba_selective_scan.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/masked_select/masked_select.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/matmul/matmul.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mha_kvcache/mha_kvcache.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mha_kvcache/mha_kvcache_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_align/moe_align.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_align/moe_align_aten.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_fused_dense/moe_fused_dense.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_fused_dense/moe_fused_dense_qy_dl.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_fused_gate/moe_fused_gate.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_sum/moe_sum.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_topk_sigmoid/moe_topk_sigmoid.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_topk_sigmoid/moe_topk_sigmoid_aten.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/moe_topk_softmax/moe_topk_softmax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mrope/mrope.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mrope/mrope_metax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mul/mul.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mul/mul_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mul_scalar/mul_scalar.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/mul_scalar/mul_scalar_aten.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/multi_head_attention/mha.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/multi_head_attention/mha_dense_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/multi_head_attention_varlen/mha_varlen.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/multi_head_attention_varlen/mha_varlen_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/multi_margin_loss/multi_margin_loss.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/nrm2/nrm2.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/nsa_compress_paged_cache/nsa_compress_paged_cache.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/nsa_paged_attention/nsa_paged_attention.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/ones/ones.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/ones/ones_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/pad/pad.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/paged_caching/paged_caching.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/paged_caching/paged_caching_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/per_channel_quant_i8/per_channel_quant_i8.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/prelu/prelu.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/prepare_moe_input/prepare_moe_input.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/quant/per_tensor_quant_int8/per_tensor_quant_int8.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/quickgelu/quickgelu.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/random_sample/random_sample.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/random_sample/random_sample_metax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rearrange/rearrange.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rearrange/rearrange_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rearrange/rearrange_metax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/reciprocal/reciprocal.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/recurrent_gated_delta_rule/recurrent_gated_delta_rule.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/recurrent_gated_delta_rule/recurrent_gated_delta_rule_metax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/relu/relu.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/relu/relu_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/relu6/relu6.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rms_norm/rms_norm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rms_norm/rms_norm_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rope/rope.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rope/rope_aten.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rot/rot.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rotary_embedding/rotary_embedding.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rotary_embedding/rotary_embedding_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rotg/rotg.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rotm/rotm.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rotmg/rotmg.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/rwkv5_wkv/rwkv5_wkv.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/scal/scal.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/scaled_mm_i8/scaled_mm_i8.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/scatter/scatter.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/selu/selu.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/sigmoid/sigmoid.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/sigmoid/sigmoid_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/silu/silu.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/silu/silu_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/silu_and_mul/silu_and_mul.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/silu_and_mul/silu_and_mul_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/sinh/sinh.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/smooth_l1_loss/smooth_l1_loss.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/softmax/softmax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/softmax/softmax_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/softplus/softplus.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/softsign/softsign.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/sum/sum.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/swap/swap.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/swiglu/swiglu.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/swiglu/swiglu_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/take/take.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/tan/tan.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/tanhshrink/tanhshrink.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/topk/topk.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/topksoftmax/topksoftmax.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/topksoftmax/topksoftmax_infiniops.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/triplet_margin_loss/triplet_margin_loss.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/triplet_margin_with_distance_loss/triplet_margin_with_distance_loss.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/unfold/unfold.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/upsample_bilinear/upsample_bilinear.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/upsample_nearest/upsample_nearest.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/vander/vander.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/var/var.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/var_mean/var_mean.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/zeros/zeros.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/ops/zeros/zeros_infinirt.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/tensor/copy.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/tensor/debug.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/tensor/tensor.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/src/tensor/view.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    },
+    {
+      "path": "worktree/InfiniLM/build/.deps/infinicore_runtime/linux/x86_64/release/csrc/infinicore/utils/custom_types.cc.o.d",
+      "compiler": "/usr/bin/g++",
+      "optimization_flags": [],
+      "target": "infinicore_runtime"
+    }
+  ]
+}

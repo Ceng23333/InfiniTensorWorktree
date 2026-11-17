@@ -1,3 +1,12 @@
+# InfiniTensorWorktree — InfiniLM production pin
+
+Tag: `v2026.10.29-infinilm-prod-qwen38-tp4`.
+See [the production snapshot](deployment/infinilm-prod/README.md) for the exact
+image identity, serving configuration, correctness fixes and validation evidence.
+Graph execution is enabled by default; hybrid prefix caching remains disabled.
+
+The material below describes the historical parent snapshot.
+
 # InfiniTensorWorktree
 
 Lightweight pin umbrella for **InfiniCore** and **InfiniLM**. Annotated release tags (`vYYYY.MM.DD`) lock the deployment commit (submodule SHAs + `MANIFEST`).

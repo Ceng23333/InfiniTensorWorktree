@@ -1,0 +1,31 @@
+--- a/InfiniLM/python/infinilm/processors/qwen3_5_processor.py
++++ b/InfiniLM/python/infinilm/processors/qwen3_5_processor.py
+@@ -407,11 +407,25 @@
+         import torch
+ 
+         position_chunks = []
+-        for req in scheduler_output.scheduled_requests:
+-            if scheduler_output.is_prefill:
++        rows = getattr(scheduler_output, "rows", None)
++        # The v1 scheduler can split a prompt or mix decode and prefill rows.
++        # Position columns must match the exact token slice packed by the base
++        # processor, rather than the entire remaining request prompt.
++        scheduled = (
++            [(row.request, row.is_prefill_row, row.num_scheduled_tokens) for row in rows]
++            if rows else
++            [(req, scheduler_output.is_prefill, None)
++             for req in scheduler_output.scheduled_requests]
++        )
++        for req, is_prefill, budget in scheduled:
++            if is_prefill:
+                 self._update_request_mrope_delta(req)
+                 num_cached = req.num_local_cached_tokens
+-                compute_len = len(req.get_input_tokens()) - num_cached
++                if budget is not None:
++                    num_cached = getattr(req, "chunk_prefill_offset", 0) or num_cached
++                    compute_len = min(budget, len(req.get_prefill_tokens()) - num_cached)
++                else:
++                    compute_len = len(req.get_input_tokens()) - num_cached
+                 position_chunks.append(
+                     self._build_mrope_position_ids(req, num_cached, compute_len)
+                 )

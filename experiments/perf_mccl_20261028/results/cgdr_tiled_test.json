@@ -1,0 +1,57 @@
+[
+  {
+    "D": 64,
+    "T": 1,
+    "dtype": "torch.float32",
+    "indexed": false,
+    "register_us": 28.08319926261902,
+    "tiled_us": 19.379200041294098,
+    "speedup": 1.44914130628602,
+    "max_diff": 0.0,
+    "reference_pass": true
+  },
+  {
+    "D": 128,
+    "T": 31,
+    "dtype": "torch.float32",
+    "indexed": false,
+    "register_us": 404.47998046875,
+    "tiled_us": 372.7871894836426,
+    "speedup": 1.0850157727496108,
+    "max_diff": 9.313225746154785e-09,
+    "reference_pass": true
+  },
+  {
+    "D": 128,
+    "T": 31,
+    "dtype": "torch.bfloat16",
+    "indexed": true,
+    "register_us": 228.8383960723877,
+    "tiled_us": 196.91519737243652,
+    "speedup": 1.1621164802205342,
+    "max_diff": 0.0,
+    "reference_pass": true
+  },
+  {
+    "D": 128,
+    "T": 257,
+    "dtype": "torch.bfloat16",
+    "indexed": false,
+    "register_us": 2601.9840240478516,
+    "tiled_us": 2727.2960662841797,
+    "speedup": 0.954052644380828,
+    "max_diff": 0.0,
+    "reference_pass": true
+  },
+  {
+    "D": 128,
+    "T": 2048,
+    "dtype": "torch.bfloat16",
+    "indexed": false,
+    "register_us": 20300.799560546875,
+    "tiled_us": 21511.62872314453,
+    "speedup": 0.9437128086310398,
+    "max_diff": 3.814697265625e-06,
+    "reference_pass": true
+  }
+]

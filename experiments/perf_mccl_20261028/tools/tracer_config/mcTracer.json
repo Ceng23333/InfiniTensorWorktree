@@ -1,0 +1,10 @@
+{
+  "callback": [
+    {"action":"ENABLE","domain":2,"cbid":[120,75]},
+    {"action":"DISABLE","domain":2,"cbid":["mcMemcpy","mcLaunchKernel"]}
+  ],
+  "activity": [
+    {"action":"ENABLE","kind":[1,2,10,51]},
+    {"action":"DISABLE","kind":[4,5,22]}
+  ]
+}

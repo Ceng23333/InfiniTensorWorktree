@@ -1,0 +1,100 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "start_ns": 1793194530768032206,
+      "end_ns": 1793194532290734511,
+      "elapsed_s": 1.5226971280062571,
+      "ttft_s": null,
+      "tok_s": 42.03068280807646,
+      "prompt_tokens": 30,
+      "total_tokens": 94,
+      "completion_tokens": 64,
+      "prompt_tokens_details": null,
+      "text": "```\npad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad",
+      "workload": "decode_micro",
+      "warmup": true
+    },
+    {
+      "start_ns": 1793194532290929895,
+      "end_ns": 1793194533460476435,
+      "elapsed_s": 1.169541354989633,
+      "ttft_s": null,
+      "tok_s": 54.72230607917863,
+      "prompt_tokens": 30,
+      "total_tokens": 94,
+      "completion_tokens": 64,
+      "prompt_tokens_details": null,
+      "text": "```\npad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793194533460763787,
+      "end_ns": 1793194534632915430,
+      "elapsed_s": 1.1721485720190685,
+      "ttft_s": null,
+      "tok_s": 54.600586928803466,
+      "prompt_tokens": 30,
+      "total_tokens": 94,
+      "completion_tokens": 64,
+      "prompt_tokens_details": null,
+      "text": "```\npad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793194534633055304,
+      "end_ns": 1793194535815684779,
+      "elapsed_s": 1.1826267289870884,
+      "ttft_s": null,
+      "tok_s": 54.11682184353769,
+      "prompt_tokens": 30,
+      "total_tokens": 94,
+      "completion_tokens": 64,
+      "prompt_tokens_details": null,
+      "text": "```\npad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad",
+      "workload": "decode_micro",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793194535816051254,
+      "end_ns": 1793194537977729302,
+      "elapsed_s": 2.1616756199800875,
+      "ttft_s": 2.058929447986884,
+      "tok_s": 3.2382286848683064,
+      "prompt_tokens": 10718,
+      "total_tokens": 10725,
+      "completion_tokens": 7,
+      "text": "I have read the prompt.",
+      "workload": "prefill_12k",
+      "warmup": false
+    },
+    {
+      "start_ns": 1793194537977890882,
+      "end_ns": 1793194538059076378,
+      "elapsed_s": 0.08118413199554197,
+      "ttft_s": null,
+      "tok_s": 24.635356083006776,
+      "prompt_tokens": 26,
+      "total_tokens": 28,
+      "completion_tokens": 2,
+      "prompt_tokens_details": null,
+      "text": "2",
+      "workload": "correctness_smoke"
+    },
+    {
+      "start_ns": 1793194538059163405,
+      "end_ns": 1793194538384130904,
+      "elapsed_s": 0.32496518999687396,
+      "ttft_s": null,
+      "tok_s": 49.236042790164426,
+      "prompt_tokens": 25,
+      "total_tokens": 41,
+      "completion_tokens": 16,
+      "prompt_tokens_details": null,
+      "text": "Wait, I need to correct my previous response. The capital of France is Paris",
+      "workload": "correctness_smoke"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "ok": false,
+  "phase": "in_progress",
+  "results": [
+    {
+      "start_ns": 1793195138658582145,
+      "end_ns": 1793195142186139275,
+      "elapsed_s": 3.527549184014788,
+      "ttft_s": null,
+      "tok_s": 3.9687611057108683,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": true
+    },
+    {
+      "start_ns": 1793195142186794924,
+      "end_ns": 1793195144923984072,
+      "elapsed_s": 2.737182729993947,
+      "ttft_s": null,
+      "tok_s": 5.114748038773049,
+      "prompt_tokens": 30,
+      "completion_tokens": 14,
+      "total_tokens": 44,
+      "text": "I'm sorry, but I can't assist with that request.",
+      "workload": "decode_micro",
+      "warmup": false
+    }
+  ]
+}

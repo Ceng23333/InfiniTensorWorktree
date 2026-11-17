@@ -1,0 +1,66 @@
+{
+  "reference": {
+    "source": "/home/metax/qy/workspace/pilotdeck/perf_mccl_loop/results/vllm_current/clean/host.json",
+    "historical": false,
+    "decode_tok_s": 54.600586928803466,
+    "prefill_ttft_s": 2.058929447986884
+  },
+  "candidates": [
+    {
+      "name": "01_graph_metadata_fixed",
+      "env": {
+        "INFINI_CUDAGRAPH_POLICY": "full_and_piecewise",
+        "INFINI_DECODE_CG_TP": "1",
+        "INFINI_FA_INGRAPH": "decode"
+      }
+    },
+    {
+      "name": "02_register_state_eager",
+      "env": {
+        "INFINI_CUDAGRAPH_POLICY": "eager",
+        "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+      }
+    },
+    {
+      "name": "03_register_state_graph",
+      "env": {
+        "INFINI_CUDAGRAPH_POLICY": "full_and_piecewise",
+        "INFINI_DECODE_CG_TP": "1",
+        "INFINI_FA_INGRAPH": "decode",
+        "LD_PRELOAD": "/perf/tools/libcgdr_register.so",
+        "INFINICORE_GRAPH_DEBUG": "1"
+      },
+      "patch": "patches/qwen35_position_rows.patch"
+    },
+    {
+      "name": "04_corrected_register_eager",
+      "patch": "patches/qwen35_correctness.patch",
+      "env": {
+        "ENABLE_GRAPH": "0",
+        "INFINI_CUDAGRAPH_POLICY": "eager",
+        "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+      }
+    },
+    {
+      "name": "05_corrected_register_decode_graph",
+      "patch": "patches/qwen35_correctness.patch",
+      "env": {
+        "ENABLE_GRAPH": "1",
+        "INFINI_CUDAGRAPH_POLICY": "legacy",
+        "INFINI_PREFILL_NATIVE_CG": "0",
+        "INFINI_FA_INGRAPH": "decode",
+        "INFINICORE_GRAPH_DEBUG": "1",
+        "INFINI_DECODE_GRAPH_DIAGNOSTICS": "1",
+        "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+      }
+    },
+    {
+      "name": "06_corrected_integrated_eager",
+      "patch": "patches/qwen35_correctness_v2.patch",
+      "env": {
+        "ENABLE_GRAPH": "0",
+        "INFINI_CUDAGRAPH_POLICY": "eager"
+      }
+    }
+  ]
+}

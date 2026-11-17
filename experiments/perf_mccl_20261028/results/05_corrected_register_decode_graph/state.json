@@ -1,0 +1,21 @@
+{
+  "name": "05_corrected_register_decode_graph",
+  "env": {
+    "ENABLE_GRAPH": "1",
+    "INFINI_CUDAGRAPH_POLICY": "legacy",
+    "INFINI_PREFILL_NATIVE_CG": "0",
+    "INFINI_FA_INGRAPH": "decode",
+    "INFINICORE_GRAPH_DEBUG": "1",
+    "INFINI_DECODE_GRAPH_DIAGNOSTICS": "1",
+    "LD_PRELOAD": "/perf/tools/libcgdr_register.so"
+  },
+  "phase": "failed",
+  "started_ns": 1793193789999292116,
+  "ok": false,
+  "source_sha": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
+  "source_diff_sha256": "b6da35d155b4f1971076db3a282fbf968afe47c52808eb624d9726488a3c934a",
+  "decode_tok_s": 7.752984619578686,
+  "prefill_ttft_s": 8.271124130988028,
+  "correctness_ok": false,
+  "error": "server exited during startup"
+}
