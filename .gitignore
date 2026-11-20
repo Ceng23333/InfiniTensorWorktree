@@ -12,3 +12,9 @@ bench_results/
 prefix-mars/
 hpcc-shim/
 **/InfiniCCL.bak/
+.autohelix/
+
+# AutoHelix local
+artifacts/
+.autohelix/
+autohelix.yaml
