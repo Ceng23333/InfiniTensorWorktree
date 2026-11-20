@@ -1,0 +1,38 @@
+# AutoHelix 0.1.1 — metax-9 mars / Qwen3-8B unified TP4 promotion
+# Measure: InfiniOrchestrator observe→parse. Iteration/accept/reject: AutoHelix.
+# Surpass/ship: human after scripts/promo/stop_surpass.py (no native stop: in 0.1.1).
+
+goal: |
+  Close the InfiniLM vs frozen vLLM wall gap on metax-9 (mars / mars-phytium)
+  for Qwen3-8B TP4 (cases qwen3-8b-mars-inf--unified-tp4 vs
+  qwen3-8b-mars-vllm--unified-tp4). Each iteration: read the promotion backlog,
+  apply exactly one top_path lever under deployment/infinilm-prod/, rebuild/
+  restart the candidate only, leave vLLM frozen. Do not invent WALL_DECODE_RATIO;
+  do not edit scripts/promo/ or autohelix/; surpass/ship is human judgment.
+
+constraints:
+  - python scripts/promo/gate_correctness.py
+
+metrics:
+  - command: python scripts/promo/observe.py
+    values:
+      primary_wall_ratio: higher
+      ttft_p95_ratio: lower
+      success_rate: higher
+
+acceptance:
+  metric_gates:
+    - metric: primary_wall_ratio
+      max_regression_pct: 2
+
+scope:
+  editable:
+    - deployment/infinilm-prod/
+
+agent:
+  type: codex
+  model: glm-5.3
+  timeout_seconds: 1800
+
+budget:
+  iterations: 5
