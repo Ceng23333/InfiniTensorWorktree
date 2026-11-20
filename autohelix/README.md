@@ -12,22 +12,19 @@ Closed-loop InfiniLM vs frozen vLLM on **metax-9** (`mars` / `mars-phytium`).
 ## Protocol
 
 ```bash
-export INFINI_ORCHESTRATOR=/root/zenghua/workspace/InfiniOrchestrator
-export INFINI_TENSOR_WORKTREE=/root/zenghua/workspace/deploy20261113/InfiniTensorWorktree
-export HOST_ROLE=mars DEVICE_TRACK=mars HOST_ID=metax-9 MODEL=Qwen3-8B
+source /root/zenghua/workspace/deploy20261113/autohelix-env.sh
+# activates PATH to .venv-autohelix + campaign env (SUITE_DIR absolute)
 
-# Offline fixture:
+# Offline fixture (artifacts/promo/suite/compare.json):
 export RUN_WALL=0 SKIP_PROFILER=1
-# Live:
-# export RUN_WALL=1
-# export BASE_URL_VLLM=http://127.0.0.1:8000
-# export BASE_URL_INFINILM=http://127.0.0.1:8000
-# export HCTRACER_ROOT=/opt/hpcc
+# Live (:8000 sequential vLLM↔InfiniLM) — see scripts/promo/bringup_hint.sh
+# export RUN_WALL=1 BASE_URL_VLLM=http://127.0.0.1:8000 BASE_URL_INFINILM=http://127.0.0.1:8000
+# export HCTRACER_ROOT=/opt/hpcc SKIP_PROFILER=0
 
-cd "$INFINI_TENSOR_WORKTREE"
 autohelix run -c autohelix/promo-unified-metax9.yaml -n 5
 # other terminal:
 autohelix watch
+python scripts/promo/stop_surpass.py   # exit 0 → human ship
 ```
 
 Grafana publish is deferred. Use `autohelix watch`, not Grafana.
