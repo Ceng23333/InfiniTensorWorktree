@@ -14,7 +14,10 @@
     "fa_ingraph": "decode",
     "prefill_chunked": true,
     "max_num_batched_tokens": 2048,
-    "host_recipe": "metax-9-mars-hpcc-vllm-mars-image"
+    "graph_skip_tail_sync": true,
+    "host_recipe": "metax-9-mars-hpcc-vllm-mars-image",
+    "promo_lever_applied": "INFINI_GRAPH_SKIP_TAIL_SYNC=1",
+    "promo_path_id": "host_graph_command"
   },
   "validation": "Prefill slot regression; live tool smoke pending",
   "files": {

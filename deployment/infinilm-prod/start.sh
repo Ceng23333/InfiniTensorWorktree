@@ -38,6 +38,8 @@ INFINI_FA_INGRAPH="${INFINI_FA_INGRAPH:-decode}"
 INFINI_PREFILL_CHUNKED="${INFINI_PREFILL_CHUNKED:-1}"
 INFINI_MAX_NUM_BATCHED_TOKENS="${INFINI_MAX_NUM_BATCHED_TOKENS:-2048}"
 INFINI_V1_SCHEDULER="${INFINI_V1_SCHEDULER:-1}"
+# host_graph_command lever: skip Graph::run tail syncStream (mid-segment syncs remain).
+INFINI_GRAPH_SKIP_TAIL_SYNC="${INFINI_GRAPH_SKIP_TAIL_SYNC:-1}"
 IGNORE_EOS="${IGNORE_EOS:-1}"
 SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-Qwen3-8B}"
 READY_TIMEOUT_SEC="${READY_TIMEOUT_SEC:-1800}"
@@ -46,7 +48,7 @@ echo "[infinilm-prod/start] ITW=${ITW_ROOT}"
 echo "[infinilm-prod/start] name=${name} image=${image}"
 echo "[infinilm-prod/start] model_host=${MODEL_HOST} → ${MODEL_CTN} TP=${TP} PORT=${API_PORT}->${CTN_PORT}"
 echo "[infinilm-prod/start] MAX_BATCH=${MAX_BATCH} NUM_BLOCKS=${NUM_BLOCKS} GRAPH=${ENABLE_GRAPH} POLICY=${INFINI_CUDAGRAPH_POLICY}"
-echo "[infinilm-prod/start] V1_SCHEDULER=${INFINI_V1_SCHEDULER}"
+echo "[infinilm-prod/start] V1_SCHEDULER=${INFINI_V1_SCHEDULER} SKIP_TAIL_SYNC=${INFINI_GRAPH_SKIP_TAIL_SYNC}"
 
 # Free :API_PORT holders (vLLM fair cell / prior InfiniLM).
 if command -v docker >/dev/null 2>&1; then
@@ -96,6 +98,7 @@ docker run -d \
   -e "INFINI_PREFILL_CHUNKED=${INFINI_PREFILL_CHUNKED}" \
   -e "INFINI_MAX_NUM_BATCHED_TOKENS=${INFINI_MAX_NUM_BATCHED_TOKENS}" \
   -e "INFINI_V1_SCHEDULER=${INFINI_V1_SCHEDULER}" \
+  -e "INFINI_GRAPH_SKIP_TAIL_SYNC=${INFINI_GRAPH_SKIP_TAIL_SYNC}" \
   -e "IGNORE_EOS=${IGNORE_EOS}" \
   -e "SERVED_MODEL_NAME=${SERVED_MODEL_NAME}" \
   -w /workspace \
@@ -112,6 +115,7 @@ export INFINI_FA_INGRAPH=${INFINI_FA_INGRAPH}
 export INFINI_PREFILL_CHUNKED=${INFINI_PREFILL_CHUNKED}
 export INFINI_MAX_NUM_BATCHED_TOKENS=${INFINI_MAX_NUM_BATCHED_TOKENS}
 export INFINI_V1_SCHEDULER=${INFINI_V1_SCHEDULER}
+export INFINI_GRAPH_SKIP_TAIL_SYNC=${INFINI_GRAPH_SKIP_TAIL_SYNC}
 export PYTHONPATH=/workspace/InfiniLM/python:/workspace/InfiniCore/python:\${PYTHONPATH:-}
 source /workspace/scripts/mars/hpcc-env.sh 2>/dev/null || true
 export INFINI_ROOT=/workspace/prefix-mars
