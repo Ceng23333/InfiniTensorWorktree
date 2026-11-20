@@ -2,14 +2,19 @@
   "base_image": "pilotdeck-infinilm:with-deps",
   "source_head": "de7b0f64e8a8120d704e49df5349c4fd67f42c7f",
   "configuration": {
-    "model": "Qwen3.8-27B",
+    "model": "Qwen3-8B",
     "tp": 4,
     "graph": true,
-    "ignore_eos": false,
-    "max_batch": 1,
+    "ignore_eos": true,
+    "max_batch": 64,
+    "num_blocks": 2048,
+    "block_size": 256,
     "graph_policy": "legacy",
     "native_prefill": false,
-    "fa_ingraph": "decode"
+    "fa_ingraph": "decode",
+    "prefill_chunked": true,
+    "max_num_batched_tokens": 2048,
+    "host_recipe": "metax-9-mars-hpcc-vllm-mars-image"
   },
   "validation": "Prefill slot regression; live tool smoke pending",
   "files": {
