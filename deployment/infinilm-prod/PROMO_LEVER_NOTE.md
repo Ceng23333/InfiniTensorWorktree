@@ -1,7 +1,7 @@
 # Promo lever applied
 
 - path_id: `host_graph_command`
-- lever: raise `INFINI_MAX_NUM_BATCHED_TOKENS` from 2048 to 8192 (start.sh + Dockerfile.runtime + production-runtime-manifest.json)
-- effect: packs the measured P64 x 128-token prompt cohort into one launch budget instead of four prefill chunks, reducing chunk-boundary host work while keeping legacy graph policy and skip-tail sync unchanged
-- evidence: fresh hcTracer ranks `runtime.host_graph_command` (runtime 7.198x, command 6.390x, gap 9.781x); prior F&P was exactly flat and the request asks for a distinct launch-batching lever
-- next: unprofiled wall observe decides acceptance; source scope is still required to remove the 16 Mars attention host breaks per decode graph
+- lever: restore `INFINI_MAX_NUM_BATCHED_TOKENS` from 8192 to the prior known-good 2048 default (start.sh + Dockerfile.runtime + production-runtime-manifest.json)
+- effect: rolls back the iteration-3 launch-budget trial after the unprofiled wall stayed exactly flat at 0.67959; legacy graph policy, V1 scheduling, and skip-tail sync remain unchanged
+- evidence: iteration-3 notes required reverting this dial if flat; pinned source confirms the persistent command overhead comes from Mars FA graph breaks and per-row Mars sampling, not the scheduler token budget
+- next: deployment-only levers on `host_graph_command` are exhausted; source scope is required to validate persistent Mars FA capture and batched Mars sampling without deleting safety guards
