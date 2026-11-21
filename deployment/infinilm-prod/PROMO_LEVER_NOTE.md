@@ -1,7 +1,7 @@
 # Promo lever applied
 
 - path_id: `host_graph_command`
-- lever: reduce `NUM_BLOCKS` from 2048 to the production-known-good 512 default (start.sh + production-runtime-manifest.json)
-- effect: cuts paged-KV allocation and decode graph block-table metadata by 4x while retaining 8x the roughly 64 blocks needed by the measured P64 128->128 workload; every graph, scheduler, and sampling dial remains unchanged
-- evidence: InfiniProfiler ranks `host_graph_command` first, and PagedCompiler captures block tables against total `num_blocks`; the measured workload needs about one 256-token block per request
-- next: run the required unprofiled wall observe; if this is flat or regressive, revert to 2048 and require source scope for Mars FA capture and batched sampling
+- lever: restore `INFINI_MAX_NUM_BATCHED_TOKENS` from 8192 to the prior known-good 2048 default (start.sh + Dockerfile.runtime + production-runtime-manifest.json)
+- effect: rolls back the iteration-3 launch-budget trial after the unprofiled wall stayed exactly flat at 0.67959; legacy graph policy, V1 scheduling, and skip-tail sync remain unchanged
+- evidence: iteration-3 notes required reverting this dial if flat; pinned source confirms the persistent command overhead comes from Mars FA graph breaks and per-row Mars sampling, not the scheduler token budget
+- next: deployment-only levers on `host_graph_command` are exhausted; source scope is required to validate persistent Mars FA capture and batched Mars sampling without deleting safety guards

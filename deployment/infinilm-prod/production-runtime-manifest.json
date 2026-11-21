@@ -7,7 +7,7 @@
     "graph": true,
     "ignore_eos": true,
     "max_batch": 64,
-    "num_blocks": 512,
+    "num_blocks": 2048,
     "block_size": 256,
     "graph_policy": "legacy",
     "native_prefill": false,
@@ -16,7 +16,7 @@
     "max_num_batched_tokens": 2048,
     "graph_skip_tail_sync": true,
     "host_recipe": "metax-9-mars-hpcc-vllm-mars-image",
-    "promo_lever_applied": "reduce_NUM_BLOCKS_to_512",
+    "promo_lever_applied": "restore_INFINI_MAX_NUM_BATCHED_TOKENS_to_2048",
     "promo_path_id": "host_graph_command"
   },
   "validation": "Prefill slot regression; live tool smoke pending",
