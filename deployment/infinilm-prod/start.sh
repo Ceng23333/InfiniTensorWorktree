@@ -5,9 +5,10 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ITW_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+CANDIDATE_WORKSPACE="${CANDIDATE_WORKSPACE:-${ITW_ROOT}/InfiniLM}"
 
 # --- editable serve knobs (env overrides; defaults match fair dual / manifest) ---
-MODEL_HOST="${MODEL_DIR:-${MODEL_HOST:-${MODEL:-/data-aisoft/mechdancer/models/Qwen3-8B}}}"
+MODEL_HOST="${MODEL_DIR:-${MODEL_HOST:-/data-aisoft/mechdancer/models/Qwen3-8B}}"
 # Accept host path or already-mapped /models/...
 if [[ "${MODEL_HOST}" == /models/* ]]; then
   MODEL_CTN="${MODEL_HOST}"
@@ -43,12 +44,16 @@ INFINI_GRAPH_SKIP_TAIL_SYNC="${INFINI_GRAPH_SKIP_TAIL_SYNC:-1}"
 IGNORE_EOS="${IGNORE_EOS:-1}"
 SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-Qwen3-8B}"
 READY_TIMEOUT_SEC="${READY_TIMEOUT_SEC:-1800}"
+RUNTIME_PIN_LIB="${RUNTIME_PIN_LIB:-${ITW_ROOT}/artifacts/runtime_pins/libinfinicore_runtime.so}"
+RUNTIME_PIN_SHA256="${RUNTIME_PIN_SHA256:-68ad25887eb8a7ac7dcb6bc4eff42bf0f8a3d9a72169bcc5e4cbbca6e41ebb3e}"
 
 echo "[infinilm-prod/start] ITW=${ITW_ROOT}"
+echo "[infinilm-prod/start] CANDIDATE_WORKSPACE=${CANDIDATE_WORKSPACE}"
 echo "[infinilm-prod/start] name=${name} image=${image}"
 echo "[infinilm-prod/start] model_host=${MODEL_HOST} → ${MODEL_CTN} TP=${TP} PORT=${API_PORT}->${CTN_PORT}"
 echo "[infinilm-prod/start] MAX_BATCH=${MAX_BATCH} NUM_BLOCKS=${NUM_BLOCKS} GRAPH=${ENABLE_GRAPH} POLICY=${INFINI_CUDAGRAPH_POLICY}"
 echo "[infinilm-prod/start] V1_SCHEDULER=${INFINI_V1_SCHEDULER} SKIP_TAIL_SYNC=${INFINI_GRAPH_SKIP_TAIL_SYNC} MAX_BATCHED_TOKENS=${INFINI_MAX_NUM_BATCHED_TOKENS}"
+echo "[infinilm-prod/start] RUNTIME_PIN_LIB=${RUNTIME_PIN_LIB}"
 
 # Free :API_PORT holders (vLLM fair cell / prior InfiniLM).
 if command -v docker >/dev/null 2>&1; then
@@ -78,6 +83,7 @@ docker run -d \
   --device /dev/htcd:/dev/htcd \
   -p "${API_PORT}:${CTN_PORT}" \
   -v "${ITW_ROOT}:/workspace" \
+  -v "${CANDIDATE_WORKSPACE}:/workspace/InfiniLM" \
   -v /nfs:/nfs:ro \
   -v "${MODEL_BIND_SRC}:/models:ro" \
   -e HPCC_PATH=/opt/hpcc \
@@ -105,6 +111,28 @@ docker run -d \
   --entrypoint /bin/bash \
   "${image}" \
   -lc 'sleep infinity'
+
+if [[ -n "${RUNTIME_PIN_LIB}" ]]; then
+  [[ -f "${RUNTIME_PIN_LIB}" ]] || { echo "missing runtime pin: ${RUNTIME_PIN_LIB}" >&2; exit 2; }
+  actual_hash="$(sha256sum "${RUNTIME_PIN_LIB}" | awk '{print $1}')"
+  if [[ -n "${RUNTIME_PIN_SHA256}" && "${actual_hash}" != "${RUNTIME_PIN_SHA256}" ]]; then
+    echo "runtime pin hash mismatch: ${actual_hash} != ${RUNTIME_PIN_SHA256}" >&2
+    exit 2
+  fi
+  docker cp "${RUNTIME_PIN_LIB}" "${name}:/tmp/pinned_libinfinicore_runtime.so"
+  docker exec "${name}" bash -lc '
+    set -euo pipefail
+    mkdir -p /workspace/InfiniLM/python/infinicore/lib /workspace/InfiniLM/python/infinilm/lib
+    cp /tmp/pinned_libinfinicore_runtime.so \
+      /workspace/InfiniLM/python/infinicore/lib/libinfinicore_runtime.so
+    cp /tmp/pinned_libinfinicore_runtime.so \
+      /workspace/InfiniLM/python/infinilm/lib/libinfinicore_runtime.so
+    sha256sum \
+      /workspace/InfiniLM/python/infinicore/lib/libinfinicore_runtime.so \
+      /workspace/InfiniLM/python/infinilm/lib/libinfinicore_runtime.so
+    rm -f /tmp/pinned_libinfinicore_runtime.so
+  '
+fi
 
 docker exec -d "${name}" bash -lc "
 set -eo pipefail
