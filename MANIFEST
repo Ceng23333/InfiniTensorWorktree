@@ -1,12 +1,12 @@
 ITW_SHA=924b0aaa60a37a981af2cf09fae4203271c6989f
 IC_SHA=f9c11542a0dc77aa32445e827d78c729b2f63356
-IL_SHA=89358fb4e6b3bc2b6e7d208c3f3b364d4f7630ad
+IL_SHA=08dc99ee3f8f995dae3b4b11be5ec8374ba7f097
 IC_URL=https://github.com/Ceng23333/InfiniCore.git
 IL_URL=https://github.com/Ceng23333/InfiniLM.git
-PIN_DATE=2026-11-22T07:04:45Z
+PIN_DATE=2026-11-24T01:07:43Z
 ITW_BASE_SHA=924b0aaa60a37a981af2cf09fae4203271c6989f
-EXPERIMENT_BRANCH=campaign/baseline/repro-primary-1.18565275
-STATUS=reproducible_startup_candidate_not_ship_approved
+EXPERIMENT_BRANCH=campaign/showroom-eager-catchup-20261123
+STATUS=showroom_eager_catchup_candidate_not_ship_approved
 RELEASE_TAG=v2026.11.22-infinilm-prod-qwen38-tp4-mars-repro
 DEPLOYMENT=deployment/infinilm-prod
 ENABLE_GRAPH=1
@@ -25,3 +25,4 @@ PRIMARY_WALL_RATIO_VS_FROZEN_VLLM=1.1856527506382737
 TTFT_P95_RATIO_VS_FROZEN_VLLM=0.3547431958619732
 SUCCESS_RATE=1.0
 STARTUP_CANDIDATE_IS_NOT_COMPARISON_BASELINE=true
+
