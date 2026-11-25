@@ -33,6 +33,7 @@ UNPINNED_FILE="${LINEAGE_DIR}/UNPINNED"
 INDEX_FILE="${ITW}/lineage.json"
 MAIN_REF="${MAIN_REF:-origin/main}"
 TAG_GLOB="${TAG_GLOB:-v*}"
+NESTED_PREFIX="submodules"   # InfiniCore's own dependency leaves
 
 die() { echo "error: $*" >&2; exit 1; }
 
@@ -44,10 +45,31 @@ leaf_repo() {
   esac
 }
 
+# Dependency leaves of InfiniCore live in its own tree under submodules/.
+nested_field() { # <name> <prefix> -> e.g. MAIN_BASE_IC_INFINICCL
+  echo "${2}IC_${1^^}"
+}
+
+nested_repo() { # <name> -> repo dir, or non-zero when unavailable
+  local u="${1^^}"
+  local v="IC_${u}_DIR"
+  if [[ -n "${!v:-}" ]]; then echo "${!v}"; return 0; fi
+  if [[ -d "${IC_DIR}/submodules/$1" ]]; then echo "${IC_DIR}/submodules/$1"; return 0; fi
+  return 1
+}
+
+nested_main_ref() { # <name> -> branch to compute shared-with-main against
+  local u="${1^^}"
+  local v="IC_${u}_MAIN_REF"
+  echo "${!v:-master}"
+}
+
 # ---------------------------------------------------------------- state
 
 TAGS=()
 declare -A PIN_IC=() PIN_IL=()      # tag -> pin sha
+declare -A PIN_NESTED=()            # "tag|name" -> pin sha inside InfiniCore
+NESTED_NAMES=()                     # dependency leaves discovered in InfiniCore
 declare -A MASK_IC=() MASK_IL=()    # pin sha -> ancestor bitset, one char per pin
 declare -A IDX_IC=() IDX_IL=()      # pin sha -> bit index
 REPS=()                             # representative tag per distinct pin vector
@@ -191,6 +213,24 @@ load() {
   for sha in "${il_all[@]}"; do [[ -n "${il_ok[$sha]:-}" ]] && il_pins+=("${sha}"); done
   build_masks InfiniCore "$(leaf_repo InfiniCore)" "${ic_pins[@]}"
   build_masks InfiniLM "$(leaf_repo InfiniLM)" "${il_pins[@]}"
+
+  # Discover InfiniCore's dependency leaves and record their pins per tag.
+  local -A nseen=()
+  local nm line2
+  for sha in "${ic_pins[@]}"; do
+    while IFS= read -r line2; do
+      if [[ "${line2}" =~ ^160000\ commit\ ([0-9a-f]{40})[[:space:]]+(.+)$ ]]; then
+        nm="${BASH_REMATCH[2]}"; nm="${nm##*/}"
+        if [[ -z "${nseen[${nm}]:-}" ]]; then nseen["${nm}"]=1; NESTED_NAMES+=("${nm}"); fi
+      fi
+    done < <(git -C "$(leaf_repo InfiniCore)" ls-tree "${sha}:${NESTED_PREFIX}" 2>/dev/null || true)
+  done
+  for t in "${TAGS[@]}"; do
+    ic="${PIN_IC[${t}]}"
+    for nm in "${NESTED_NAMES[@]:-}"; do
+      PIN_NESTED["${t}|${nm}"]="$(git -C "$(leaf_repo InfiniCore)" rev-parse "${ic}:${NESTED_PREFIX}/${nm}" 2>/dev/null || true)"
+    done
+  done
 
   # Distinct pin vectors, ordered by first publication.
   local -A rep2=()
@@ -346,7 +386,7 @@ cmd_explain() {
 }
 
 cmd_emit() {
-  local t="$1" write="${2:-}" parents base kind body
+  local t="$1" write="${2:-}" parents base kind body stream ef note v0 nl
   is_tag "${t}" || die "no such tag: ${t}"
   [[ -n "${PIN_IC[$t]:-}" ]] || die "tag has no pin vector: ${t} (list it in lineage/UNPINNED)"
   max_parents "${t}"; parents="${OUT_PARENTS}"
@@ -361,16 +401,45 @@ cmd_emit() {
   if [[ -z "$(stream_of "${t}")" ]]; then
     echo "warning: STREAM is not derivable, set it by hand in lineage/${t}.env" >&2
   fi
+  stream="$(stream_of "${t}")"
+  # Hand-declared fields win over derivation when the file already exists.
+  ef="${LINEAGE_DIR}/${t}.env"
+  if [[ -f "${ef}" ]]; then
+    v0="$(env_field "${ef}" STREAM)";       [[ -n "${v0}" ]] && stream="${v0}"
+    v0="$(env_field "${ef}" PARENT)";       [[ -n "${v0}" ]] && parents="${v0}"
+    v0="$(env_field "${ef}" BASE)";         [[ -n "${v0}" ]] && base="${v0}"
+    v0="$(env_field "${ef}" MAIN_BASE_IC)"; [[ -n "${v0}" ]] && mb_ic="${v0}"
+    v0="$(env_field "${ef}" MAIN_BASE_IL)"; [[ -n "${v0}" ]] && mb_il="${v0}"
+    note="$(env_field "${ef}" NOTE)"
+  fi
+  local -a nlines=()
+  local nm u nb r
+  for nm in "${NESTED_NAMES[@]:-}"; do
+    [[ -z "${nm}" ]] && continue
+    u="${nm^^}"
+    nlines+=("PIN_IC_${u}=${PIN_NESTED[${t}|${nm}]:-}")
+    nb="$(env_field "${ef}" "MAIN_BASE_IC_${u}")"
+    if [[ -z "${nb}" ]] && r="$(nested_repo "${nm}")"; then
+      nb="$(git -C "${r}" merge-base "${PIN_NESTED[${t}|${nm}]:-}" "$(nested_main_ref "${nm}")" 2>/dev/null || true)"
+    fi
+    nlines+=("MAIN_BASE_IC_${u}=${nb}")
+  done
   body="TAG=${t}
 PIN_IC=${PIN_IC[$t]}
 PIN_IL=${PIN_IL[$t]}
-STREAM=$(stream_of "${t}")
+STREAM=${stream}
 KIND=${kind}
 PARENT=${parents}
 BASE=${base}
 MAIN_BASE_IC=${mb_ic}
-MAIN_BASE_IL=${mb_il}
-NOTE="
+MAIN_BASE_IL=${mb_il}"
+  for nl in "${nlines[@]:-}"; do
+    [[ -z "${nl}" ]] && continue
+    body="${body}
+${nl}"
+  done
+  body="${body}
+NOTE=${note}"
   if [[ "${write}" == "--write" ]]; then
     mkdir -p "${LINEAGE_DIR}"
     printf '%s\n' "${body}" > "${LINEAGE_DIR}/${t}.env"
@@ -381,7 +450,7 @@ NOTE="
 }
 
 cmd_verify() {
-  local t u f p base fails=0 unpinned=0 covered
+  local t u f p base fails=0 unpinned=0 covered nm np r nb want
   local -a declared=()
   for t in "${TAGS[@]}"; do
     if is_unpinned "${t}"; then unpinned=$((unpinned + 1)); continue; fi
@@ -444,18 +513,37 @@ cmd_verify() {
   if [[ -n "$(env_field "${f}" MAIN_BASE_IL)" && "$(env_field "${f}" MAIN_BASE_IL)" != "${mb_il}" ]]; then
     echo "MAIN_B  ${t}: InfiniLM shared-with-main mismatch"; fails=$((fails + 1))
   fi
+  # nested dependency leaves of InfiniCore: pins must match its tree
+  for nm in "${NESTED_NAMES[@]:-}"; do
+    [[ -z "${nm}" ]] && continue
+    u="${nm^^}"
+    np="$(git -C "$(leaf_repo InfiniCore)" rev-parse "${PIN_IC[${t}]}:${NESTED_PREFIX}/${nm}" 2>/dev/null || true)"
+    if [[ "$(env_field "${f}" "PIN_IC_${u}")" != "${np}" ]]; then
+      echo "PIN_IC_${u} mismatch: ${t}"; fails=$((fails + 1))
+    fi
+    r="$(nested_repo "${nm}")" || continue
+    nb="$(git -C "${r}" merge-base "${np}" "$(nested_main_ref "${nm}")" 2>/dev/null || true)"
+    want="$(env_field "${f}" "MAIN_BASE_IC_${u}")"
+    if [[ -n "${want}" && "${want}" != "${nb}" ]]; then
+      echo "MAIN_B  ${t}: ${nm} shared-with-main mismatch"; fails=$((fails + 1))
+    fi
+  done
   done
   for f in "${LINEAGE_DIR}"/*.env; do
     [[ -e "${f}" ]] || continue
     t="$(basename "${f}" .env)"
     if ! is_tag "${t}"; then echo "ORPHAN   lineage/${t}.env has no tag"; fails=$((fails + 1)); fi
   done
+  for nm in "${NESTED_NAMES[@]:-}"; do
+    [[ -z "${nm}" ]] && continue
+    nested_repo "${nm}" >/dev/null || echo "NESTED  ${nm}: repo unavailable; shared-with-main checks skipped"
+  done
   echo "tags: ${#TAGS[@]}  unpinned: ${unpinned}  failures: ${fails}"
   [[ "${fails}" -eq 0 ]]
 }
 
 cmd_index() {
-  local t f first=1
+  local t f first=1 nest nmu v first2
   {
     echo "{"
     echo '  "generated_by": "scripts/lineage.sh index",'
@@ -465,9 +553,19 @@ cmd_index() {
       [[ -f "${f}" ]] || continue
       if [[ "${first}" -eq 0 ]]; then echo ','; fi
       first=0
-      printf '    "%s": {"stream": "%s", "kind": "%s", "parent": "%s", "base": "%s"}' \
+      nest=""
+      first2=1
+      for nmu in "${NESTED_NAMES[@]:-}"; do
+        [[ -z "${nmu}" ]] && continue
+        v="$(env_field "${f}" "PIN_IC_${nmu^^}")"
+        [[ -z "${v}" ]] && continue
+        if [[ "${first2}" -eq 0 ]]; then nest+=', '; fi
+        first2=0
+        nest+="\"${nmu}\": \"${v}\""
+      done
+      printf '    "%s": {"stream": "%s", "kind": "%s", "parent": "%s", "base": "%s", "nested": {%s}}' \
         "${t}" "$(env_field "${f}" STREAM)" "$(env_field "${f}" KIND)" \
-        "$(env_field "${f}" PARENT)" "$(env_field "${f}" BASE)"
+        "$(env_field "${f}" PARENT)" "$(env_field "${f}" BASE)" "${nest}"
     done
     echo
     echo "  }"

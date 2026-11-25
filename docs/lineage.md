@@ -108,6 +108,31 @@ resolved through `git rev-parse` rather than string-compared. The convention
 already exists; this just makes it a contract instead of a commit message
 convention.
 
+### 3.6 Nested dependency leaves
+
+InfiniCore is not a true leaf: it carries its own dependencies as git
+submodules under `submodules/` (`InfiniCCL`, `InfiniOps`, `InfiniRT`), and
+their pins move independently of the InfiniCore commit. They are discovered
+from the pin's tree and recorded per tag as `PIN_IC_<MODULE>`, together with
+`MAIN_BASE_IC_<MODULE>`: the newest commit that submodule shares with its own
+default branch (`master`).
+
+They are recorded, but they do not participate in the product order of section
+3.3 yet. The Oct-Nov data shows why that is a separate decision and not a
+formality: the `qy` trunk pins InfiniCCL at `8dda36c2`, while `v2026.11.16` and
+later pin it at `13362553`, and `13362553` does not contain `8dda36c2` - the
+two lines forked at `c21a5b46`. Folding nested leaves into the product order
+would therefore disconnect `v2026.11.16+` from `v2026.11.12-prod` in the
+published parent chain. Record first, decide second.
+
+The `qy-moe` snapshot pins are the extreme case: its InfiniCCL / InfiniOps /
+InfiniRT pins (`960ecca6`, `194e7055`, `229c6691`) share no history at all with
+their modules' `master`, and the upstreams now reject them as unreachable refs.
+
+Module repos resolve from `IC_DIR/submodules/<name>` (a recursive submodule
+checkout) and can be pointed elsewhere with `IC_<MODULE>_DIR`; the nested
+branch defaults to `master` and is overridable with `IC_<MODULE>_MAIN_REF`.
+
 ## 4. Storage
 
 Lineage lives in the repo at `HEAD`, append-only. Tags are never rewritten.
@@ -138,6 +163,8 @@ NOTE=orphan branch seeded from the 10.28 kernel checkpoint
 | `BASE`   | no       | declared seed; only legal on a root (`PARENT` empty)          |
 | `MAIN_BASE_IC` | no | newest commit shared with the InfiniCore `main` branch        |
 | `MAIN_BASE_IL` | no | newest commit shared with the InfiniLM `main` branch          |
+| `PIN_IC_<MOD>` | yes | pin of InfiniCore's nested submodule `<MOD>`, must match the InfiniCore pin's tree |
+| `MAIN_BASE_IC_<MOD>` | no | newest commit that submodule shares with its own `master` |
 | `NOTE`   | no       | free text, one line                                          |
 
 `KIND` values:
@@ -216,6 +243,10 @@ Scope is `TAG_GLOB` (default `v*`), so a partial migration can target
 8. **Shared-with-main.** `MAIN_BASE_IC` / `MAIN_BASE_IL`, when present, must
    equal the `git merge-base` of that leaf's pin and `MAIN_REF`. Derived, not
    trusted.
+9. **Nested pins.** `PIN_IC_<MOD>` must equal the gitlink at
+   `submodules/<MOD>` of the tag's InfiniCore pin. `MAIN_BASE_IC_<MOD>`, when
+   present, must equal that submodule's merge-base with its default branch,
+   re-proved whenever the module repo is available.
 
 ## 7. Migration
 
