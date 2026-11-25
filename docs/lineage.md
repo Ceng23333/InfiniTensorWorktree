@@ -213,6 +213,7 @@ hand.
 | `emit <tag>`    | print (or `--write`) the env file, deriving `PARENT` and `BASE`  |
 | `emit --all`    | write one env file per tag in scope (`TAG_GLOB`)                |
 | `graph`         | ASCII forest of the pin lineage, grouped by stream              |
+| `graph --mermaid` | emit the product-order graph as mermaid; rendered in docs/lineage-graph.md |
 | `explain <tag>` | per-leaf cone, product lineage, declared base                   |
 | `verify`        | run the invariants in section 6                                 |
 | `index`         | regenerate `lineage.json`                                       |

@@ -356,13 +356,51 @@ kind_of() { # <tag> -> pin | snapshot | fork | republish
 # ---------------------------------------------------------------- commands
 
 cmd_graph() {
-  local t stream depth
-  echo "pin lineage: ${#REPS[@]} pins, ${#TAGS[@]} tags"
+  local fmt="${1:-}" t stream depth id label u p
+  if [[ "${fmt}" != "--mermaid" ]]; then
+    echo "pin lineage: ${#REPS[@]} pins, ${#TAGS[@]} tags"
+    for t in "${REPS[@]}"; do
+      stream="$(stream_of "${t}")"
+      depth_of "${t}"; depth="${OUT_DEPTH}"
+      printf '%-10s %2d  %s\n' "${stream}" "${depth}" "${t}"
+    done | sort -k1,1 -k2,2n
+    return 0
+  fi
+  echo "flowchart TD"
+  local -A sg_seen=() sg_nodes=()
+  local -a sg_order=()
   for t in "${REPS[@]}"; do
     stream="$(stream_of "${t}")"
-    depth_of "${t}"; depth="${OUT_DEPTH}"
-    printf '%-10s %2d  %s\n' "${stream}" "${depth}" "${t}"
-  done | sort -k1,1 -k2,2n
+    id="N${t//[!0-9A-Za-z]/}"
+    label="${t}"
+    for u in "${TAGS[@]}"; do
+      if [[ "${u}" != "${t}" ]] && same_pin "${u}" "${t}"; then label="${label}<br/>= ${u}"; fi
+    done
+    if [[ -z "${sg_seen[${stream}]:-}" ]]; then
+      sg_seen["${stream}"]=1
+      sg_order+=("${stream}")
+    fi
+    sg_nodes["${stream}"]+="    ${id}[\"${label}\"]"$'\n'
+  done
+  for stream in "${sg_order[@]:-}"; do
+    echo "  subgraph SG_${stream//[!0-9A-Za-z]/}[\"${stream}\"]"
+    echo "    direction TB"
+    printf '%s' "${sg_nodes[${stream}]}"
+    echo "  end"
+  done
+  for t in "${REPS[@]}"; do
+    id="N${t//[!0-9A-Za-z]/}"
+    max_parents "${t}"
+    local -a ps=()
+    IFS=',' read -r -a ps <<< "${OUT_PARENTS:-}"
+    for p in "${ps[@]:-}"; do
+      [[ -z "${p}" ]] && continue
+      echo "  N${p//[!0-9A-Za-z]/} --> ${id}"
+    done
+    if [[ -z "${OUT_PARENTS}" ]] && orphan_base "${t}"; then
+      echo "  N${OUT_BASE//[!0-9A-Za-z]/} -. \"declared BASE\" .-> ${id}"
+    fi
+  done
 }
 
 cmd_explain() {
@@ -588,7 +626,7 @@ cmd_emit_all() {
 load
 
 case "${1:-}" in
-  graph) cmd_graph ;;
+  graph) cmd_graph "${2:-}" ;;
   explain) shift; cmd_explain "${1:?usage: lineage.sh explain <tag>}" ;;
   emit) shift
     if [[ "${1:-}" == "--all" ]]; then cmd_emit_all
