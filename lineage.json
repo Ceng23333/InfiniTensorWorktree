@@ -1,0 +1,30 @@
+{
+  "generated_by": "scripts/lineage.sh index",
+  "tags": {
+    "v2026.10.09-qy-minicpm5-16a3-post-refactor": {"stream": "qy", "kind": "fork", "parent": "", "base": ""},
+    "v2026.10.10-qy-minicpm5-16a3-fa": {"stream": "qy", "kind": "pin", "parent": "v2026.10.09-qy-minicpm5-16a3-post-refactor", "base": ""},
+    "v2026.10.10-qy-minicpm5-2b-fa": {"stream": "qy", "kind": "republish", "parent": "v2026.10.09-qy-minicpm5-16a3-post-refactor", "base": ""},
+    "v2026.10.10-qy-minicpm5-cudagraph": {"stream": "qy", "kind": "pin", "parent": "v2026.10.10-qy-minicpm5-16a3-fa", "base": ""},
+    "v2026.10.12-qy-minicpm5-16a3": {"stream": "16a3", "kind": "fork", "parent": "", "base": ""},
+    "v2026.10.13-qy-minicpm5-16a3-fa-longctx-cudagraph": {"stream": "qy", "kind": "pin", "parent": "v2026.10.10-qy-minicpm5-cudagraph", "base": ""},
+    "v2026.10.14-metax-g9v3-39a5b": {"stream": "metax", "kind": "fork", "parent": "", "base": ""},
+    "v2026.10.19-qy-minicpm5-full-piecewise-cudagraph": {"stream": "qy", "kind": "pin", "parent": "v2026.10.13-qy-minicpm5-16a3-fa-longctx-cudagraph", "base": ""},
+    "v2026.10.21-qy-minicpm5-2b-full-piecewise": {"stream": "qy", "kind": "pin", "parent": "v2026.10.19-qy-minicpm5-full-piecewise-cudagraph", "base": ""},
+    "v2026.10.22-qy-minicpm5-2b-full-piecewise": {"stream": "qy", "kind": "republish", "parent": "v2026.10.19-qy-minicpm5-full-piecewise-cudagraph", "base": ""},
+    "v2026.10.23-qy-minicpm5-2b-batch-sample-fix": {"stream": "qy", "kind": "pin", "parent": "v2026.10.23-qy-minicpm5-2b-full-piecewise", "base": ""},
+    "v2026.10.23-qy-minicpm5-2b-full-piecewise": {"stream": "qy", "kind": "pin", "parent": "v2026.10.21-qy-minicpm5-2b-full-piecewise", "base": ""},
+    "v2026.10.27-qy-minicpm5-2b-fa-contig": {"stream": "qy", "kind": "pin", "parent": "v2026.10.27-qy-minicpm5-2b-full-piecewise", "base": ""},
+    "v2026.10.27-qy-minicpm5-2b-full-piecewise": {"stream": "qy", "kind": "pin", "parent": "v2026.10.23-qy-minicpm5-2b-full-piecewise", "base": ""},
+    "v2026.10.28-qy-kernel-em-pending": {"stream": "qy", "kind": "pin", "parent": "v2026.10.23-qy-minicpm5-2b-batch-sample-fix", "base": ""},
+    "v2026.10.29-infinilm-prod-qwen38-tp4": {"stream": "qy", "kind": "pin", "parent": "v2026.10.27-qy-minicpm5-2b-fa-contig", "base": ""},
+    "v2026.11.03-qy-lmhead-tp-nccl": {"stream": "qy-moe", "kind": "snapshot", "parent": "", "base": "v2026.10.28-qy-kernel-em-pending"},
+    "v2026.11.06-qy-full-pd": {"stream": "qy-moe", "kind": "pin", "parent": "v2026.11.03-qy-lmhead-tp-nccl", "base": ""},
+    "v2026.11.09-qy-moe-bf16-warpnk": {"stream": "qy-moe", "kind": "pin", "parent": "v2026.11.09-qy-moe-decode-full", "base": ""},
+    "v2026.11.09-qy-moe-decode-full": {"stream": "qy-moe", "kind": "pin", "parent": "v2026.11.06-qy-full-pd", "base": ""},
+    "v2026.11.12-infinilm-prod-qwen38-tp4-ar-split": {"stream": "qy", "kind": "pin", "parent": "v2026.10.29-infinilm-prod-qwen38-tp4", "base": ""},
+    "v2026.11.12-qy-moe-bf16-warpnk": {"stream": "qy-moe", "kind": "republish", "parent": "v2026.11.09-qy-moe-decode-full", "base": ""},
+    "v2026.11.16-infinilm-prod-qwen38-tp4-ar-split": {"stream": "qy", "kind": "pin", "parent": "v2026.11.12-infinilm-prod-qwen38-tp4-ar-split", "base": ""},
+    "v2026.11.22-infinilm-prod-qwen38-tp4-mars-repro": {"stream": "qy", "kind": "pin", "parent": "v2026.11.16-infinilm-prod-qwen38-tp4-ar-split", "base": ""},
+    "v2026.11.24-infinilm-showroom-eager-catchup": {"stream": "qy", "kind": "pin", "parent": "v2026.11.22-infinilm-prod-qwen38-tp4-mars-repro", "base": ""}
+  }
+}

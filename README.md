@@ -44,3 +44,15 @@ git push origin HEAD --tags
 ```
 
 Manifest fields: `ITW_SHA`, `IC_SHA`, `IL_SHA`, URLs, `PIN_DATE`.
+
+## Lineage
+
+`docs/lineage.md` defines how published tags relate at commit level, per leaf
+repo. `lineage/<tag>.env` records each publication's parents and declared seed;
+`scripts/lineage.sh verify` checks the invariants.
+
+```bash
+scripts/lineage.sh graph
+scripts/lineage.sh explain <tag>
+scripts/lineage.sh verify
+```
