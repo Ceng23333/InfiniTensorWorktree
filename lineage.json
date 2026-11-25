@@ -25,6 +25,7 @@
     "v2026.11.12-qy-moe-bf16-warpnk": {"stream": "qy-moe", "kind": "republish", "parent": "v2026.11.09-qy-moe-decode-full", "base": ""},
     "v2026.11.16-infinilm-prod-qwen38-tp4-ar-split": {"stream": "qy", "kind": "pin", "parent": "v2026.11.12-infinilm-prod-qwen38-tp4-ar-split", "base": ""},
     "v2026.11.22-infinilm-prod-qwen38-tp4-mars-repro": {"stream": "qy", "kind": "pin", "parent": "v2026.11.16-infinilm-prod-qwen38-tp4-ar-split", "base": ""},
-    "v2026.11.24-infinilm-showroom-eager-catchup": {"stream": "qy", "kind": "pin", "parent": "v2026.11.22-infinilm-prod-qwen38-tp4-mars-repro", "base": ""}
+    "v2026.11.24-infinilm-showroom-eager-catchup": {"stream": "qy", "kind": "pin", "parent": "v2026.11.22-infinilm-prod-qwen38-tp4-mars-repro", "base": ""},
+    "v2026.11.25-infinilm-showroom-freeze": {"stream": "qy", "kind": "republish", "parent": "v2026.11.24-infinilm-showroom-eager-catchup", "base": ""}
   }
 }
